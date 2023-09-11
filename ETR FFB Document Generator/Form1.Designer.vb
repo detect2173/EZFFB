@@ -30,14 +30,20 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
+        Guna2Separator4 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Separator5 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Separator6 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         TabPage2 = New TabPage()
         TabPage3 = New TabPage()
-        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         tc1.SuspendLayout()
         TabPage1.SuspendLayout()
-        TabPage3.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage3.SuspendLayout()
         CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -74,48 +80,99 @@ Partial Class Form1
         ' 
         ' TabPage1
         ' 
+        TabPage1.BackColor = Color.Black
+        TabPage1.Controls.Add(Guna2Separator4)
+        TabPage1.Controls.Add(Guna2Separator5)
+        TabPage1.Controls.Add(Guna2Separator6)
+        TabPage1.Controls.Add(Guna2Separator3)
+        TabPage1.Controls.Add(Guna2Separator2)
+        TabPage1.Controls.Add(Guna2Separator1)
         TabPage1.Controls.Add(Guna2PictureBox1)
         TabPage1.Location = New Point(184, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(841, 622)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home"
-        TabPage1.UseVisualStyleBackColor = True
+        TabPage1.Text = "Home"' 
+        ' Guna2Separator4
         ' 
-        ' TabPage2
+        Guna2Separator4.FillThickness = 4
+        Guna2Separator4.Location = New Point(533, 77)
+        Guna2Separator4.Name = "Guna2Separator4"
+        Guna2Separator4.Size = New Size(140, 10)
+        Guna2Separator4.TabIndex = 6
         ' 
-        TabPage2.Location = New Point(184, 4)
-        TabPage2.Name = "TabPage2"
-        TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(841, 622)
-        TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS"
-        TabPage2.UseVisualStyleBackColor = True
+        ' Guna2Separator5
         ' 
-        ' TabPage3
+        Guna2Separator5.FillThickness = 4
+        Guna2Separator5.Location = New Point(533, 61)
+        Guna2Separator5.Name = "Guna2Separator5"
+        Guna2Separator5.Size = New Size(170, 10)
+        Guna2Separator5.TabIndex = 5
         ' 
-        TabPage3.Controls.Add(Guna2DataGridView1)
-        TabPage3.Location = New Point(184, 4)
-        TabPage3.Name = "TabPage3"
-        TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(841, 622)
-        TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster"
-        TabPage3.UseVisualStyleBackColor = True
+        ' Guna2Separator6
+        ' 
+        Guna2Separator6.FillThickness = 4
+        Guna2Separator6.Location = New Point(532, 45)
+        Guna2Separator6.Name = "Guna2Separator6"
+        Guna2Separator6.Size = New Size(200, 10)
+        Guna2Separator6.TabIndex = 4
+        ' 
+        ' Guna2Separator3
+        ' 
+        Guna2Separator3.FillThickness = 4
+        Guna2Separator3.Location = New Point(171, 77)
+        Guna2Separator3.Name = "Guna2Separator3"
+        Guna2Separator3.Size = New Size(140, 10)
+        Guna2Separator3.TabIndex = 3
+        ' 
+        ' Guna2Separator2
+        ' 
+        Guna2Separator2.FillThickness = 4
+        Guna2Separator2.Location = New Point(140, 61)
+        Guna2Separator2.Name = "Guna2Separator2"
+        Guna2Separator2.Size = New Size(170, 10)
+        Guna2Separator2.TabIndex = 2
+        ' 
+        ' Guna2Separator1
+        ' 
+        Guna2Separator1.FillThickness = 4
+        Guna2Separator1.Location = New Point(111, 45)
+        Guna2Separator1.Name = "Guna2Separator1"
+        Guna2Separator1.Size = New Size(200, 10)
+        Guna2Separator1.TabIndex = 1
         ' 
         ' Guna2PictureBox1
         ' 
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Image = My.Resources.Resources.ETR_Logo_2023
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(330, 8)
+        Guna2PictureBox1.Location = New Point(331, 8)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2PictureBox1.Size = New Size(181, 94)
         Guna2PictureBox1.TabIndex = 0
         Guna2PictureBox1.TabStop = False
         ' 
+        ' TabPage2
+        ' 
+        TabPage2.BackColor = Color.White
+        TabPage2.Location = New Point(184, 4)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(841, 622)
+        TabPage2.TabIndex = 1
+        TabPage2.Text = "FFB DOCS"' 
+        ' TabPage3
+        ' 
+        TabPage3.BackColor = Color.White
+        TabPage3.Controls.Add(Guna2DataGridView1)
+        TabPage3.Location = New Point(184, 4)
+        TabPage3.Name = "TabPage3"
+        TabPage3.Padding = New Padding(3)
+        TabPage3.Size = New Size(841, 622)
+        TabPage3.TabIndex = 2
+        TabPage3.Text = "Student Roster"' 
         ' Guna2DataGridView1
         ' 
         Guna2DataGridView1.AllowUserToAddRows = False
@@ -187,8 +244,8 @@ Partial Class Form1
         Text = "Fact Finding Board Document Generator"
         tc1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
-        TabPage3.ResumeLayout(False)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        TabPage3.ResumeLayout(False)
         CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -199,4 +256,10 @@ Partial Class Form1
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2Separator4 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Separator5 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Separator6 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Separator3 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Separator2 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
 End Class
