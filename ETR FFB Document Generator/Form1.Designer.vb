@@ -180,6 +180,7 @@ Partial Class Form1
         DataGridViewCellStyle1.BackColor = Color.White
         Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Guna2DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Guna2DataGridView1.BackgroundColor = Color.WhiteSmoke
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -211,7 +212,7 @@ Partial Class Form1
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.BackColor = Color.WhiteSmoke
         Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
