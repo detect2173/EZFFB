@@ -94,8 +94,7 @@ Partial Class Form1
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(841, 622)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home"
-        ' 
+        TabPage1.Text = "Home"' 
         ' Guna2Separator4
         ' 
         Guna2Separator4.FillThickness = 4
@@ -164,8 +163,7 @@ Partial Class Form1
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(841, 622)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS"
-        ' 
+        TabPage2.Text = "FFB DOCS"' 
         ' TabPage3
         ' 
         TabPage3.BackColor = Color.White
@@ -175,8 +173,7 @@ Partial Class Form1
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(841, 622)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster"
-        ' 
+        TabPage3.Text = "Student Roster"' 
         ' dgvRoster
         ' 
         dgvRoster.AllowUserToAddRows = False
