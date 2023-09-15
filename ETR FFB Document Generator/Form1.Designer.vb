@@ -39,12 +39,12 @@ Partial Class Form1
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         TabPage2 = New TabPage()
         TabPage3 = New TabPage()
-        Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        dgvRoster = New Guna.UI2.WinForms.Guna2DataGridView()
         tc1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         TabPage3.SuspendLayout()
-        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRoster, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' tc1
@@ -54,6 +54,7 @@ Partial Class Form1
         tc1.Controls.Add(TabPage2)
         tc1.Controls.Add(TabPage3)
         tc1.Dock = DockStyle.Fill
+        tc1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         tc1.ItemSize = New Size(180, 40)
         tc1.Location = New Point(0, 0)
         tc1.Name = "tc1"
@@ -67,12 +68,12 @@ Partial Class Form1
         tc1.TabButtonIdleState.BorderColor = Color.Empty
         tc1.TabButtonIdleState.FillColor = Color.FromArgb(CByte(102), CByte(6), CByte(8))
         tc1.TabButtonIdleState.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        tc1.TabButtonIdleState.ForeColor = Color.FromArgb(CByte(156), CByte(160), CByte(167))
+        tc1.TabButtonIdleState.ForeColor = Color.Gray
         tc1.TabButtonIdleState.InnerColor = Color.FromArgb(CByte(33), CByte(42), CByte(57))
         tc1.TabButtonSelectedState.BorderColor = Color.Empty
         tc1.TabButtonSelectedState.FillColor = Color.Black
         tc1.TabButtonSelectedState.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        tc1.TabButtonSelectedState.ForeColor = Color.White
+        tc1.TabButtonSelectedState.ForeColor = Color.OldLace
         tc1.TabButtonSelectedState.InnerColor = Color.Silver
         tc1.TabButtonSize = New Size(180, 40)
         tc1.TabIndex = 0
@@ -93,7 +94,8 @@ Partial Class Form1
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(841, 622)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home"' 
+        TabPage1.Text = "Home"
+        ' 
         ' Guna2Separator4
         ' 
         Guna2Separator4.FillThickness = 4
@@ -156,78 +158,80 @@ Partial Class Form1
         ' 
         ' TabPage2
         ' 
-        TabPage2.BackColor = Color.White
+        TabPage2.BackColor = Color.OldLace
         TabPage2.Location = New Point(184, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(841, 622)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS"' 
+        TabPage2.Text = "FFB DOCS"
+        ' 
         ' TabPage3
         ' 
         TabPage3.BackColor = Color.White
-        TabPage3.Controls.Add(Guna2DataGridView1)
+        TabPage3.Controls.Add(dgvRoster)
         TabPage3.Location = New Point(184, 4)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(841, 622)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster"' 
-        ' Guna2DataGridView1
+        TabPage3.Text = "Student Roster"
         ' 
-        Guna2DataGridView1.AllowUserToAddRows = False
-        Guna2DataGridView1.AllowUserToDeleteRows = False
+        ' dgvRoster
+        ' 
+        dgvRoster.AllowUserToAddRows = False
+        dgvRoster.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = Color.White
-        Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Guna2DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Guna2DataGridView1.BackgroundColor = Color.WhiteSmoke
+        dgvRoster.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvRoster.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvRoster.BackgroundColor = Color.OldLace
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Guna2DataGridView1.ColumnHeadersHeight = 25
-        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvRoster.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvRoster.ColumnHeadersHeight = 25
+        dgvRoster.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Guna2DataGridView1.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.Location = New Point(0, 368)
-        Guna2DataGridView1.Name = "Guna2DataGridView1"
-        Guna2DataGridView1.ReadOnly = True
-        Guna2DataGridView1.RowHeadersVisible = False
-        Guna2DataGridView1.RowTemplate.Height = 25
-        Guna2DataGridView1.Size = New Size(841, 254)
-        Guna2DataGridView1.TabIndex = 0
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.BackColor = Color.WhiteSmoke
-        Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 25
-        Guna2DataGridView1.ThemeStyle.ReadOnly = True
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvRoster.DefaultCellStyle = DataGridViewCellStyle3
+        dgvRoster.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRoster.Location = New Point(0, 368)
+        dgvRoster.Name = "dgvRoster"
+        dgvRoster.ReadOnly = True
+        dgvRoster.RowHeadersVisible = False
+        dgvRoster.RowTemplate.Height = 25
+        dgvRoster.Size = New Size(841, 254)
+        dgvRoster.TabIndex = 0
+        dgvRoster.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dgvRoster.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dgvRoster.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dgvRoster.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dgvRoster.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dgvRoster.ThemeStyle.BackColor = Color.OldLace
+        dgvRoster.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRoster.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dgvRoster.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvRoster.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        dgvRoster.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dgvRoster.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvRoster.ThemeStyle.HeaderStyle.Height = 25
+        dgvRoster.ThemeStyle.ReadOnly = True
+        dgvRoster.ThemeStyle.RowsStyle.BackColor = Color.White
+        dgvRoster.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvRoster.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        dgvRoster.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvRoster.ThemeStyle.RowsStyle.Height = 25
+        dgvRoster.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRoster.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' Form1
         ' 
@@ -247,7 +251,7 @@ Partial Class Form1
         TabPage1.ResumeLayout(False)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TabPage3.ResumeLayout(False)
-        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRoster, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -256,7 +260,7 @@ Partial Class Form1
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents dgvRoster As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2Separator4 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2Separator5 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2Separator6 As Guna.UI2.WinForms.Guna2Separator

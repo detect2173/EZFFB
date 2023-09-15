@@ -24,17 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\Users\jfber\Downloads\ETR_Logo_2023.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.5" />
     <PackageReference Include="itext7" Version="8.0.1" />
     <PackageReference Include="MySql.Data" Version="8.1.0" />
     <PackageReference Include="MySqlConnector" Version="2.2.7" />
+    <PackageReference Include="Npgsql" Version="7.0.6" />
   </ItemGroup>
 
   <ItemGroup>
