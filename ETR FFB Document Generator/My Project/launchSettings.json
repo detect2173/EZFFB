@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ETR FFB Document Generator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DB_USERNAME": "postgres",
+        "DB_PASSWORD": "Jbbb2023?"
+      }
+    }
+  }
+}

@@ -7,12 +7,21 @@ Public Class DBConnection
     Public Shared Function GetConnection() As NpgsqlConnection
         Dim username As String = Environment.GetEnvironmentVariable("DB_USERNAME")
         Dim password As String = Environment.GetEnvironmentVariable("DB_PASSWORD")
-        Dim connectionString As String = $"Host=localhost;Username={username};Password={password};Database=roster"
+
+        Dim connectionString As String = $"Host=localhost;Username={username};Password={password};Database=postgres"
 
         Return New NpgsqlConnection(connectionString)
     End Function
+    'Public Shared Function GetConnection() As NpgsqlConnection
+    '    Dim username As String = "postgres"
+    '    Dim password As String = "Jbbb2023?"
+    '    'Dim connectionString As String = $"Host=localhost;Username={username};Password={password};Database=roster"
+    '    Dim connectionString As String = "Host=localhost;Username=postgres;Password=Jbbb2023?;Database=postgres"
 
-    Public Function FetchRosterData() As DataTable
+    '    Return New NpgsqlConnection(connectionString)
+    'End Function
+
+    Public Shared Function FetchRosterData() As DataTable
         Using conn As NpgsqlConnection = GetConnection()
             conn.Open()
 
