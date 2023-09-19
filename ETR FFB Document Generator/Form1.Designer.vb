@@ -654,7 +654,7 @@ Partial Class Form1
         dgvRoster.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         dgvRoster.BackgroundColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(102), CByte(6), CByte(8))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
