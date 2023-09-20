@@ -1,4 +1,4 @@
-﻿Imports Npgsql
+﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 Imports System.Configuration
 
@@ -8,19 +8,22 @@ Imports System.Configuration
 Public Class DBConnection
 
     ''' <summary>
-    ''' Creates and returns a new PostgreSQL database connection.
+    ''' Creates and returns a new MySQL database connection.
     ''' </summary>
-    ''' <returns>The NpgsqlConnection object.</returns>
-    Public Shared Function GetConnection() As NpgsqlConnection
-        ' Retrieve environment variables for database credentials
-        Dim username As String = Environment.GetEnvironmentVariable("DB_USERNAME")
-        Dim password As String = Environment.GetEnvironmentVariable("DB_PASSWORD")
+    ''' <returns>The MySqlConnection object.</returns>
+    Public Shared Function GetConnection() As MySqlConnection
+        Try
+            ' Your DB Connection and population logic here
+            ' Create the connection string
+            Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
+            ' Return a new MySqlConnection object
+            Return New MySqlConnection(connectionString)
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
 
-        ' Create the connection string
-        Dim connectionString As String = $"Host=localhost;Username={username};Password={password};Database=postgres"
 
-        ' Return a new NpgsqlConnection object
-        Return New NpgsqlConnection(connectionString)
+
     End Function
 
     ''' <summary>
@@ -29,12 +32,12 @@ Public Class DBConnection
     ''' <returns>A DataTable containing the student roster data.</returns>
     Public Shared Function FetchRosterData() As DataTable
         ' Initialize and open the connection
-        Using conn As NpgsqlConnection = GetConnection()
+        Using conn As MySqlConnection = GetConnection()
             conn.Open()
 
             ' Execute the SQL command to fetch data
-            Using cmd As New NpgsqlCommand("SELECT * FROM roster.roster", conn)
-                Using reader As NpgsqlDataReader = cmd.ExecuteReader()
+            Using cmd As New MySqlCommand("SELECT * FROM roster.roster", conn)
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
                     ' Load the fetched data into a DataTable
                     Dim dataTable As New DataTable()
                     dataTable.Load(reader)
@@ -43,5 +46,11 @@ Public Class DBConnection
             End Using
         End Using
     End Function
+    Public Shared Sub PopulateAndRefreshRoster(ByRef dgv As DataGridView)
+        ' Fetch data from the database into a DataTable
+        Dim rosterData As DataTable = FetchRosterData()
 
+        ' Bind the DataGridView to the DataTable
+        dgv.DataSource = rosterData
+    End Sub
 End Class
