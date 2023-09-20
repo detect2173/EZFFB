@@ -24,6 +24,8 @@ Namespace My
     ' End Sub
 
     Partial Friend Class MyApplication
-
+        Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As StartupEventArgs) Handles Me.Startup
+            Form1.CopyLogToDocuments()
+        End Sub
     End Class
 End Namespace
