@@ -16,7 +16,10 @@ Public Class Form1
 
     Private Sub Guna2Button8_Click(sender As Object, e As EventArgs) Handles Guna2Button8.Click
         Dim logFilePath As String = System.IO.Path.Combine(Application.StartupPath, "roster_updater.log")
-        System.Diagnostics.Process.Start("explorer.exe", "/select," & logFilePath)
+        System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo() With {
+    .FileName = logFilePath,
+    .UseShellExecute = True
+})
     End Sub
 
     Public Sub CopyLogToDocuments()
@@ -25,6 +28,17 @@ Public Class Form1
 
         If File.Exists(sourcePath) Then
             File.Copy(sourcePath, destPath, True)
+        End If
+    End Sub
+
+    Private Sub btnUpdateDB_Click(sender As Object, e As EventArgs) Handles btnUpdateDB.Click
+        Dim startupPath As String = Application.StartupPath
+        Dim exePath As String = Path.Combine(startupPath, "roster_updater.exe")
+
+        If File.Exists(exePath) Then
+            Process.Start(exePath)
+        Else
+            MessageBox.Show("roster_updater.exe not found.")
         End If
     End Sub
 End Class
