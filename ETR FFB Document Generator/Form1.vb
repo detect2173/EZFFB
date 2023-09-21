@@ -16,6 +16,7 @@ Public Class Form1
         AddHandler Me.btnUpdateDB.Click, AddressOf btnUpdateDB_Click
         AddHandler txtFName.TextChanged, AddressOf TextBox_TextChanged
         AddHandler txtLName.TextChanged, AddressOf TextBox_TextChanged
+        AddHandler btnReset.Click, AddressOf btnReset_Click
 
     End Sub
 
