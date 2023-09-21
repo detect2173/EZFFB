@@ -8,18 +8,18 @@ Imports System.IO
 
 Public Class Form1
     Public Sub New()
-
         ' This call is required by the designer.
-        AddHandler MyBase.Load, AddressOf Form1_Load
         InitializeComponent()
-
         ' Add any initialization after the InitializeComponent() call.
+        AddHandler MyBase.Load, AddressOf Form1_Load
+        AddHandler Me.Guna2Button8.Click, AddressOf Guna2Button8_Click
+        AddHandler Me.btnUpdateDB.Click, AddressOf btnUpdateDB_Click
+        AddHandler txtFName.TextChanged, AddressOf TextBox_TextChanged
+        AddHandler txtLName.TextChanged, AddressOf TextBox_TextChanged
 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs)
-        AddHandler btnUpdateDB.Click, AddressOf btnUpdateDB_Click
-        AddHandler Guna2Button8.Click, AddressOf Guna2Button8_Click
         CopyLogToDocuments()
         SetupLogic.SetupUI()
         ' Populate and set up DataGrid
@@ -168,5 +168,11 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs)
+        Dim tb As TextBox = CType(sender, TextBox)
+        tb.Text = tb.Text.ToUpper()
+        tb.Font = New Font(tb.Font.FontFamily, tb.Font.Size, FontStyle.Bold)
+        tb.SelectionStart = tb.Text.Length ' Position cursor at the end
+    End Sub
 
 End Class
