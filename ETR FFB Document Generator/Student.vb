@@ -1,4 +1,14 @@
 ﻿Public Class Student
+    Public Property ID As Integer
+    Public Property FName As String
+    Public Property LName As String
+    Public Property DOB As String
+    Public Property DOE As String
+    Public Property EMail As String
+    Public Property Trade As String
+    Public Property Size As String
+    Public Property Incentive As String
+
     Public Shared ReadOnly TradeOptions As New Dictionary(Of String, String) From {
     {"CPP", "CPP"},
     {"Advanced_Welding", "Advanced Welding"},

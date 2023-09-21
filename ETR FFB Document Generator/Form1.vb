@@ -20,6 +20,10 @@ Public Class Form1
         AddHandler cmbSearch.SelectedIndexChanged, AddressOf cmbSearch_SelectedIndexChanged
         AddHandler dgvRoster.CellClick, AddressOf dgvRoster_CellClick
         AddHandler btnReload.Click, AddressOf btnReload_Click
+        AddHandler btnAdd.Click, AddressOf btnAdd_Click
+        AddHandler btnUpdate.Click, AddressOf btnUpdate_Click
+        AddHandler btnDelete.Click, AddressOf btnDelete_Click
+        AddHandler btnFill.Click, AddressOf btnFill_Click
 
     End Sub
 
@@ -76,8 +80,8 @@ Public Class Form1
             dtpDOB.Value = Convert.ToDateTime(dgvRoster.SelectedRows(0).Cells(3).Value)
             dtpDOE.Value = Convert.ToDateTime(dgvRoster.SelectedRows(0).Cells(4).Value)
             txtEMail.Text = dgvRoster.SelectedRows(0).Cells(5).Value.ToString()
-            cmbSize.Text = dgvRoster.SelectedRows(0).Cells(6).Value.ToString()
-            cmbTrade.Text = dgvRoster.SelectedRows(0).Cells(7).Value.ToString()
+            cmbSize.Text = dgvRoster.SelectedRows(0).Cells(7).Value.ToString()
+            cmbTrade.Text = dgvRoster.SelectedRows(0).Cells(6).Value.ToString()
             cmbIncentive.Text = dgvRoster.SelectedRows(0).Cells(8).Value.ToString()
             txtID.ReadOnly = True
             txtID.Enabled = False
@@ -181,7 +185,7 @@ Public Class Form1
         tb.SelectionStart = tb.Text.Length ' Position cursor at the end
     End Sub
 
-    Private Sub btnFill_Click(sender As Object, e As EventArgs) Handles btnFill.Click
+    Private Sub btnFill_Click(sender As Object, e As EventArgs)
         Dim firstName As String = txtFName.Text.Trim()
         Dim lastName As String = txtLName.Text.Replace(" ", "").Trim()
 
@@ -194,5 +198,61 @@ Public Class Form1
         cmbIncentive.SelectedIndex = 0
     End Sub
 
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs)
+        Dim newStudent As New Student
+        newStudent.ID = CInt(txtID.Text)
+        newStudent.FName = txtFName.Text
+        newStudent.LName = txtLName.Text
+        newStudent.DOB = dtpDOB.Value
+        newStudent.DOE = dtpDOE.Value
+        newStudent.EMail = txtEMail.Text
+        newStudent.Trade = cmbTrade.SelectedItem.ToString()
+        newStudent.Size = cmbSize.SelectedItem.ToString()
+        newStudent.Incentive = cmbIncentive.SelectedItem.ToString()
+
+        Dim isSuccess As Boolean = Add_Student(newStudent)
+
+        If isSuccess Then
+            MessageBox.Show("Student record added successfully." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
+        Else
+            MessageBox.Show("Error adding student record.")
+        End If
+        DBConnection.PopulateAndRefreshRoster(dgvRoster)
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
+        Dim updatedStudent As New Student
+        updatedStudent.ID = CInt(txtID.Text)
+        updatedStudent.FName = txtFName.Text
+        updatedStudent.LName = txtLName.Text
+        updatedStudent.DOB = dtpDOB.Value
+        updatedStudent.DOE = dtpDOE.Value
+        updatedStudent.EMail = txtEMail.Text
+        updatedStudent.Trade = cmbTrade.SelectedItem.ToString()
+        updatedStudent.Size = cmbSize.SelectedItem.ToString()
+        updatedStudent.Incentive = cmbIncentive.SelectedItem.ToString()
+
+        Dim isSuccess As Boolean = Update_Student(updatedStudent)
+
+        If isSuccess Then
+            MessageBox.Show("Student record updated successfully.")
+        Else
+            MessageBox.Show("Error updating student record.")
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs)
+        Dim studentID As Integer = CInt(txtID.Text) ' Assuming txtID is where you keep the StudentID
+        Dim isSuccess As Boolean = Delete_Student(studentID)
+
+        If isSuccess Then
+            ' Refresh your DataGridView or UI here
+            DBConnection.PopulateAndRefreshRoster(dgvRoster)
+            MessageBox.Show("Student record successfully deleted." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
+
+        Else
+            MessageBox.Show("Failed to delete student record.")
+        End If
+    End Sub
 
 End Class
