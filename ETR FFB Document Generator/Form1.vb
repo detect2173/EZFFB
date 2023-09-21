@@ -3,8 +3,7 @@ Imports System.Data
 Imports System.Configuration
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.IO
-
-
+Imports Guna.UI2.WinForms
 
 Public Class Form1
     Public Sub New()
@@ -17,6 +16,10 @@ Public Class Form1
         AddHandler txtFName.TextChanged, AddressOf TextBox_TextChanged
         AddHandler txtLName.TextChanged, AddressOf TextBox_TextChanged
         AddHandler btnReset.Click, AddressOf btnReset_Click
+        AddHandler txtSearch.KeyUp, AddressOf txtSearch_KeyUp
+        AddHandler cmbSearch.SelectedIndexChanged, AddressOf cmbSearch_SelectedIndexChanged
+        AddHandler dgvRoster.CellClick, AddressOf dgvRoster_CellClick
+        AddHandler btnReload.Click, AddressOf btnReload_Click
 
     End Sub
 
@@ -28,7 +31,7 @@ Public Class Form1
         dgvRoster.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.DarkGray
     End Sub
 
-    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs) Handles Guna2Button8.Click
+    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs)
         Dim logFilePath As String = System.IO.Path.Combine(Application.StartupPath, "roster_updater.log")
         System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo() With {
     .FileName = logFilePath,
@@ -45,7 +48,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnUpdateDB_Click(sender As Object, e As EventArgs) Handles btnUpdateDB.Click
+    Private Sub btnUpdateDB_Click(sender As Object, e As EventArgs)
         Dim startupPath As String = Application.StartupPath
         Dim exePath As String = Path.Combine(startupPath, "roster_updater.exe")
 
@@ -77,6 +80,7 @@ Public Class Form1
             cmbTrade.Text = dgvRoster.SelectedRows(0).Cells(7).Value.ToString()
             cmbIncentive.Text = dgvRoster.SelectedRows(0).Cells(8).Value.ToString()
             txtID.ReadOnly = True
+            txtID.Enabled = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -97,6 +101,7 @@ Public Class Form1
         cmbIncentive.SelectedIndex = -1
 
         txtID.ReadOnly = False
+        txtID.Enabled = True
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs)
@@ -170,10 +175,24 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox_TextChanged(sender As Object, e As EventArgs)
-        Dim tb As TextBox = CType(sender, TextBox)
+        Dim tb As Guna2TextBox = CType(sender, Guna2TextBox)
         tb.Text = tb.Text.ToUpper()
-        tb.Font = New Font(tb.Font.FontFamily, tb.Font.Size, FontStyle.Bold)
+        'tb.Font = New Font(tb.Font.FontFamily, tb.Font.Size, FontStyle.Bold)
         tb.SelectionStart = tb.Text.Length ' Position cursor at the end
     End Sub
+
+    Private Sub btnFill_Click(sender As Object, e As EventArgs) Handles btnFill.Click
+        Dim firstName As String = txtFName.Text.Trim()
+        Dim lastName As String = txtLName.Text.Replace(" ", "").Trim()
+
+        ' Create email address
+        txtEMail.Text = $"{lastName}.{firstName}@live.jobcorps.org".ToLower()
+
+        ' Reset combo boxes to their default values
+        cmbTrade.SelectedIndex = 0 ' Assuming the first value is the default
+        cmbSize.SelectedIndex = 7
+        cmbIncentive.SelectedIndex = 0
+    End Sub
+
 
 End Class
