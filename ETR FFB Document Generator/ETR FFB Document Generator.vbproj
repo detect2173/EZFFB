@@ -14,7 +14,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PythonUtility.vb" />
+    <Compile Remove="StartupModule.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="app.config" />
+    <None Remove="csv_sync.py" />
+    <None Remove="db_sync.py" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,12 +68,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="csv_sync.py">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="db_sync.py">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
