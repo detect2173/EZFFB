@@ -52,5 +52,7 @@ Public Class DBConnection
 
         ' Bind the DataGridView to the DataTable
         dgv.DataSource = rosterData
+        Form1.lblOBS.Text = Form1.dgvRoster.Rows.Count
+        Form1.lblCount.Text = Form1.dgvRoster.Rows.Count
     End Sub
 End Class

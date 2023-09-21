@@ -70,6 +70,8 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
+        lblOBS = New Label()
+        Label10 = New Label()
         btnUpdateDB = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button8 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Separator4 = New Guna.UI2.WinForms.Guna2Separator()
@@ -90,6 +92,8 @@ Partial Class Form1
         btnUpdate = New Guna.UI2.WinForms.Guna2Button()
         btnAdd = New Guna.UI2.WinForms.Guna2Button()
         GroupBox1 = New GroupBox()
+        Label11 = New Label()
+        lblCount = New Label()
         txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         cmbSearch = New Guna.UI2.WinForms.Guna2ComboBox()
         Label4 = New Label()
@@ -157,6 +161,8 @@ Partial Class Form1
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.Black
+        TabPage1.Controls.Add(lblOBS)
+        TabPage1.Controls.Add(Label10)
         TabPage1.Controls.Add(btnUpdateDB)
         TabPage1.Controls.Add(Guna2Button8)
         TabPage1.Controls.Add(Guna2Separator4)
@@ -171,12 +177,33 @@ Partial Class Form1
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(1092, 745)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home"
+        TabPage1.Text = "Home"' 
+        ' lblOBS
         ' 
+        lblOBS.AutoSize = True
+        lblOBS.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        lblOBS.ForeColor = Color.White
+        lblOBS.Location = New Point(610, 674)
+        lblOBS.Name = "lblOBS"
+        lblOBS.Size = New Size(54, 32)
+        lblOBS.TabIndex = 10
+        lblOBS.Text = "128"' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.ForeColor = Color.White
+        Label10.Location = New Point(428, 674)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(166, 32)
+        Label10.TabIndex = 9
+        Label10.Text = "Current OBS:"' 
         ' btnUpdateDB
         ' 
         btnUpdateDB.AutoRoundedCorners = True
+        btnUpdateDB.BorderColor = Color.White
         btnUpdateDB.BorderRadius = 21
+        btnUpdateDB.BorderThickness = 2
         btnUpdateDB.CustomizableEdges = CustomizableEdges1
         btnUpdateDB.DisabledState.BorderColor = Color.DarkGray
         btnUpdateDB.DisabledState.CustomBorderColor = Color.DarkGray
@@ -185,17 +212,18 @@ Partial Class Form1
         btnUpdateDB.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         btnUpdateDB.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         btnUpdateDB.ForeColor = Color.White
-        btnUpdateDB.Location = New Point(206, 652)
+        btnUpdateDB.Location = New Point(556, 603)
         btnUpdateDB.Name = "btnUpdateDB"
         btnUpdateDB.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnUpdateDB.Size = New Size(140, 45)
         btnUpdateDB.TabIndex = 8
-        btnUpdateDB.Text = "UPDATE ROSTER"
-        ' 
+        btnUpdateDB.Text = "UPDATE ROSTER"' 
         ' Guna2Button8
         ' 
         Guna2Button8.AutoRoundedCorners = True
+        Guna2Button8.BorderColor = Color.White
         Guna2Button8.BorderRadius = 21
+        Guna2Button8.BorderThickness = 2
         Guna2Button8.CustomizableEdges = CustomizableEdges3
         Guna2Button8.DisabledState.BorderColor = Color.DarkGray
         Guna2Button8.DisabledState.CustomBorderColor = Color.DarkGray
@@ -204,13 +232,12 @@ Partial Class Form1
         Guna2Button8.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         Guna2Button8.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2Button8.ForeColor = Color.White
-        Guna2Button8.Location = New Point(47, 652)
+        Guna2Button8.Location = New Point(397, 603)
         Guna2Button8.Name = "Guna2Button8"
         Guna2Button8.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button8.Size = New Size(140, 45)
         Guna2Button8.TabIndex = 7
-        Guna2Button8.Text = "LOGS"
-        ' 
+        Guna2Button8.Text = "LOGS"' 
         ' Guna2Separator4
         ' 
         Guna2Separator4.FillThickness = 4
@@ -279,8 +306,7 @@ Partial Class Form1
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(1092, 745)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS"
-        ' 
+        TabPage2.Text = "FFB DOCS"' 
         ' TabPage3
         ' 
         TabPage3.BackColor = Color.FromArgb(CByte(142), CByte(199), CByte(210))
@@ -300,8 +326,7 @@ Partial Class Form1
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(1092, 745)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster"
-        ' 
+        TabPage3.Text = "Student Roster"' 
         ' GroupBox2
         ' 
         GroupBox2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -318,8 +343,7 @@ Partial Class Form1
         GroupBox2.Size = New Size(538, 324)
         GroupBox2.TabIndex = 21
         GroupBox2.TabStop = False
-        GroupBox2.Text = "ROSTER ACTIONS"
-        ' 
+        GroupBox2.Text = "ROSTER ACTIONS"' 
         ' btnReload
         ' 
         btnReload.AutoRoundedCorners = True
@@ -337,8 +361,7 @@ Partial Class Form1
         btnReload.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnReload.Size = New Size(395, 45)
         btnReload.TabIndex = 25
-        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇"
-        ' 
+        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇"' 
         ' Guna2Button6
         ' 
         Guna2Button6.AutoRoundedCorners = True
@@ -357,8 +380,7 @@ Partial Class Form1
         Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2Button6.Size = New Size(180, 45)
         Guna2Button6.TabIndex = 24
-        Guna2Button6.Text = "BLANK"
-        ' 
+        Guna2Button6.Text = "BLANK"' 
         ' btnPrint
         ' 
         btnPrint.AutoRoundedCorners = True
@@ -376,8 +398,7 @@ Partial Class Form1
         btnPrint.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnPrint.Size = New Size(180, 45)
         btnPrint.TabIndex = 23
-        btnPrint.Text = "PRINT"
-        ' 
+        btnPrint.Text = "PRINT"' 
         ' btnReset
         ' 
         btnReset.AutoRoundedCorners = True
@@ -395,8 +416,7 @@ Partial Class Form1
         btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnReset.Size = New Size(180, 45)
         btnReset.TabIndex = 22
-        btnReset.Text = "RESET"
-        ' 
+        btnReset.Text = "RESET"' 
         ' btnDelete
         ' 
         btnDelete.AutoRoundedCorners = True
@@ -414,8 +434,7 @@ Partial Class Form1
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btnDelete.Size = New Size(180, 45)
         btnDelete.TabIndex = 21
-        btnDelete.Text = "DELETE"
-        ' 
+        btnDelete.Text = "DELETE"' 
         ' btnUpdate
         ' 
         btnUpdate.AutoRoundedCorners = True
@@ -433,8 +452,7 @@ Partial Class Form1
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         btnUpdate.Size = New Size(180, 45)
         btnUpdate.TabIndex = 20
-        btnUpdate.Text = "UPDATE"
-        ' 
+        btnUpdate.Text = "UPDATE"' 
         ' btnAdd
         ' 
         btnAdd.AutoRoundedCorners = True
@@ -452,11 +470,12 @@ Partial Class Form1
         btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnAdd.Size = New Size(180, 45)
         btnAdd.TabIndex = 19
-        btnAdd.Text = "ADD"
-        ' 
+        btnAdd.Text = "ADD"' 
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        GroupBox1.Controls.Add(Label11)
+        GroupBox1.Controls.Add(lblCount)
         GroupBox1.Controls.Add(txtSearch)
         GroupBox1.Controls.Add(cmbSearch)
         GroupBox1.Location = New Point(550, 3)
@@ -464,8 +483,26 @@ Partial Class Form1
         GroupBox1.Size = New Size(538, 125)
         GroupBox1.TabIndex = 20
         GroupBox1.TabStop = False
-        GroupBox1.Text = "SEARCH"
+        GroupBox1.Text = "SEARCH"' 
+        ' Label11
         ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point)
+        Label11.Location = New Point(432, 25)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(39, 13)
+        Label11.TabIndex = 24
+        Label11.Text = "Count"' 
+        ' lblCount
+        ' 
+        lblCount.AutoSize = True
+        lblCount.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        lblCount.ForeColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
+        lblCount.Location = New Point(426, 36)
+        lblCount.Name = "lblCount"
+        lblCount.Size = New Size(54, 32)
+        lblCount.TabIndex = 23
+        lblCount.Text = "128"' 
         ' txtSearch
         ' 
         txtSearch.AutoRoundedCorners = True
@@ -504,6 +541,7 @@ Partial Class Form1
         cmbSearch.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         cmbSearch.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbSearch.ItemHeight = 30
+        cmbSearch.Items.AddRange(New Object() {"--Please Select--", "Adults", "Minors"})
         cmbSearch.Location = New Point(6, 28)
         cmbSearch.Name = "cmbSearch"
         cmbSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges24
@@ -519,8 +557,7 @@ Partial Class Form1
         Label4.Name = "Label4"
         Label4.Size = New Size(53, 21)
         Label4.TabIndex = 15
-        Label4.Text = "EMail"
-        ' 
+        Label4.Text = "EMail"' 
         ' dtpDOE
         ' 
         dtpDOE.AutoRoundedCorners = True
@@ -532,13 +569,13 @@ Partial Class Form1
         dtpDOE.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOE.Format = DateTimePickerFormat.Short
         dtpDOE.Location = New Point(110, 216)
-        dtpDOE.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpDOE.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpDOE.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpDOE.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpDOE.Name = "dtpDOE"
         dtpDOE.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         dtpDOE.Size = New Size(239, 28)
         dtpDOE.TabIndex = 6
-        dtpDOE.Value = New Date(2023, 9, 16, 18, 5, 55, 566)
+        dtpDOE.Value = New DateTime(2023, 9, 16, 18, 5, 55, 566)
         ' 
         ' dtpDOB
         ' 
@@ -551,13 +588,13 @@ Partial Class Form1
         dtpDOB.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOB.Format = DateTimePickerFormat.Short
         dtpDOB.Location = New Point(110, 180)
-        dtpDOB.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpDOB.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpDOB.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpDOB.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpDOB.Name = "dtpDOB"
         dtpDOB.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         dtpDOB.Size = New Size(239, 28)
         dtpDOB.TabIndex = 5
-        dtpDOB.Value = New Date(2023, 9, 16, 18, 7, 40, 435)
+        dtpDOB.Value = New DateTime(2023, 9, 16, 18, 7, 40, 435)
         ' 
         ' txtEMail
         ' 
@@ -737,8 +774,7 @@ Partial Class Form1
         GroupBox3.Size = New Size(539, 455)
         GroupBox3.TabIndex = 26
         GroupBox3.TabStop = False
-        GroupBox3.Text = "Student Information"
-        ' 
+        GroupBox3.Text = "Student Information"' 
         ' cmbTrade
         ' 
         cmbTrade.AutoRoundedCorners = True
@@ -808,8 +844,7 @@ Partial Class Form1
         Label9.Name = "Label9"
         Label9.Size = New Size(81, 21)
         Label9.TabIndex = 18
-        Label9.Text = "Incentive"
-        ' 
+        Label9.Text = "Incentive"' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -819,8 +854,7 @@ Partial Class Form1
         Label6.Name = "Label6"
         Label6.Size = New Size(44, 21)
         Label6.TabIndex = 13
-        Label6.Text = "DOB"
-        ' 
+        Label6.Text = "DOB"' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -830,8 +864,7 @@ Partial Class Form1
         Label5.Name = "Label5"
         Label5.Size = New Size(43, 21)
         Label5.TabIndex = 14
-        Label5.Text = "DOE"
-        ' 
+        Label5.Text = "DOE"' 
         ' Label7
         ' 
         Label7.AutoSize = True
@@ -841,8 +874,7 @@ Partial Class Form1
         Label7.Name = "Label7"
         Label7.Size = New Size(52, 21)
         Label7.TabIndex = 16
-        Label7.Text = "Trade"
-        ' 
+        Label7.Text = "Trade"' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -852,8 +884,7 @@ Partial Class Form1
         Label8.Name = "Label8"
         Label8.Size = New Size(41, 21)
         Label8.TabIndex = 17
-        Label8.Text = "Size"
-        ' 
+        Label8.Text = "Size"' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -863,8 +894,7 @@ Partial Class Form1
         Label3.Name = "Label3"
         Label3.Size = New Size(90, 21)
         Label3.TabIndex = 12
-        Label3.Text = "Last Name"
-        ' 
+        Label3.Text = "Last Name"' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -874,8 +904,7 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(91, 21)
         Label1.TabIndex = 10
-        Label1.Text = "Student ID"
-        ' 
+        Label1.Text = "Student ID"' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -885,8 +914,7 @@ Partial Class Form1
         Label2.Name = "Label2"
         Label2.Size = New Size(92, 21)
         Label2.TabIndex = 11
-        Label2.Text = "First Name"
-        ' 
+        Label2.Text = "First Name"' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
@@ -903,11 +931,13 @@ Partial Class Form1
         Text = "  "
         tc1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
+        TabPage1.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TabPage3.ResumeLayout(False)
         TabPage3.PerformLayout()
         GroupBox2.ResumeLayout(False)
         GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         CType(dgvRoster, ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
@@ -958,4 +988,8 @@ Partial Class Form1
     Friend WithEvents cmbSearch As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2Button8 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnUpdateDB As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblOBS As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents lblCount As Label
+    Friend WithEvents Label11 As Label
 End Class
