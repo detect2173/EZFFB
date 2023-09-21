@@ -7,7 +7,19 @@ Imports System.IO
 
 
 Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub New()
+
+        ' This call is required by the designer.
+        AddHandler MyBase.Load, AddressOf Form1_Load
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs)
+        AddHandler btnUpdateDB.Click, AddressOf btnUpdateDB_Click
+        AddHandler Guna2Button8.Click, AddressOf Guna2Button8_Click
         CopyLogToDocuments()
         SetupLogic.SetupUI()
         ' Populate and set up DataGrid
@@ -43,11 +55,11 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnReload_Click(sender As Object, e As EventArgs) Handles btnReload.Click
+    Private Sub btnReload_Click(sender As Object, e As EventArgs)
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
     End Sub
 
-    Private Sub dgvRoster_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRoster.CellClick
+    Private Sub dgvRoster_CellClick(sender As Object, e As DataGridViewCellEventArgs)
         ' Check if there are no selected rows or if the clicked cell is a header or an empty row
         If dgvRoster.SelectedRows.Count = 0 OrElse e.RowIndex < 0 OrElse e.RowIndex >= dgvRoster.Rows.Count - 1 Then
             Return
@@ -76,6 +88,8 @@ Public Class Form1
         dtpDOB.Value = DateTime.Now
         dtpDOE.Value = DateTime.Now
         txtEMail.Text = String.Empty
+        cmbSearch.SelectedIndex = -1
+        txtSearch.Text = String.Empty
 
         cmbTrade.SelectedIndex = -1
         cmbSize.SelectedIndex = -1
@@ -84,11 +98,11 @@ Public Class Form1
         txtID.ReadOnly = False
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Private Sub btnReset_Click(sender As Object, e As EventArgs)
         ResetControls()
     End Sub
 
-    Private Sub cmbSearch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSearch.SelectedIndexChanged
+    Private Sub cmbSearch_SelectedIndexChanged(sender As Object, e As EventArgs)
         ' Replace with your function to load the data into dgvRoster
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
 
@@ -119,10 +133,40 @@ Public Class Form1
 
             dgvRoster.DataSource = filteredDataTable
             ' Replace with your function to update the row count label, if applicable
-            lblCount.Text = dgvRoster.Rows.Count
+            txtCount.Text = dgvRoster.Rows.Count
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub txtSearch_KeyUp(sender As Object, e As KeyEventArgs)
+        If e.KeyCode = Keys.Enter Then
+            ' Replace with your function to load the data into dgvRoster
+            DBConnection.PopulateAndRefreshRoster(dgvRoster)
+
+            Try
+                Dim rosterDataTable As DataTable = CType(dgvRoster.DataSource, DataTable)
+                Dim searchText As String = txtSearch.Text.ToLower()
+
+                Dim filteredRows = rosterDataTable.AsEnumerable().Where(Function(row)
+                                                                            Dim id = row("StudentID").ToString().ToLower()
+                                                                            Dim fName = row("FirstName").ToString().ToLower()
+                                                                            Dim lName = row("Lastname").ToString().ToLower()
+                                                                            ' ... add more columns as needed
+                                                                            Return id.Contains(searchText) OrElse fName.Contains(searchText) OrElse lName.Contains(searchText)
+                                                                        End Function)
+
+                Dim filteredDataTable As DataTable = filteredRows.CopyToDataTable()
+
+                dgvRoster.DataSource = filteredDataTable
+                ' Replace with your function to update the row count label, if applicable
+                txtCount.Text = dgvRoster.Rows.Count
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+
+
 End Class
