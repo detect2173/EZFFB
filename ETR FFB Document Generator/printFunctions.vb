@@ -1,9 +1,10 @@
-﻿Imports System.Text
+﻿Imports System.IO
+Imports System.Text
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text.html.simpleparser
 Imports MySql.Data.MySqlClient
-Imports iText.Kernel.Pdf
-Imports iText.Html2pdf
-Imports iText.Layout
-Imports iText.Layout.Element
+
 
 
 Module printFunctions
@@ -59,10 +60,16 @@ Module printFunctions
         Dim htmlString As String = GenerateHTML()
         System.IO.Directory.CreateDirectory("c:\roster")
 
-        Using writer As New PdfWriter(pdfDest)
-            HtmlConverter.ConvertToPdf(htmlString, writer)
-        End Using
-    End Function
+        Dim document As New Document()
+        PdfWriter.GetInstance(document, New FileStream(pdfDest, FileMode.Create))
+        document.Open()
 
+        Dim styles As New StyleSheet()
+        Dim hw As New HTMLWorker(document)
+        hw.SetStyleSheet(styles)
+        hw.Parse(New StringReader(htmlString))
+
+        document.Close()
+    End Function
 
 End Module

@@ -36,10 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.5" />
-    <PackageReference Include="itext7" Version="8.0.1" />
-    <PackageReference Include="itext7.pdfhtml" Version="5.0.1" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="MySql.Data" Version="8.1.0" />
     <PackageReference Include="MySqlConnector" Version="2.2.7" />
