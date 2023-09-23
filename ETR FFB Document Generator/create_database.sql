@@ -13,3 +13,49 @@ CREATE TABLE roster (
   Size VARCHAR(10),
   Incentive VARCHAR(20)
 );
+
+CREATE TABLE Level1 (
+    Infraction VARCHAR(255),
+    Code VARCHAR(50)
+);
+
+CREATE TABLE Level2 (
+    Infraction VARCHAR(255),
+    Code VARCHAR(50)
+);
+INSERT INTO Level1 (infraction, code) VALUES
+('Possession of a weapon on center or under center supervision', '5.1a'),
+('Assault', '5.1a'),
+('Threat of assault', '5.1a'),
+('Threat to safety', '5.1a'),
+('Sexual assault', '5.1a'),
+('Drugs: Possession or distribution of drugs on center or under center supervision', '5.2b'),
+('Drugs: Use of drugs as evidenced by a positive drug test', '5.2a'),
+('Alcohol: Possession, consumption, or distribution while on center or under center supervision', '5.3c'),
+('Abuse of Alcohol', '5.3c'),
+('Arrest for a felony or violent misdemeanor on or off center', '5.1a'),
+('Illegal Activity', '5.1a'),
+('Robbery or Extortion', '5.1a'),
+('Arson', '5.1a'),
+('Cruelty to animals', '5.1a'),
+('Inciting a disturbance or creating disorder', '5.1a');
+
+INSERT INTO Level2 (infraction, code) VALUES
+('Possession of a potentially dangerous item', '5.1b'),
+('Theft/stealing', '5.1b'),
+('Intoxication on center or under center supervision', '5.3b'),
+('Possession of stolen goods', '5.1b'),
+('Bullying or harassment', '5.1b'),
+('Sexual harassment', '5.1b'),
+('False accusation', '5.1b'),
+('Unfair money lending', '5.1b'),
+('Hazing or initiation', '5.1b'),
+('Gang representation or activity', '5.1b'),
+('Vandalism', '5.1b'),
+('Plagiarism', '5.1b'),
+('Cheating', '5.1b'),
+('Arrest for a non-violent misdemeanor on or off center', '5.3b'),
+('Bringing disrepute to the program', '5.1b'),
+('Pattern of minor infractions', '5.3a'),
+('Unauthorized exit', '5.3d');
+

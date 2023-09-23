@@ -211,13 +211,16 @@ Public Class Form1
         newStudent.Incentive = cmbIncentive.SelectedItem.ToString()
 
         Dim isSuccess As Boolean = Add_Student(newStudent)
+        DBConnection.PopulateAndRefreshRoster(dgvRoster)
+        ResetControls()
 
         If isSuccess Then
             MessageBox.Show("Student record added successfully." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
         Else
             MessageBox.Show("Error adding student record.")
         End If
-        DBConnection.PopulateAndRefreshRoster(dgvRoster)
+
+
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
@@ -233,12 +236,14 @@ Public Class Form1
         updatedStudent.Incentive = cmbIncentive.SelectedItem.ToString()
 
         Dim isSuccess As Boolean = Update_Student(updatedStudent)
+        ResetControls()
 
         If isSuccess Then
             MessageBox.Show("Student record updated successfully.")
         Else
             MessageBox.Show("Error updating student record.")
         End If
+
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs)
@@ -248,11 +253,27 @@ Public Class Form1
         If isSuccess Then
             ' Refresh your DataGridView or UI here
             DBConnection.PopulateAndRefreshRoster(dgvRoster)
+            ResetControls()
             MessageBox.Show("Student record successfully deleted." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
 
         Else
             MessageBox.Show("Failed to delete student record.")
         End If
+
     End Sub
 
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        ' Call your method to generate the HTML string
+        Dim htmlString As String = GenerateHTML()
+        '' Save HTML to a temporary file
+        'Dim tempPath As String = System.IO.Path.GetTempPath() & Guid.NewGuid().ToString() & ".html"
+
+        'System.IO.File.WriteAllText(tempPath, htmlString)
+
+        '' Open the HTML in the default browser
+        'Process.Start("C:\Program Files\Google\Chrome\Application\chrome.exe", tempPath)
+        GeneratePDF()
+
+
+    End Sub
 End Class
