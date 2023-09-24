@@ -1,75 +1,40 @@
-﻿Imports System.IO
-Imports System.Text
-Imports iTextSharp.text
-Imports iTextSharp.text.pdf
-Imports iTextSharp.text.html.simpleparser
-Imports MySql.Data.MySqlClient
-
-
+﻿Imports Microsoft.Reporting.WebForms
+Imports Microsoft.Reporting.WinForms
+Imports System.IO
 
 Module printFunctions
 
-    Function GenerateHTML() As String
-        Dim html As New StringBuilder()
-        Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
-        Dim query As String = "SELECT * FROM roster"
-        Dim counter As Integer = 1 ' Counter for numbering students
 
-        Using conn As New MySqlConnection(connectionString)
-            Dim cmd As New MySqlCommand(query, conn)
-            conn.Open()
+    Public Sub GenerateRDLCPDF()
 
-            Using reader As MySqlDataReader = cmd.ExecuteReader()
-                html.Append("<html><head><style>")
-                html.Append("body { font-family: Arial, sans-serif; margin: 20px; }")
-                html.Append("h2 { text-align: center; }")
-                html.Append("table { width: 100%; border-collapse: collapse; margin: 20px 0; }")
-                html.Append("th, td { border: 1px solid #ddd; text-align: left; padding: 8px; }")
-                html.Append("tr:nth-child(even) { background-color: #f2f2f2; }")
-                html.Append("@media print {")
-                html.Append("  body { width: 8.5in; margin: 0.5in 0.5in; }")
-                html.Append("  table { width: 100%; }")
-                html.Append("  th, td { width: auto; overflow: hidden; white-space: nowrap; }")
-                html.Append("}")
-                html.Append("</style></head><body>")
-                html.Append("</style></head><body>")
-                html.Append("<h2>Student Roster</h2>")
-                html.Append("<table>")
-                html.Append("<tr><th>#</th><th>StudentID</th><th>Full Name</th></tr>") ' Added '#' column
+        ' Set up the ReportViewer
+        Dim reportViewer As New ReportViewer()
+        reportViewer.ProcessingMode = ProcessingMode.Local
+        reportViewer.LocalReport.ReportPath = "path_to_your_report_file.rdlc"
 
-                While reader.Read()
-                    html.Append("<tr>")
-                    html.AppendFormat("<td>{0}</td>", counter) ' Numbering column
-                    html.AppendFormat("<td>{0}</td>", reader("StudentID"))
-                    html.AppendFormat("<td>{0} {1}</td>", reader("Firstname"), reader("Lastname"))
-                    html.Append("</tr>")
-                    counter += 1 ' Increment counter
-                End While
+        ' Prepare the data source
+        Dim studentRoster As New DataTable()
+        ' ...fill the table with data from MySQL
 
-                html.Append("</table>")
-                html.Append("</body></html>")
-            End Using
-        End Using
+        ' Bind the data source to the report
+        Dim rds As New ReportDataSource("StudentRosterDataSet", studentRoster)
+        reportViewer.LocalReport.DataSources.Clear()
+        reportViewer.LocalReport.DataSources.Add(rds)
+        reportViewer.RefreshReport()
 
-        Return html.ToString()
-    End Function
+        ' Code to export the report as a PDF
+        Dim warnings As Warning()
+        Dim streamids As String()
+        Dim mimeType As String = ""
+        Dim encoding As String = ""
+        Dim extension As String = "pdf"
+        Dim bytes As Byte() = reportViewer.LocalReport.Render("PDF", Nothing, mimeType, encoding, extension, streamids, warnings)
+        ' Write bytes to a file
+        Dim fs As New FileStream("ExportedReport.pdf", FileMode.Create)
+        fs.Write(bytes, 0, bytes.Length)
+        fs.Close()
 
+    End Sub
 
-    Function GeneratePDF()
-        Dim pdfDest As String = "c:/roster/Students.pdf"
-        Dim htmlString As String = GenerateHTML()
-        System.IO.Directory.CreateDirectory("c:\roster")
-
-        Dim document As New Document()
-        PdfWriter.GetInstance(document, New FileStream(pdfDest, FileMode.Create))
-        document.Open()
-
-        Dim styles As New StyleSheet()
-        Dim hw As New HTMLWorker(document)
-        hw.SetStyleSheet(styles)
-        hw.Parse(New StringReader(htmlString))
-
-        document.Close()
-    End Function
 
 End Module
