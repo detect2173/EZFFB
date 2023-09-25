@@ -28,11 +28,16 @@ Public Class Form1
         AddHandler btnFill.Click, AddressOf btnFill_Click
         AddHandler cbLevel.CheckedChanged, AddressOf cbLevel_CheckedChanged
         AddHandler cmbInfraction.SelectedIndexChanged, AddressOf cmbInfraction_SelectedIndexChanged
+        AddHandler dtpFFBDate.ValueChanged, AddressOf dtpFFBDate_ValueChanged
+        AddHandler cmbStudentName.SelectedIndexChanged, AddressOf cmbStudentName_SelectedIndexChanged
+        AddHandler btnResetForm.Click, AddressOf btnResetForm_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
     Private level2Infractions As Dictionary(Of String, String)
     Private toolTip1 As New ToolTip()
+    Private studentInfo As Dictionary(Of String, (Integer, DateTime, DateTime)) = GetStudentInfo()
+
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs)
@@ -49,6 +54,21 @@ Public Class Form1
         For Each kvp As KeyValuePair(Of String, String) In level1Infractions
             cmbInfraction.Items.Add(kvp.Key)
         Next
+        btnCreateDocs.BorderRadius = 27
+        btnResetForm.BorderRadius = 15
+
+        'Load student names into cmbStdentName
+        cmbStudentName.Items.Clear()
+        Dim sortedNames As List(Of String) = studentInfo.Keys.ToList()
+        sortedNames.Sort()
+        For Each name As String In sortedNames
+            cmbStudentName.Items.Add(name)
+        Next
+        If cmbStudentName.Items.Count > 0 Then
+            cmbStudentName.SelectedIndex = -1  ' Select the first item
+        End If
+
+        dtpFFBDate.Value = AddNBusinessDays(Date.Today, 3)
     End Sub
 
     Private Sub Guna2Button8_Click(sender As Object, e As EventArgs)
@@ -326,11 +346,15 @@ Public Class Form1
             cbLevel.Text = "Level II"
             cbLevel.ForeColor = Color.FromArgb(192, 255, 192)
             selectedInfractions = level2Infractions
+            dtpFFBDate.Value = AddNBusinessDays(Date.Today, 5)
+            txtDetails.ResetText()
 
         Else
             cbLevel.Text = "Level I"
             cbLevel.ForeColor = Color.White
             selectedInfractions = level1Infractions
+            dtpFFBDate.Value = AddNBusinessDays(Date.Today, 3)
+            txtDetails.ResetText()
 
         End If
 
@@ -346,17 +370,53 @@ Public Class Form1
     End Sub
 
     Private Sub cmbInfraction_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Dim selectedInfractions As Dictionary(Of String, String)
+        If cmbInfraction.SelectedIndex = -1 Then
+            Exit Sub
+        End If
 
+        Dim selectedInfractions As Dictionary(Of String, String)
         If cbLevel.Checked Then
             selectedInfractions = level2Infractions
         Else
             selectedInfractions = level1Infractions
         End If
 
-        Dim selectedInfraction As String = cmbInfraction.SelectedItem.ToString()
+        Dim selectedInfraction As Integer = cmbInfraction.SelectedIndex()
+        txtDetails.Text = GetInfractionDetails(selectedInfraction)
+
+        ' Populate txtPRHCode
         If selectedInfractions.ContainsKey(selectedInfraction) Then
             txtPRHCode.Text = selectedInfractions(selectedInfraction)
+        Else
+            txtPRHCode.Text = ""  ' Clear or set to a default value
         End If
+    End Sub
+
+
+
+    Private Sub dtpFFBDate_ValueChanged(sender As Object, e As EventArgs)
+        lblAppealDate.Text = dtpFFBDate.Value.AddDays(30).ToShortDateString()
+    End Sub
+
+    Private Sub cmbStudentName_SelectedIndexChanged(sender As Object, e As EventArgs)
+        If cmbStudentName.SelectedIndex = -1 Then
+            Exit Sub
+        End If
+
+        Dim selectedName As String = cmbStudentName.SelectedItem.ToString()
+        If studentInfo.ContainsKey(selectedName) Then
+            Dim info = studentInfo(selectedName)
+            txtStudentID.Text = info.Item1.ToString()
+            dtpDOB2.Value = info.Item2
+            dtpDOE2.Value = info.Item3
+        End If
+    End Sub
+
+    Private Sub btnResetForm_Click(sender As Object, e As EventArgs)
+        ResetFormFFB()
+    End Sub
+
+    Private Sub cmbInfraction_SelectedIndexChanged_1(sender As Object, e As EventArgs)
+
     End Sub
 End Class

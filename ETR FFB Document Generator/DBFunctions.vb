@@ -128,4 +128,89 @@ Module DBFunctions
 
         Return infractions
     End Function
+
+    Public Function AddNBusinessDays(ByVal startDate As DateTime, ByVal numDays As Integer) As DateTime
+
+        If numDays = 0 Then Return New DateTime(startDate.Ticks)
+
+        If numDays < 0 Then Throw New ArgumentException()
+
+        'Dim i As Integer
+        Dim totalDays As Integer
+        Dim businessDays As Integer
+        totalDays = 0
+        businessDays = 0
+
+        Dim currDate As DateTime
+        While businessDays < numDays
+            totalDays += 1
+
+            currDate = startDate.AddDays(totalDays)
+
+            If Not (currDate.DayOfWeek = DayOfWeek.Saturday Or currDate.DayOfWeek = DayOfWeek.Sunday) Then
+                businessDays += 1
+            End If
+
+        End While
+
+        Return currDate
+
+
+    End Function
+
+    Public Function GetStudentInfo() As Dictionary(Of String, (Integer, DateTime, DateTime))
+        Dim students As New Dictionary(Of String, (Integer, DateTime, DateTime))
+        Dim connectionString As String = "Server=localhost;Database=roster;User ID=root;Password=;"
+        Using conn As New MySqlConnection(connectionString)
+            Dim query As String = "SELECT CONCAT(Firstname, ' ', Lastname) AS FullName, StudentID, DOB, DOE FROM roster.roster"
+            Using cmd As New MySqlCommand(query, conn)
+                conn.Open()
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        students.Add(reader("FullName").ToString(), (Integer.Parse(reader("StudentID").ToString()), DateTime.Parse(reader("DOB").ToString()), DateTime.Parse(reader("DOE").ToString())))
+                    End While
+                End Using
+            End Using
+        End Using
+        Return students
+    End Function
+
+    Public Sub ResetFormFFB()
+        ' Reset ComboBoxes to first item
+        Form1.cmbStudentName.SelectedIndex = -1
+        Form1.cmbInfraction.SelectedIndex = -1
+        ' ... add other ComboBox controls here
+
+        ' Clear TextBoxes
+        Form1.txtStudentID.Clear()
+        Form1.txtPRHCode.Clear()
+        Form1.txtDetails.Clear()
+
+
+        ' ... add other TextBox controls here
+
+        ' Reset DateTimePickers to current date or any default date
+        Form1.dtpDOB2.Value = DateTime.Now
+        Form1.dtpDOE2.Value = DateTime.Now
+        Form1.dtpFFBDate.Value = DateTime.Now
+        Form1.dtpNotification.Value = DateTime.Now
+        Form1.dtpDOI.Value = DateTime.Now
+        ' ... add other DateTimePicker controls here
+
+        Form1.cbLevel.Checked = False
+        Form1.lblAppealDate.Text = DateTime.Today.AddDays(30).ToShortDateString()
+    End Sub
+
+
+    Public Function GetInfractionDetails(selectedInfraction As Integer) As String
+        Select Case selectedInfraction
+            Case 6
+                Return "Student tested positive on their second drug test for the presence of drugs. "
+            Case 15
+                Return "Student received more than 4 minor infractions within a 60 day period elevating the infraction to a Level II infraction with a Fact Finding Board for: Pattern of minor infractons."
+            Case Else
+                Return "" ' Clear the textbox or set to a default value
+        End Select
+    End Function
+
 End Module
