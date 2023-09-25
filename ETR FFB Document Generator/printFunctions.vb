@@ -48,17 +48,22 @@ Module printFunctions
     Sub GeneratePDF()
         Try
             Dim currentDate As String = DateTime.Now.ToString("MMMddyy_HHmmss")
-            Dim pdfDest As String = $"c:/roster/Students_{currentDate}.pdf"
+            Dim pdfDest As String = Path.Combine(Application.StartupPath, $"roster\Students_{currentDate}.pdf")
 
             Dim htmlString As String = GenerateHTML()
-            System.IO.Directory.CreateDirectory("c:\roster")
+            System.IO.Directory.CreateDirectory(Path.Combine(Application.StartupPath, "roster"))
+
 
             Dim document As New Document()
             PdfWriter.GetInstance(document, New FileStream(pdfDest, FileMode.Create))
             document.Open()
 
+#Disable Warning BC40008 ' Type or member is obsolete
             Dim styles As New StyleSheet()
+#Enable Warning BC40008 ' Type or member is obsolete
+#Disable Warning BC40008 ' Type or member is obsolete
             Dim hw As New HTMLWorker(document)
+#Enable Warning BC40008 ' Type or member is obsolete
             hw.SetStyleSheet(styles)
             hw.Parse(New StringReader(htmlString))
 

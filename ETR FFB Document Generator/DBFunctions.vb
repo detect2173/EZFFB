@@ -86,4 +86,46 @@ Module DBFunctions
         Return isSuccess
     End Function
 
+
+    Public Function GetLevel1Infractions() As Dictionary(Of String, String)
+        Dim infractions As New Dictionary(Of String, String)
+        Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
+
+        Using conn As New MySqlConnection(connectionString)
+            Dim query As String = "SELECT Infraction, Code FROM Level1"
+
+            Using cmd As New MySqlCommand(query, conn)
+                conn.Open()
+
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        infractions.Add(reader.GetString("Infraction"), reader.GetString("Code"))
+                    End While
+                End Using
+            End Using
+        End Using
+
+        Return infractions
+    End Function
+
+    Public Function GetLevel2Infractions() As Dictionary(Of String, String)
+        Dim infractions As New Dictionary(Of String, String)
+        Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
+
+        Using conn As New MySqlConnection(connectionString)
+            Dim query As String = "SELECT Infraction, Code FROM Level2"
+
+            Using cmd As New MySqlCommand(query, conn)
+                conn.Open()
+
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        infractions.Add(reader.GetString("Infraction"), reader.GetString("Code"))
+                    End While
+                End Using
+            End Using
+        End Using
+
+        Return infractions
+    End Function
 End Module

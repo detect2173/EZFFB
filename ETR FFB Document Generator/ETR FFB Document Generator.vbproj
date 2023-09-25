@@ -11,7 +11,15 @@
     <PackageIcon>ETR_Logo_2023.png</PackageIcon>
     <RepositoryUrl>https://github.com/detect2173/ETR-FFB-Document-Generator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+	  <NoWarn>BC40008</NoWarn>
+	  <NoWarn>NU1701</NoWarn>
+	  <NoWarn>BC42016</NoWarn>
+	  
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'" />
 
   <ItemGroup>
     <Compile Remove="PythonUtility.vb" />
