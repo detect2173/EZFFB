@@ -185,6 +185,7 @@ Module DBFunctions
         Form1.txtStudentID.Clear()
         Form1.txtPRHCode.Clear()
         Form1.txtDetails.Clear()
+        Form1.txtLocation.Clear()
 
 
         ' ... add other TextBox controls here

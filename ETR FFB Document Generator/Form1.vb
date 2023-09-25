@@ -32,6 +32,7 @@ Public Class Form1
         AddHandler cmbStudentName.SelectedIndexChanged, AddressOf cmbStudentName_SelectedIndexChanged
         AddHandler btnResetForm.Click, AddressOf btnResetForm_Click
         AddHandler btnCreateDocs.Click, AddressOf btnCreateDocs_Click
+        AddHandler btnOpenDirectory.Click, AddressOf btnOpenDirectory_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
@@ -57,6 +58,7 @@ Public Class Form1
         Next
         btnCreateDocs.BorderRadius = 27
         btnResetForm.BorderRadius = 15
+        btnOpenDirectory.BorderRadius = 15
 
         'Load student names into cmbStdentName
         cmbStudentName.Items.Clear()
@@ -423,5 +425,11 @@ Public Class Form1
         FillNoticeLevel2()
         ResetFormFFB()
     End Sub
+
+    Private Sub btnOpenDirectory_Click(sender As Object, e As EventArgs)
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\")
+        System.Diagnostics.Process.Start("explorer.exe", pdfDest)
+    End Sub
+
 
 End Class

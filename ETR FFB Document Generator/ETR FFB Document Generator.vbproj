@@ -33,6 +33,7 @@
     <None Remove="db_sync.py" />
     <None Remove="PDF\Notice_L1.pdf" />
     <None Remove="PDF\Notice_L2.pdf" />
+    <None Remove="PDF\Saved\001COPY.pdf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +43,9 @@
     </Content>
     <Content Include="PDF\Notice_L2.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDF\Saved\001COPY.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
