@@ -188,7 +188,7 @@ Partial Class Form1
         tc1.Controls.Add(TabPage2)
         tc1.Controls.Add(TabPage3)
         tc1.Dock = DockStyle.Fill
-        tc1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        tc1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         tc1.ItemSize = New Size(180, 40)
         tc1.Location = New Point(0, 0)
         tc1.Name = "tc1"
@@ -196,17 +196,17 @@ Partial Class Form1
         tc1.Size = New Size(1280, 753)
         tc1.TabButtonHoverState.BorderColor = Color.Empty
         tc1.TabButtonHoverState.FillColor = Color.FromArgb(CByte(40), CByte(52), CByte(70))
-        tc1.TabButtonHoverState.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
+        tc1.TabButtonHoverState.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point)
         tc1.TabButtonHoverState.ForeColor = Color.White
         tc1.TabButtonHoverState.InnerColor = Color.FromArgb(CByte(40), CByte(52), CByte(70))
         tc1.TabButtonIdleState.BorderColor = Color.Empty
         tc1.TabButtonIdleState.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
-        tc1.TabButtonIdleState.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
+        tc1.TabButtonIdleState.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point)
         tc1.TabButtonIdleState.ForeColor = Color.Gray
         tc1.TabButtonIdleState.InnerColor = Color.FromArgb(CByte(33), CByte(42), CByte(57))
         tc1.TabButtonSelectedState.BorderColor = Color.Empty
         tc1.TabButtonSelectedState.FillColor = Color.Black
-        tc1.TabButtonSelectedState.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
+        tc1.TabButtonSelectedState.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point)
         tc1.TabButtonSelectedState.ForeColor = Color.OldLace
         tc1.TabButtonSelectedState.InnerColor = Color.Silver
         tc1.TabButtonSize = New Size(180, 40)
@@ -233,7 +233,7 @@ Partial Class Form1
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(1092, 745)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home" ' 
+        TabPage1.Text = "Home"' 
         ' Guna2PictureBox2
         ' 
         Guna2PictureBox2.BackColor = Color.Black
@@ -251,23 +251,23 @@ Partial Class Form1
         ' lblOBS
         ' 
         lblOBS.AutoSize = True
-        lblOBS.Font = New Font("Segoe UI Black", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        lblOBS.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
         lblOBS.ForeColor = Color.White
         lblOBS.Location = New Point(610, 674)
         lblOBS.Name = "lblOBS"
         lblOBS.Size = New Size(54, 32)
         lblOBS.TabIndex = 10
-        lblOBS.Text = "128" ' 
+        lblOBS.Text = "128"' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI Black", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(428, 674)
         Label10.Name = "Label10"
         Label10.Size = New Size(166, 32)
         Label10.TabIndex = 9
-        Label10.Text = "Current OBS:" ' 
+        Label10.Text = "Current OBS:"' 
         ' btnUpdateDB
         ' 
         btnUpdateDB.AutoRoundedCorners = True
@@ -280,14 +280,14 @@ Partial Class Form1
         btnUpdateDB.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnUpdateDB.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnUpdateDB.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
-        btnUpdateDB.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
+        btnUpdateDB.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         btnUpdateDB.ForeColor = Color.White
         btnUpdateDB.Location = New Point(556, 603)
         btnUpdateDB.Name = "btnUpdateDB"
         btnUpdateDB.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnUpdateDB.Size = New Size(140, 45)
         btnUpdateDB.TabIndex = 8
-        btnUpdateDB.Text = "UPDATE ROSTER" ' 
+        btnUpdateDB.Text = "UPDATE ROSTER"' 
         ' Guna2Button8
         ' 
         Guna2Button8.AutoRoundedCorners = True
@@ -300,14 +300,14 @@ Partial Class Form1
         Guna2Button8.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button8.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button8.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
-        Guna2Button8.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2Button8.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2Button8.ForeColor = Color.White
         Guna2Button8.Location = New Point(397, 603)
         Guna2Button8.Name = "Guna2Button8"
         Guna2Button8.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Button8.Size = New Size(140, 45)
         Guna2Button8.TabIndex = 7
-        Guna2Button8.Text = "LOGS" ' 
+        Guna2Button8.Text = "LOGS"' 
         ' Guna2Separator4
         ' 
         Guna2Separator4.FillThickness = 4
@@ -378,7 +378,7 @@ Partial Class Form1
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(1092, 745)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS" ' 
+        TabPage2.Text = "FFB DOCS"' 
         ' Guna2GroupBox2
         ' 
         Guna2GroupBox2.BackColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
@@ -403,15 +403,15 @@ Partial Class Form1
         Guna2GroupBox2.Controls.Add(Guna2HtmlLabel1)
         Guna2GroupBox2.Controls.Add(txtStudentID)
         Guna2GroupBox2.Controls.Add(cmbStudentName)
-        Guna2GroupBox2.CustomBorderColor = Color.Silver
+        Guna2GroupBox2.CustomBorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Guna2GroupBox2.CustomizableEdges = CustomizableEdges19
         Guna2GroupBox2.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
-        Guna2GroupBox2.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2GroupBox2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2GroupBox2.ForeColor = Color.Black
-        Guna2GroupBox2.Location = New Point(53, 152)
+        Guna2GroupBox2.Location = New Point(53, 139)
         Guna2GroupBox2.Name = "Guna2GroupBox2"
         Guna2GroupBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        Guna2GroupBox2.Size = New Size(1000, 574)
+        Guna2GroupBox2.Size = New Size(1000, 587)
         Guna2GroupBox2.TabIndex = 3
         Guna2GroupBox2.Text = "Incident & FFB Details"
         Guna2GroupBox2.TextAlign = HorizontalAlignment.Center
@@ -419,13 +419,13 @@ Partial Class Form1
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel6.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel6.ForeColor = Color.White
         Guna2HtmlLabel6.Location = New Point(140, 347)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Guna2HtmlLabel6.Size = New Size(120, 23)
         Guna2HtmlLabel6.TabIndex = 19
-        Guna2HtmlLabel6.Text = "Incident Details:" ' 
+        Guna2HtmlLabel6.Text = "Incident Details:"' 
         ' btnCreateDocs
         ' 
         btnCreateDocs.CustomizableEdges = CustomizableEdges9
@@ -434,14 +434,14 @@ Partial Class Form1
         btnCreateDocs.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnCreateDocs.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnCreateDocs.FillColor = Color.White
-        btnCreateDocs.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCreateDocs.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnCreateDocs.ForeColor = Color.Black
         btnCreateDocs.Location = New Point(730, 347)
         btnCreateDocs.Name = "btnCreateDocs"
         btnCreateDocs.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnCreateDocs.Size = New Size(143, 109)
         btnCreateDocs.TabIndex = 18
-        btnCreateDocs.Text = "Generate Documents" ' 
+        btnCreateDocs.Text = "Generate Documents"' 
         ' btnResetForm
         ' 
         btnResetForm.CustomizableEdges = CustomizableEdges11
@@ -450,14 +450,14 @@ Partial Class Form1
         btnResetForm.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnResetForm.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnResetForm.FillColor = Color.White
-        btnResetForm.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnResetForm.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnResetForm.ForeColor = Color.Black
         btnResetForm.Location = New Point(730, 462)
         btnResetForm.Name = "btnResetForm"
         btnResetForm.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnResetForm.Size = New Size(143, 45)
         btnResetForm.TabIndex = 17
-        btnResetForm.Text = "Reset Form" ' 
+        btnResetForm.Text = "Reset Form"' 
         ' txtDetails
         ' 
         txtDetails.CustomizableEdges = CustomizableEdges13
@@ -467,7 +467,7 @@ Partial Class Form1
         txtDetails.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtDetails.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtDetails.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtDetails.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtDetails.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtDetails.ForeColor = Color.Black
         txtDetails.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtDetails.Location = New Point(272, 347)
@@ -484,13 +484,13 @@ Partial Class Form1
         ' Guna2HtmlLabel9
         ' 
         Guna2HtmlLabel9.BackColor = Color.Transparent
-        Guna2HtmlLabel9.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel9.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel9.ForeColor = Color.White
         Guna2HtmlLabel9.Location = New Point(135, 314)
         Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
         Guna2HtmlLabel9.Size = New Size(125, 23)
         Guna2HtmlLabel9.TabIndex = 15
-        Guna2HtmlLabel9.Text = "Date of Incident:" ' 
+        Guna2HtmlLabel9.Text = "Date of Incident:"' 
         ' dtpDOI
         ' 
         dtpDOI.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -503,13 +503,13 @@ Partial Class Form1
         ' Guna2HtmlLabel7
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel7.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel7.ForeColor = Color.White
         Guna2HtmlLabel7.Location = New Point(158, 283)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(102, 23)
         Guna2HtmlLabel7.TabIndex = 13
-        Guna2HtmlLabel7.Text = "Date of Entry:" ' 
+        Guna2HtmlLabel7.Text = "Date of Entry:"' 
         ' dtpDOE2
         ' 
         dtpDOE2.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -523,13 +523,13 @@ Partial Class Form1
         ' Guna2HtmlLabel8
         ' 
         Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel8.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel8.ForeColor = Color.White
         Guna2HtmlLabel8.Location = New Point(160, 251)
         Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
         Guna2HtmlLabel8.Size = New Size(100, 23)
         Guna2HtmlLabel8.TabIndex = 11
-        Guna2HtmlLabel8.Text = "Date of Birth:" ' 
+        Guna2HtmlLabel8.Text = "Date of Birth:"' 
         ' dtpDOB2
         ' 
         dtpDOB2.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -543,33 +543,33 @@ Partial Class Form1
         ' lblAppealDate
         ' 
         lblAppealDate.BackColor = Color.Transparent
-        lblAppealDate.Font = New Font("Segoe UI Semibold", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        lblAppealDate.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point)
         lblAppealDate.ForeColor = Color.White
         lblAppealDate.Location = New Point(730, 145)
         lblAppealDate.Name = "lblAppealDate"
         lblAppealDate.Size = New Size(127, 34)
         lblAppealDate.TabIndex = 9
-        lblAppealDate.Text = "00/00/0000" ' 
+        lblAppealDate.Text = "00/00/0000"' 
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel5.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel5.ForeColor = Color.White
         Guna2HtmlLabel5.Location = New Point(722, 107)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(143, 34)
         Guna2HtmlLabel5.TabIndex = 8
-        Guna2HtmlLabel5.Text = "Appeal Date" ' 
+        Guna2HtmlLabel5.Text = "Appeal Date"' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel4.ForeColor = Color.White
         Guna2HtmlLabel4.Location = New Point(189, 219)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(71, 23)
         Guna2HtmlLabel4.TabIndex = 7
-        Guna2HtmlLabel4.Text = "FFB Date:" ' 
+        Guna2HtmlLabel4.Text = "FFB Date:"' 
         ' dtpFFBDate
         ' 
         dtpFFBDate.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -582,13 +582,13 @@ Partial Class Form1
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel3.ForeColor = Color.White
         Guna2HtmlLabel3.Location = New Point(128, 187)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(132, 23)
         Guna2HtmlLabel3.TabIndex = 5
-        Guna2HtmlLabel3.Text = "Notification Date:" ' 
+        Guna2HtmlLabel3.Text = "Notification Date:"' 
         ' dtpNotification
         ' 
         dtpNotification.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -601,23 +601,23 @@ Partial Class Form1
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel2.ForeColor = Color.White
         Guna2HtmlLabel2.Location = New Point(175, 152)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(85, 23)
         Guna2HtmlLabel2.TabIndex = 3
-        Guna2HtmlLabel2.Text = "Student ID:" ' 
+        Guna2HtmlLabel2.Text = "Student ID:"' 
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.White
         Guna2HtmlLabel1.Location = New Point(195, 113)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(65, 23)
         Guna2HtmlLabel1.TabIndex = 2
-        Guna2HtmlLabel1.Text = "Student:" ' 
+        Guna2HtmlLabel1.Text = "Student:"' 
         ' txtStudentID
         ' 
         txtStudentID.CustomizableEdges = CustomizableEdges15
@@ -627,7 +627,7 @@ Partial Class Form1
         txtStudentID.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtStudentID.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtStudentID.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtStudentID.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtStudentID.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtStudentID.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtStudentID.Location = New Point(272, 145)
         txtStudentID.Margin = New Padding(4, 4, 4, 4)
@@ -647,7 +647,7 @@ Partial Class Form1
         cmbStudentName.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStudentName.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbStudentName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbStudentName.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        cmbStudentName.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         cmbStudentName.ForeColor = Color.Black
         cmbStudentName.ItemHeight = 30
         cmbStudentName.Location = New Point(272, 106)
@@ -667,7 +667,7 @@ Partial Class Form1
         Guna2GroupBox1.CustomBorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Guna2GroupBox1.CustomizableEdges = CustomizableEdges25
         Guna2GroupBox1.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
-        Guna2GroupBox1.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2GroupBox1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2GroupBox1.ForeColor = Color.Black
         Guna2GroupBox1.Location = New Point(53, 8)
         Guna2GroupBox1.Name = "Guna2GroupBox1"
@@ -713,7 +713,7 @@ Partial Class Form1
         cmbInfraction.DropDownStyle = ComboBoxStyle.DropDownList
         cmbInfraction.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbInfraction.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbInfraction.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        cmbInfraction.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         cmbInfraction.ForeColor = Color.Black
         cmbInfraction.ItemHeight = 30
         cmbInfraction.Location = New Point(178, 68)
@@ -761,7 +761,7 @@ Partial Class Form1
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(1092, 745)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster" ' 
+        TabPage3.Text = "Student Roster"' 
         ' GroupBox2
         ' 
         GroupBox2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -778,7 +778,7 @@ Partial Class Form1
         GroupBox2.Size = New Size(538, 324)
         GroupBox2.TabIndex = 21
         GroupBox2.TabStop = False
-        GroupBox2.Text = "ROSTER ACTIONS" ' 
+        GroupBox2.Text = "ROSTER ACTIONS"' 
         ' btnReload
         ' 
         btnReload.AutoRoundedCorners = True
@@ -796,7 +796,7 @@ Partial Class Form1
         btnReload.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         btnReload.Size = New Size(395, 45)
         btnReload.TabIndex = 25
-        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇" ' 
+        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇"' 
         ' Guna2Button6
         ' 
         Guna2Button6.AutoRoundedCorners = True
@@ -815,7 +815,7 @@ Partial Class Form1
         Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         Guna2Button6.Size = New Size(180, 45)
         Guna2Button6.TabIndex = 24
-        Guna2Button6.Text = "BLANK" ' 
+        Guna2Button6.Text = "(Not In Use)"' 
         ' btnPrint
         ' 
         btnPrint.AutoRoundedCorners = True
@@ -833,7 +833,7 @@ Partial Class Form1
         btnPrint.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         btnPrint.Size = New Size(180, 45)
         btnPrint.TabIndex = 23
-        btnPrint.Text = "PRINT" ' 
+        btnPrint.Text = "PRINT"' 
         ' btnReset
         ' 
         btnReset.AutoRoundedCorners = True
@@ -851,7 +851,7 @@ Partial Class Form1
         btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         btnReset.Size = New Size(180, 45)
         btnReset.TabIndex = 22
-        btnReset.Text = "RESET" ' 
+        btnReset.Text = "RESET"' 
         ' btnDelete
         ' 
         btnDelete.AutoRoundedCorners = True
@@ -869,7 +869,7 @@ Partial Class Form1
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         btnDelete.Size = New Size(180, 45)
         btnDelete.TabIndex = 21
-        btnDelete.Text = "DELETE" ' 
+        btnDelete.Text = "DELETE"' 
         ' btnUpdate
         ' 
         btnUpdate.AutoRoundedCorners = True
@@ -887,7 +887,7 @@ Partial Class Form1
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         btnUpdate.Size = New Size(180, 45)
         btnUpdate.TabIndex = 20
-        btnUpdate.Text = "UPDATE" ' 
+        btnUpdate.Text = "UPDATE"' 
         ' btnAdd
         ' 
         btnAdd.AutoRoundedCorners = True
@@ -905,7 +905,7 @@ Partial Class Form1
         btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         btnAdd.Size = New Size(180, 45)
         btnAdd.TabIndex = 19
-        btnAdd.Text = "ADD" ' 
+        btnAdd.Text = "ADD"' 
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -918,7 +918,7 @@ Partial Class Form1
         GroupBox1.Size = New Size(538, 125)
         GroupBox1.TabIndex = 20
         GroupBox1.TabStop = False
-        GroupBox1.Text = "SEARCH" ' 
+        GroupBox1.Text = "SEARCH"' 
         ' txtCount
         ' 
         txtCount.BackColor = Color.Transparent
@@ -932,7 +932,7 @@ Partial Class Form1
         txtCount.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCount.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         txtCount.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCount.Font = New Font("Segoe UI Black", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCount.Font = New Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point)
         txtCount.ForeColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtCount.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtCount.Location = New Point(399, 41)
@@ -954,7 +954,7 @@ Partial Class Form1
         Label11.Name = "Label11"
         Label11.Size = New Size(39, 13)
         Label11.TabIndex = 24
-        Label11.Text = "Count" ' 
+        Label11.Text = "Count"' 
         ' txtSearch
         ' 
         txtSearch.AutoRoundedCorners = True
@@ -967,7 +967,7 @@ Partial Class Form1
         txtSearch.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSearch.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtSearch.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtSearch.ForeColor = Color.Black
         txtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSearch.Location = New Point(7, 71)
@@ -991,7 +991,7 @@ Partial Class Form1
         cmbSearch.DropDownStyle = ComboBoxStyle.DropDownList
         cmbSearch.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbSearch.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        cmbSearch.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         cmbSearch.ForeColor = Color.Black
         cmbSearch.ItemHeight = 30
         cmbSearch.Items.AddRange(New Object() {"--Please Select--", "Adults", "Minors"})
@@ -1010,7 +1010,7 @@ Partial Class Form1
         Label4.Name = "Label4"
         Label4.Size = New Size(53, 21)
         Label4.TabIndex = 15
-        Label4.Text = "EMail" ' 
+        Label4.Text = "EMail"' 
         ' dtpDOE
         ' 
         dtpDOE.AutoRoundedCorners = True
@@ -1019,7 +1019,7 @@ Partial Class Form1
         dtpDOE.Checked = True
         dtpDOE.CustomizableEdges = CustomizableEdges47
         dtpDOE.FillColor = Color.LightGray
-        dtpDOE.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        dtpDOE.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOE.Format = DateTimePickerFormat.Short
         dtpDOE.Location = New Point(110, 216)
         dtpDOE.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
@@ -1038,7 +1038,7 @@ Partial Class Form1
         dtpDOB.Checked = True
         dtpDOB.CustomizableEdges = CustomizableEdges49
         dtpDOB.FillColor = Color.LightGray
-        dtpDOB.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        dtpDOB.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOB.Format = DateTimePickerFormat.Short
         dtpDOB.Location = New Point(110, 180)
         dtpDOB.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
@@ -1062,7 +1062,7 @@ Partial Class Form1
         txtEMail.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtEMail.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtEMail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtEMail.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtEMail.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtEMail.ForeColor = Color.Black
         txtEMail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtEMail.Location = New Point(110, 252)
@@ -1088,7 +1088,7 @@ Partial Class Form1
         txtFName.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtFName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtFName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtFName.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtFName.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtFName.ForeColor = Color.Black
         txtFName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtFName.Location = New Point(110, 86)
@@ -1112,7 +1112,7 @@ Partial Class Form1
         dgvRoster.BackgroundColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(102), CByte(6), CByte(8))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -1122,7 +1122,7 @@ Partial Class Form1
         dgvRoster.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(33), CByte(37), CByte(41))
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         DataGridViewCellStyle3.ForeColor = Color.White
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(114), CByte(117), CByte(119))
         DataGridViewCellStyle3.SelectionForeColor = Color.White
@@ -1146,14 +1146,14 @@ Partial Class Form1
         dgvRoster.ThemeStyle.GridColor = Color.FromArgb(CByte(50), CByte(56), CByte(62))
         dgvRoster.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(102), CByte(6), CByte(8))
         dgvRoster.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvRoster.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        dgvRoster.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         dgvRoster.ThemeStyle.HeaderStyle.ForeColor = Color.White
         dgvRoster.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         dgvRoster.ThemeStyle.HeaderStyle.Height = 25
         dgvRoster.ThemeStyle.ReadOnly = True
         dgvRoster.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(CByte(33), CByte(37), CByte(41))
         dgvRoster.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvRoster.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        dgvRoster.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         dgvRoster.ThemeStyle.RowsStyle.ForeColor = Color.White
         dgvRoster.ThemeStyle.RowsStyle.Height = 25
         dgvRoster.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(114), CByte(117), CByte(119))
@@ -1182,7 +1182,7 @@ Partial Class Form1
         GroupBox3.Size = New Size(539, 455)
         GroupBox3.TabIndex = 26
         GroupBox3.TabStop = False
-        GroupBox3.Text = "Student Information" ' 
+        GroupBox3.Text = "Student Information"' 
         ' btnFill
         ' 
         btnFill.AutoRoundedCorners = True
@@ -1200,7 +1200,7 @@ Partial Class Form1
         btnFill.ShadowDecoration.CustomizableEdges = CustomizableEdges56
         btnFill.Size = New Size(116, 45)
         btnFill.TabIndex = 26
-        btnFill.Text = "🡇 FILL" ' 
+        btnFill.Text = "🡇 FILL"' 
         ' cmbTrade
         ' 
         cmbTrade.AutoRoundedCorners = True
@@ -1212,7 +1212,7 @@ Partial Class Form1
         cmbTrade.DropDownStyle = ComboBoxStyle.DropDownList
         cmbTrade.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbTrade.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbTrade.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        cmbTrade.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         cmbTrade.ForeColor = Color.Black
         cmbTrade.ItemHeight = 30
         cmbTrade.Location = New Point(105, 299)
@@ -1232,7 +1232,7 @@ Partial Class Form1
         cmbSize.DropDownStyle = ComboBoxStyle.DropDownList
         cmbSize.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbSize.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbSize.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        cmbSize.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         cmbSize.ForeColor = Color.Black
         cmbSize.ItemHeight = 30
         cmbSize.Location = New Point(105, 343)
@@ -1252,7 +1252,7 @@ Partial Class Form1
         cmbIncentive.DropDownStyle = ComboBoxStyle.DropDownList
         cmbIncentive.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbIncentive.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbIncentive.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        cmbIncentive.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         cmbIncentive.ForeColor = Color.Black
         cmbIncentive.ItemHeight = 30
         cmbIncentive.Location = New Point(105, 387)
@@ -1270,7 +1270,7 @@ Partial Class Form1
         Label9.Name = "Label9"
         Label9.Size = New Size(81, 21)
         Label9.TabIndex = 18
-        Label9.Text = "Incentive" ' 
+        Label9.Text = "Incentive"' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -1280,7 +1280,7 @@ Partial Class Form1
         Label6.Name = "Label6"
         Label6.Size = New Size(44, 21)
         Label6.TabIndex = 13
-        Label6.Text = "DOB" ' 
+        Label6.Text = "DOB"' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -1290,7 +1290,7 @@ Partial Class Form1
         Label5.Name = "Label5"
         Label5.Size = New Size(43, 21)
         Label5.TabIndex = 14
-        Label5.Text = "DOE" ' 
+        Label5.Text = "DOE"' 
         ' txtLName
         ' 
         txtLName.AutoRoundedCorners = True
@@ -1304,7 +1304,7 @@ Partial Class Form1
         txtLName.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtLName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtLName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtLName.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtLName.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtLName.ForeColor = Color.Black
         txtLName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtLName.Location = New Point(105, 130)
@@ -1330,7 +1330,7 @@ Partial Class Form1
         txtID.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtID.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtID.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtID.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtID.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtID.ForeColor = Color.Black
         txtID.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtID.Location = New Point(105, 36)
@@ -1352,7 +1352,7 @@ Partial Class Form1
         Label7.Name = "Label7"
         Label7.Size = New Size(52, 21)
         Label7.TabIndex = 16
-        Label7.Text = "Trade" ' 
+        Label7.Text = "Trade"' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -1362,7 +1362,7 @@ Partial Class Form1
         Label8.Name = "Label8"
         Label8.Size = New Size(41, 21)
         Label8.TabIndex = 17
-        Label8.Text = "Size" ' 
+        Label8.Text = "Size"' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -1372,7 +1372,7 @@ Partial Class Form1
         Label3.Name = "Label3"
         Label3.Size = New Size(90, 21)
         Label3.TabIndex = 12
-        Label3.Text = "Last Name" ' 
+        Label3.Text = "Last Name"' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -1382,7 +1382,7 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(91, 21)
         Label1.TabIndex = 10
-        Label1.Text = "Student ID" ' 
+        Label1.Text = "Student ID"' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -1392,15 +1392,15 @@ Partial Class Form1
         Label2.Name = "Label2"
         Label2.Size = New Size(92, 21)
         Label2.TabIndex = 11
-        Label2.Text = "First Name" ' 
+        Label2.Text = "First Name"' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 21.0F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1280, 753)
         Controls.Add(tc1)
-        Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         FormBorderStyle = FormBorderStyle.Fixed3D
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4)
