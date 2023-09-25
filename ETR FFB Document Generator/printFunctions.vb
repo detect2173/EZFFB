@@ -1,14 +1,12 @@
-﻿Imports Microsoft.Reporting.WebForms
-Imports Microsoft.Reporting.WinForms
+﻿Imports Microsoft.Reporting.WinForms
 Imports System.IO
+Imports System.Data
 
 Module printFunctions
 
-
     Public Sub GenerateRDLCPDF()
-
         ' Set up the ReportViewer
-        Dim reportViewer As New ReportViewer()
+        Dim reportViewer As New Microsoft.Reporting.WinForms.ReportViewer()
         reportViewer.ProcessingMode = ProcessingMode.Local
         reportViewer.LocalReport.ReportPath = "path_to_your_report_file.rdlc"
 
@@ -33,8 +31,6 @@ Module printFunctions
         Dim fs As New FileStream("ExportedReport.pdf", FileMode.Create)
         fs.Write(bytes, 0, bytes.Length)
         fs.Close()
-
     End Sub
-
 
 End Module

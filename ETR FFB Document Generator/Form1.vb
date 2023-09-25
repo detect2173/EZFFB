@@ -4,6 +4,8 @@ Imports System.Configuration
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.IO
 Imports Guna.UI2.WinForms
+Imports System.Windows.Forms
+Imports System.Drawing
 
 Public Class Form1
     Public Sub New()
@@ -263,16 +265,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        ' Call your method to generate the HTML string
-        Dim htmlString As String = GenerateHTML()
-        '' Save HTML to a temporary file
-        'Dim tempPath As String = System.IO.Path.GetTempPath() & Guid.NewGuid().ToString() & ".html"
 
-        'System.IO.File.WriteAllText(tempPath, htmlString)
-
-        '' Open the HTML in the default browser
-        'Process.Start("C:\Program Files\Google\Chrome\Application\chrome.exe", tempPath)
-        GeneratePDF()
 
 
     End Sub

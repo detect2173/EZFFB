@@ -1,4 +1,7 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.Drawing
+Imports System.Windows.Forms
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
@@ -71,7 +74,7 @@ Partial Class Form1
         Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
         lblOBS = New Label()
@@ -123,11 +126,11 @@ Partial Class Form1
         Label2 = New Label()
         tc1.SuspendLayout()
         TabPage1.SuspendLayout()
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         TabPage3.SuspendLayout()
         GroupBox2.SuspendLayout()
         GroupBox1.SuspendLayout()
-        CType(dgvRoster, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRoster, System.ComponentModel.ISupportInitialize).BeginInit()
         GroupBox3.SuspendLayout()
         SuspendLayout()
         ' 
@@ -1006,13 +1009,13 @@ Partial Class Form1
         tc1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         TabPage3.ResumeLayout(False)
         TabPage3.PerformLayout()
         GroupBox2.ResumeLayout(False)
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
-        CType(dgvRoster, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRoster, System.ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         ResumeLayout(False)

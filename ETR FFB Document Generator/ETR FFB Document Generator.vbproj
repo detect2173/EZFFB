@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>ETR_FFB_Document_Generator</RootNamespace>
     <StartupObject>ETR_FFB_Document_Generator.Form1</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
@@ -11,11 +11,24 @@
     <PackageIcon>ETR_Logo_2023.png</PackageIcon>
     <RepositoryUrl>https://github.com/detect2173/ETR-FFB-Document-Generator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\</ReferencePath>
+    <ImportedNamespaces>Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,ETR FFB Document Generator=True</ImportedNamespaces>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+
   <ItemGroup>
+    <Compile Remove="printFunctions.vb" />
     <Compile Remove="PythonUtility.vb" />
     <Compile Remove="StartupModule.vb" />
+    <Compile Remove="Student_Roster.vb" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +36,8 @@
     <None Remove="Book1.xlsm" />
     <None Remove="csv_sync.py" />
     <None Remove="db_sync.py" />
+    <None Remove="Student_Roster.rpt" />
+    <None Remove="~%24PRH_Infractions_and_Codes.xlsm" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,15 +45,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="CrystalReports.Design" Version="13.0.4003" />
+    <PackageReference Include="CrystalReports.Engine" Version="13.0.4003" />
+    <PackageReference Include="CrystalReports.Shared" Version="13.0.4003" />
+    <PackageReference Include="CrystalReports.Windows.Forms" Version="13.0.4003" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.5" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
-    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1586.0" />
     <PackageReference Include="MySql.Data" Version="8.1.0" />
     <PackageReference Include="MySqlConnector" Version="2.2.7" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
@@ -189,6 +200,10 @@
 
   <ItemGroup>
     <Folder Include="PythonRunTime\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{c0c07587-41a7-46c8-8fbd-3f9c8ebe2ddc}" />
   </ItemGroup>
 
 </Project>
