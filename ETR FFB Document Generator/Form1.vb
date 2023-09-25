@@ -31,6 +31,7 @@ Public Class Form1
         AddHandler dtpFFBDate.ValueChanged, AddressOf dtpFFBDate_ValueChanged
         AddHandler cmbStudentName.SelectedIndexChanged, AddressOf cmbStudentName_SelectedIndexChanged
         AddHandler btnResetForm.Click, AddressOf btnResetForm_Click
+        AddHandler btnCreateDocs.Click, AddressOf btnCreateDocs_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
@@ -416,7 +417,11 @@ Public Class Form1
         ResetFormFFB()
     End Sub
 
-    Private Sub cmbInfraction_SelectedIndexChanged_1(sender As Object, e As EventArgs)
 
+    Private Sub btnCreateDocs_Click(sender As Object, e As EventArgs)
+        FillNoticeLevel1()
+        FillNoticeLevel2()
+        ResetFormFFB()
     End Sub
+
 End Class
