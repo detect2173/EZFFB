@@ -13,17 +13,12 @@ Public Class DBConnection
     ''' <returns>The MySqlConnection object.</returns>
     Public Shared Function GetConnection() As MySqlConnection
         Try
-            ' Your DB Connection and population logic here
-            ' Create the connection string
             Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
-            ' Return a new MySqlConnection object
             Return New MySqlConnection(connectionString)
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
+            Return Nothing
         End Try
-
-
-
     End Function
 
     ''' <summary>
