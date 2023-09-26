@@ -427,8 +427,8 @@ Public Class Form1
     End Sub
 
     Private Sub btnOpenDirectory_Click(sender As Object, e As EventArgs)
-        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\")
-        System.Diagnostics.Process.Start("explorer.exe", pdfDest)
+        Dim path1 As String = Path.Combine(Application.StartupPath, $"PDF\Saved\")
+        System.Diagnostics.Process.Start("explorer.exe", path1)
     End Sub
 
 
