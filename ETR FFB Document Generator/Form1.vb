@@ -75,10 +75,16 @@ Public Class Form1
 
     Private Sub Guna2Button8_Click(sender As Object, e As EventArgs)
         Dim logFilePath As String = System.IO.Path.Combine(Application.StartupPath, "roster_updater.log")
-        System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo() With {
-    .FileName = logFilePath,
-    .UseShellExecute = True
-})
+
+        If System.IO.File.Exists(logFilePath) Then
+            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo() With {.FileName = logFilePath, .UseShellExecute = True})
+        Else
+            Using fs = System.IO.File.Create(logFilePath)
+                ' Optionally write some initial text into the file
+            End Using
+            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo() With {.FileName = logFilePath, .UseShellExecute = True})
+        End If
+
     End Sub
 
     Public Sub CopyLogToDocuments()
@@ -262,6 +268,7 @@ Public Class Form1
 
         If isSuccess Then
             MessageBox.Show("Student record added successfully." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
+            LogTransaction("Added", newStudent)
         Else
             MessageBox.Show("Error adding student record.")
         End If
@@ -286,6 +293,7 @@ Public Class Form1
 
         If isSuccess Then
             MessageBox.Show("Student record updated successfully.")
+            LogTransaction("Updated", updatedStudent)
         Else
             MessageBox.Show("Error updating student record.")
         End If
@@ -294,6 +302,8 @@ Public Class Form1
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs)
         Dim studentID As Integer = CInt(txtID.Text) ' Assuming txtID is where you keep the StudentID
+        Dim studentName As String = txtFName.Text & " " & txtLName.Text ' Assuming txtFName and txtLName are where you keep the first and last names
+
         Dim isSuccess As Boolean = Delete_Student(studentID)
 
         If isSuccess Then
@@ -302,11 +312,13 @@ Public Class Form1
             ResetControls()
             MessageBox.Show("Student record successfully deleted." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
 
+            ' Log the transaction
+            LogTransaction("Deleted", New Student With {.ID = studentID, .FName = txtFName.Text, .LName = txtLName.Text})
         Else
             MessageBox.Show("Failed to delete student record.")
         End If
-
     End Sub
+
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs)
         ' Call your method to generate the HTML string
@@ -411,6 +423,15 @@ Public Class Form1
     Private Sub btnOpenDirectory_Click(sender As Object, e As EventArgs)
         Dim path1 As String = Path.Combine(Application.StartupPath, $"PDF\Saved\")
         System.Diagnostics.Process.Start("explorer.exe", path1)
+    End Sub
+
+    ' Logging method
+    Private Sub LogTransaction(action As String, student As Student)
+        Dim logFilePath As String = System.IO.Path.Combine(Application.StartupPath, "roster_updater.log")
+        Using writer As New System.IO.StreamWriter(logFilePath, True)
+            Dim logEntry As String = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss,fff} - {action} Student with ID {student.ID} and full name {student.FName.ToUpper()} {student.LName.ToUpper()}"
+            writer.WriteLine(logEntry)
+        End Using
     End Sub
 
 
