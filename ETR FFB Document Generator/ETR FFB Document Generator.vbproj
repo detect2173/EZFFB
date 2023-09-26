@@ -30,6 +30,7 @@
   <ItemGroup>
     <None Remove="app.config" />
     <None Remove="Book1.xlsm" />
+    <None Remove="create_database.sql" />
     <None Remove="csv_sync.py" />
     <None Remove="db_sync.py" />
     <None Remove="PDF\FFB_Ballot_New.pdf" />
@@ -39,6 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="create_database.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ETR_Logo_2023 (2).ico" />
     <Content Include="PDF\FFB_Ballot_New.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

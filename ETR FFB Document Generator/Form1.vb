@@ -183,7 +183,7 @@ Public Class Form1
             dgvRoster.DataSource = filteredDataTable
             ' Replace with your function to update the row count label, if applicable
 
-            txtCount.Text = dgvRoster.Rows.Count
+            txtCount.Text = CStr(dgvRoster.Rows.Count)
             ' Implicit conversion
 
         Catch ex As Exception
@@ -215,7 +215,7 @@ Public Class Form1
                 dgvRoster.DataSource = filteredDataTable
                 ' Replace with your function to update the row count label, if applicable
 
-                txtCount.Text = dgvRoster.Rows.Count
+                txtCount.Text = CStr(dgvRoster.Rows.Count)
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -248,8 +248,8 @@ Public Class Form1
         newStudent.ID = CInt(txtID.Text)
         newStudent.FName = txtFName.Text
         newStudent.LName = txtLName.Text
-        newStudent.DOB = dtpDOB.Value
-        newStudent.DOE = dtpDOE.Value
+        newStudent.DOB = CStr(dtpDOB.Value)
+        newStudent.DOE = CStr(dtpDOE.Value)
         newStudent.EMail = txtEMail.Text
         newStudent.Trade = cmbTrade.SelectedItem.ToString()
         newStudent.Size = cmbSize.SelectedItem.ToString()
@@ -273,8 +273,8 @@ Public Class Form1
         updatedStudent.ID = CInt(txtID.Text)
         updatedStudent.FName = txtFName.Text
         updatedStudent.LName = txtLName.Text
-        updatedStudent.DOB = dtpDOB.Value
-        updatedStudent.DOE = dtpDOE.Value
+        updatedStudent.DOB = CStr(dtpDOB.Value)
+        updatedStudent.DOE = CStr(dtpDOE.Value)
         updatedStudent.EMail = txtEMail.Text
         updatedStudent.Trade = cmbTrade.SelectedItem.ToString()
         updatedStudent.Size = cmbSize.SelectedItem.ToString()
@@ -364,12 +364,12 @@ Public Class Form1
             selectedInfractions = level1Infractions
         End If
 
-        Dim selectedInfraction As Integer = cmbInfraction.SelectedIndex()
-        txtDetails.Text = GetInfractionDetails(selectedInfraction)
+        Dim selectedInfractionIndex As Integer = cmbInfraction.SelectedIndex()
+        Dim selectedInfractionText As String = cmbInfraction.SelectedItem.ToString().Trim()
 
         ' Populate txtPRHCode
-        If selectedInfractions.ContainsKey(selectedInfraction) Then
-            txtPRHCode.Text = selectedInfractions(selectedInfraction)
+        If selectedInfractions.ContainsKey(selectedInfractionText) Then
+            txtPRHCode.Text = selectedInfractions(selectedInfractionText)
         Else
             txtPRHCode.Text = ""  ' Clear or set to a default value
         End If
