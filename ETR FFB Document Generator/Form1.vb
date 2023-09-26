@@ -37,7 +37,7 @@ Public Class Form1
 
     Private level1Infractions As Dictionary(Of String, String)
     Private level2Infractions As Dictionary(Of String, String)
-    Private toolTip1 As New ToolTip()
+    Private ReadOnly toolTip1 As New ToolTip()
     Private studentInfo As Dictionary(Of String, (Integer, DateTime, DateTime)) = GetStudentInfo()
 
 
@@ -401,9 +401,7 @@ Public Class Form1
 
 
     Private Sub btnCreateDocs_Click(sender As Object, e As EventArgs)
-        FillNoticeLevel1()
-        FillNoticeLevel2()
-        FillBallot()
+        RunLevel1()
         ResetFormFFB()
     End Sub
 
@@ -412,7 +410,5 @@ Public Class Form1
         System.Diagnostics.Process.Start("explorer.exe", path1)
     End Sub
 
-    Private Sub btnCreateDocs_Click_1(sender As Object, e As EventArgs) Handles btnCreateDocs.Click
 
-    End Sub
 End Class

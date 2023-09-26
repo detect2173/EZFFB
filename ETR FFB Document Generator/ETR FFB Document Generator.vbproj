@@ -34,8 +34,11 @@
     <None Remove="csv_sync.py" />
     <None Remove="db_sync.py" />
     <None Remove="PDF\FFB_Ballot_New.pdf" />
+    <None Remove="PDF\FFB_Summary1.pdf" />
+    <None Remove="PDF\FFB_Summary2.pdf" />
     <None Remove="PDF\Notice_L1.pdf" />
     <None Remove="PDF\Notice_L2.pdf" />
+    <None Remove="PDF\RightToAppeal_New.pdf" />
     <None Remove="PDF\Saved\001COPY.pdf" />
   </ItemGroup>
 
@@ -47,11 +50,20 @@
     <Content Include="PDF\FFB_Ballot_New.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="PDF\FFB_Summary1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDF\FFB_Summary2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PDF\Notice_L1.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="PDF\Notice_L2.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDF\RightToAppeal_New.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="PDF\Saved\001COPY.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
