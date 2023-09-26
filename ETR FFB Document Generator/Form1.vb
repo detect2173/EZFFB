@@ -47,9 +47,7 @@ Public Class Form1
         CopyLogToDocuments()
         SetupLogic.SetupUI()
         ' Populate and set up DataGrid
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         dgvRoster.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.DarkGray
         ' LOAD Infractions into the dropdown in the FFB UI
         cmbInfraction.Items.Clear()
@@ -103,9 +101,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnReload_Click(sender As Object, e As EventArgs)
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
     End Sub
 
     Private Sub dgvRoster_CellClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -155,9 +151,7 @@ Public Class Form1
 
     Private Sub cmbSearch_SelectedIndexChanged(sender As Object, e As EventArgs)
         ' Replace with your function to load the data into dgvRoster
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
 
         Try
             Dim rosterDataTable As DataTable = CType(dgvRoster.DataSource, DataTable)
@@ -166,17 +160,15 @@ Public Class Form1
 
             Dim filteredRows As EnumerableRowCollection(Of DataRow)
 
-#Disable Warning BC42018 ' Operands of type Object used for operator
-            If cmbSearch.SelectedItem = "Adults" Then
-#Enable Warning BC42018 ' Operands of type Object used for operator
+            If cmbSearch.SelectedItem Is "Adults" Then
                 filteredRows = rosterDataTable.AsEnumerable().Where(Function(row)
                                                                         Dim dob As DateTime
                                                                         DateTime.TryParse(row("DOB").ToString(), dob)
                                                                         Return dob <= comparisonDate
                                                                     End Function)
-#Disable Warning BC42018 ' Operands of type Object used for operator
-            ElseIf cmbSearch.SelectedItem = "Minors" Then
-#Enable Warning BC42018 ' Operands of type Object used for operator
+
+            ElseIf cmbSearch.SelectedItem Is "Minors" Then
+
                 filteredRows = rosterDataTable.AsEnumerable().Where(Function(row)
                                                                         Dim dob As DateTime
                                                                         DateTime.TryParse(row("DOB").ToString(), dob)
@@ -190,9 +182,9 @@ Public Class Form1
 
             dgvRoster.DataSource = filteredDataTable
             ' Replace with your function to update the row count label, if applicable
-#Disable Warning BC42016 ' Implicit conversion
+
             txtCount.Text = dgvRoster.Rows.Count
-#Enable Warning BC42016 ' Implicit conversion
+            ' Implicit conversion
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -202,9 +194,9 @@ Public Class Form1
     Private Sub txtSearch_KeyUp(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
             ' Replace with your function to load the data into dgvRoster
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
+
             DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
+
 
             Try
                 Dim rosterDataTable As DataTable = CType(dgvRoster.DataSource, DataTable)
@@ -222,9 +214,9 @@ Public Class Form1
 
                 dgvRoster.DataSource = filteredDataTable
                 ' Replace with your function to update the row count label, if applicable
-#Disable Warning BC42016 ' Implicit conversion
+
                 txtCount.Text = dgvRoster.Rows.Count
-#Enable Warning BC42016 ' Implicit conversion
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
@@ -256,21 +248,15 @@ Public Class Form1
         newStudent.ID = CInt(txtID.Text)
         newStudent.FName = txtFName.Text
         newStudent.LName = txtLName.Text
-#Disable Warning BC42016 ' Implicit conversion
         newStudent.DOB = dtpDOB.Value
-#Enable Warning BC42016 ' Implicit conversion
-#Disable Warning BC42016 ' Implicit conversion
         newStudent.DOE = dtpDOE.Value
-#Enable Warning BC42016 ' Implicit conversion
         newStudent.EMail = txtEMail.Text
         newStudent.Trade = cmbTrade.SelectedItem.ToString()
         newStudent.Size = cmbSize.SelectedItem.ToString()
         newStudent.Incentive = cmbIncentive.SelectedItem.ToString()
 
         Dim isSuccess As Boolean = Add_Student(newStudent)
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
         ResetControls()
 
         If isSuccess Then
@@ -287,12 +273,8 @@ Public Class Form1
         updatedStudent.ID = CInt(txtID.Text)
         updatedStudent.FName = txtFName.Text
         updatedStudent.LName = txtLName.Text
-#Disable Warning BC42016 ' Implicit conversion
         updatedStudent.DOB = dtpDOB.Value
-#Enable Warning BC42016 ' Implicit conversion
-#Disable Warning BC42016 ' Implicit conversion
         updatedStudent.DOE = dtpDOE.Value
-#Enable Warning BC42016 ' Implicit conversion
         updatedStudent.EMail = txtEMail.Text
         updatedStudent.Trade = cmbTrade.SelectedItem.ToString()
         updatedStudent.Size = cmbSize.SelectedItem.ToString()
@@ -315,9 +297,7 @@ Public Class Form1
 
         If isSuccess Then
             ' Refresh your DataGridView or UI here
-#Disable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
             DBConnection.PopulateAndRefreshRoster(dgvRoster)
-#Enable Warning BC41999 ' Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
             ResetControls()
             MessageBox.Show("Student record successfully deleted." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
 
@@ -423,6 +403,7 @@ Public Class Form1
     Private Sub btnCreateDocs_Click(sender As Object, e As EventArgs)
         FillNoticeLevel1()
         FillNoticeLevel2()
+        FillBallot()
         ResetFormFFB()
     End Sub
 
@@ -431,5 +412,7 @@ Public Class Form1
         System.Diagnostics.Process.Start("explorer.exe", path1)
     End Sub
 
+    Private Sub btnCreateDocs_Click_1(sender As Object, e As EventArgs) Handles btnCreateDocs.Click
 
+    End Sub
 End Class

@@ -47,11 +47,7 @@ Public Class DBConnection
 
         ' Bind the DataGridView to the DataTable
         dgv.DataSource = rosterData
-#Disable Warning BC42016 ' Implicit conversion
-#Disable Warning BC42016 ' Implicit conversion
-        Form1.lblOBS.Text = Form1.dgvRoster.Rows.Count
-#Enable Warning BC42016 ' Implicit conversion
-#Enable Warning BC42016 ' Implicit conversion
-        Form1.txtCount.Text = Form1.dgvRoster.Rows.Count
+        Form1.lblOBS.Text = CStr(Form1.dgvRoster.Rows.Count)
+        Form1.txtCount.Text = CStr(Form1.dgvRoster.Rows.Count)
     End Sub
 End Class

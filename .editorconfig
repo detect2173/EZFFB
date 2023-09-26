@@ -1,0 +1,4 @@
+﻿[*.vb]
+
+# BC41999: Implicit conversion in copying the value of 'ByRef' parameter back to the matching argument
+dotnet_diagnostic.BC41999.severity = silent

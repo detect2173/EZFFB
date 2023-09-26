@@ -86,7 +86,42 @@ Module FormFiller
 
     End Sub
 
+    Public Sub FillBallot()
 
+        Dim pdfTemplate As String = Application.StartupPath & "\PDF\FFB_Ballot_New.pdf"
+        Dim newFile As String = Application.StartupPath & "\PDF\Saved\" & Form1.cmbStudentName.Text & "_FFB_Ballot.pdf"
+
+        Dim pdfReader As New PdfReader(pdfTemplate)
+        Dim pdfStamper As New PdfStamper(pdfReader, New FileStream(
+            newFile, FileMode.Create))
+
+        Dim pdfFormFields As AcroFields = pdfStamper.AcroFields
+
+
+        ' Set form fields
+        ' Level 1 Notification Form
+        pdfFormFields.SetField("STUDENT_NAME", Form1.cmbStudentName.Text)
+        pdfFormFields.SetField("STUDENT_ID", Form1.txtStudentID.Text)
+        pdfFormFields.SetField("INFRACTION_2", Form1.cmbInfraction.SelectedItem.ToString.ToUpper)
+        pdfFormFields.SetField("BDATE", Form1.dtpFFBDate.Text)
+
+
+
+        ' report by reading values from completed PDF
+        Dim sTmp4 As String = "Ballot " +
+        pdfFormFields.GetField("STUDENT_NAME") + " " +
+        pdfFormFields.GetField("STUDENT_ID")
+        'MessageBox.Show(sTmp, "Finished")
+
+        ' flatten the form to remove editting options, set it to false
+        ' to leave the form open to subsequent manual edits
+        pdfStamper.FormFlattening = True
+
+        ' close the pdf
+        pdfStamper.Close()
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\" & Form1.cmbStudentName.Text & "_FFB_Ballot.pdf")
+        Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
+    End Sub
 
 
 End Module

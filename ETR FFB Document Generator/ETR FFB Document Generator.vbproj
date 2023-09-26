@@ -11,10 +11,11 @@
     <PackageIcon>ETR_Logo_2023.png</PackageIcon>
     <RepositoryUrl>https://github.com/detect2173/ETR-FFB-Document-Generator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-	  <NoWarn>BC40008</NoWarn>
-	  <NoWarn>NU1701</NoWarn>
-	  <NoWarn>BC42016</NoWarn>
-	  
+	<NoWarn>BC40008</NoWarn>
+	<NoWarn>NU1701</NoWarn>
+	<NoWarn>BC42016</NoWarn>
+	<NoWarn>BC42016</NoWarn>
+	<NoWarn>NU1701</NoWarn>	  
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
@@ -31,6 +32,7 @@
     <None Remove="Book1.xlsm" />
     <None Remove="csv_sync.py" />
     <None Remove="db_sync.py" />
+    <None Remove="PDF\FFB_Ballot_New.pdf" />
     <None Remove="PDF\Notice_L1.pdf" />
     <None Remove="PDF\Notice_L2.pdf" />
     <None Remove="PDF\Saved\001COPY.pdf" />
@@ -38,6 +40,9 @@
 
   <ItemGroup>
     <Content Include="ETR_Logo_2023 (2).ico" />
+    <Content Include="PDF\FFB_Ballot_New.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PDF\Notice_L1.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -229,6 +234,10 @@
 
   <ItemGroup>
     <Folder Include="PythonRunTime\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
 </Project>
