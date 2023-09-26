@@ -57,6 +57,7 @@ Public Class Form1
         btnCreateDocs.BorderRadius = 27
         btnResetForm.BorderRadius = 15
         btnOpenDirectory.BorderRadius = 15
+        btnStatement.BorderRadius = 15
 
         'Load student names into cmbStdentName
         cmbStudentName.Items.Clear()
