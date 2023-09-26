@@ -40,6 +40,7 @@
     <None Remove="PDF\Notice_L2.pdf" />
     <None Remove="PDF\RightToAppeal_New.pdf" />
     <None Remove="PDF\Saved\001COPY.pdf" />
+    <None Remove="PDF\TERM_LETTER.pdf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +67,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="PDF\Saved\001COPY.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDF\TERM_LETTER.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

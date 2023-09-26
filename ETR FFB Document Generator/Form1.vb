@@ -366,6 +366,7 @@ Public Class Form1
 
         Dim selectedInfractionIndex As Integer = cmbInfraction.SelectedIndex()
         Dim selectedInfractionText As String = cmbInfraction.SelectedItem.ToString().Trim()
+        txtDetails.Text = GetInfractionDetails(selectedInfractionIndex)
 
         ' Populate txtPRHCode
         If selectedInfractions.ContainsKey(selectedInfractionText) Then
@@ -373,6 +374,7 @@ Public Class Form1
         Else
             txtPRHCode.Text = ""  ' Clear or set to a default value
         End If
+
     End Sub
 
 

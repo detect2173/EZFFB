@@ -139,14 +139,14 @@ Module FormFiller
         ' Level 1 Notification Form
         pdfFormFields.SetField("STUDENT_NAME", Form1.cmbStudentName.Text)
         pdfFormFields.SetField("STUDENT_ID", Form1.txtStudentID.Text)
-        pdfFormFields.SetField("CDATE", Form1.dtpNotification.Text)
-        pdfFormFields.SetField("BDATE", Form1.dtpFFBDate.Text)
+        pdfFormFields.SetField("CDATE", Form1.dtpNotification.Text.ToString())
+        pdfFormFields.SetField("BDATE", Form1.dtpFFBDate.Text.ToString())
         pdfFormFields.SetField("INFRACTION_2", Form1.cmbInfraction.SelectedItem.ToString.ToUpper)
         pdfFormFields.SetField("CODE", Form1.txtPRHCode.Text)
-        pdfFormFields.SetField("DOI", Form1.dtpDOI.Text)
+        pdfFormFields.SetField("DOI_1", Form1.dtpDOI.Value.ToString())
         pdfFormFields.SetField("DESC1", Form1.txtDetails.Text)
-        pdfFormFields.SetField("DOB", Form1.dtpDOB.Text)
-        pdfFormFields.SetField("DOE", Form1.dtpDOE.Text)
+        pdfFormFields.SetField("DOB_1", Form1.dtpDOB2.Value.ToString("MM/dd/yyyy"))
+        pdfFormFields.SetField("DOE_1", Form1.dtpDOE2.Value.ToString("MM/dd/yyyy"))
 
 
         ' report by reading values from completed PDF
