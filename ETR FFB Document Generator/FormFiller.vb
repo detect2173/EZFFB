@@ -147,6 +147,7 @@ Module FormFiller
         pdfFormFields.SetField("DESC1", Form1.txtDetails.Text)
         pdfFormFields.SetField("DOB_1", Form1.dtpDOB2.Value.ToString("MM/dd/yyyy"))
         pdfFormFields.SetField("DOE_1", Form1.dtpDOE2.Value.ToString("MM/dd/yyyy"))
+        pdfFormFields.SetField("CENTER", My.Settings.CenterName)
 
 
         ' report by reading values from completed PDF
@@ -189,6 +190,7 @@ Module FormFiller
         pdfFormFields.SetField("DESC1", Form1.txtDetails.Text)
         pdfFormFields.SetField("DOB", Form1.dtpDOB.Text)
         pdfFormFields.SetField("DOE", Form1.dtpDOE.Text)
+        pdfFormFields.SetField("CENTER", My.Settings.CenterName)
 
 
         ' report by reading values from completed PDF
@@ -234,6 +236,7 @@ Module FormFiller
         pdfFormFields.SetField("INFRACTION_2", infraction)
         pdfFormFields.SetField("BDATE", Form1.dtpFFBDate.Text)
         pdfFormFields.SetField("CODE", Form1.txtPRHCode.Text)
+        pdfFormFields.SetField("EXT", My.Settings.PhoneNumber)
 
         ' report by reading values from completed PDF
         Dim sTmp5 As String = "Ballot " +

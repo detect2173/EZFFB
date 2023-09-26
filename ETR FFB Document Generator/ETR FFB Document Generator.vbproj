@@ -246,6 +246,9 @@
     <None Update="PythonRunTime\_zoneinfo.pyd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="roster_updater.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
