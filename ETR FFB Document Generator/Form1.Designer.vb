@@ -101,7 +101,7 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
-        Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
+        btnSettings = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         lblOBS = New Label()
         Label10 = New Label()
@@ -228,7 +228,7 @@ Partial Class Form1
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.Black
-        TabPage1.Controls.Add(Guna2CircleButton1)
+        TabPage1.Controls.Add(btnSettings)
         TabPage1.Controls.Add(Guna2PictureBox2)
         TabPage1.Controls.Add(lblOBS)
         TabPage1.Controls.Add(Label10)
@@ -248,23 +248,23 @@ Partial Class Form1
         TabPage1.TabIndex = 0
         TabPage1.Text = "Home"
         ' 
-        ' Guna2CircleButton1
+        ' btnSettings
         ' 
-        Guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray
-        Guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2CircleButton1.FillColor = Color.Transparent
-        Guna2CircleButton1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2CircleButton1.ForeColor = Color.White
-        Guna2CircleButton1.Image = My.Resources.Resources.cog
-        Guna2CircleButton1.ImageSize = New Size(48, 48)
-        Guna2CircleButton1.Location = New Point(1038, 689)
-        Guna2CircleButton1.Name = "Guna2CircleButton1"
-        Guna2CircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges1
-        Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2CircleButton1.Size = New Size(48, 48)
-        Guna2CircleButton1.TabIndex = 12
+        btnSettings.DisabledState.BorderColor = Color.DarkGray
+        btnSettings.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSettings.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSettings.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSettings.FillColor = Color.Transparent
+        btnSettings.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnSettings.ForeColor = Color.White
+        btnSettings.Image = My.Resources.Resources.cog
+        btnSettings.ImageSize = New Size(48, 48)
+        btnSettings.Location = New Point(6, 689)
+        btnSettings.Name = "btnSettings"
+        btnSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges1
+        btnSettings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        btnSettings.Size = New Size(48, 48)
+        btnSettings.TabIndex = 12
         ' 
         ' Guna2PictureBox2
         ' 
@@ -1651,5 +1651,5 @@ Partial Class Form1
     Friend WithEvents txtLocation As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnOpenDirectory As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnStatement As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents btnSettings As Guna.UI2.WinForms.Guna2CircleButton
 End Class

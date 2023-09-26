@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="app.config" />
     <None Remove="Book1.xlsm" />
     <None Remove="create_database.sql" />
     <None Remove="csv_sync.py" />

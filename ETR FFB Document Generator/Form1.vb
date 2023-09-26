@@ -33,6 +33,7 @@ Public Class Form1
         AddHandler btnResetForm.Click, AddressOf btnResetForm_Click
         AddHandler btnCreateDocs.Click, AddressOf btnCreateDocs_Click
         AddHandler btnOpenDirectory.Click, AddressOf btnOpenDirectory_Click
+        AddHandler btnSettings.Click, AddressOf btnSettings_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
@@ -43,6 +44,10 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs)
+        If String.IsNullOrEmpty(My.Settings.CenterName) OrElse String.IsNullOrEmpty(My.Settings.PhoneNumber) Then
+            Dim settingsForm As New Settings()
+            settingsForm.ShowDialog()
+        End If
         toolTip1.SetToolTip(cbLevel, "Check the Box to Populate Level 2 infractions, and uncheck the box to populate Level 1 infractions.")
         CopyLogToDocuments()
         SetupLogic.SetupUI()
@@ -264,11 +269,12 @@ Public Class Form1
 
         Dim isSuccess As Boolean = Add_Student(newStudent)
         DBConnection.PopulateAndRefreshRoster(dgvRoster)
-        ResetControls()
+
 
         If isSuccess Then
             MessageBox.Show("Student record added successfully." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
             LogTransaction("Added", newStudent)
+            ResetControls()
         Else
             MessageBox.Show("Error adding student record.")
         End If
@@ -289,11 +295,12 @@ Public Class Form1
         updatedStudent.Incentive = cmbIncentive.SelectedItem.ToString()
 
         Dim isSuccess As Boolean = Update_Student(updatedStudent)
-        ResetControls()
+
 
         If isSuccess Then
             MessageBox.Show("Student record updated successfully.")
             LogTransaction("Updated", updatedStudent)
+            ResetControls()
         Else
             MessageBox.Show("Error updating student record.")
         End If
@@ -313,7 +320,8 @@ Public Class Form1
             MessageBox.Show("Student record successfully deleted." & vbCrLf & "Your new OBS is: " & dgvRoster.Rows.Count)
 
             ' Log the transaction
-            LogTransaction("Deleted", New Student With {.ID = studentID, .FName = txtFName.Text, .LName = txtLName.Text})
+            LogTransaction("Deleted", New Student With {.ID = studentID, .FName = studentName.Split(" ")(0), .LName = studentName.Split(" ")(1)})
+
         Else
             MessageBox.Show("Failed to delete student record.")
         End If
@@ -429,10 +437,12 @@ Public Class Form1
     Private Sub LogTransaction(action As String, student As Student)
         Dim logFilePath As String = System.IO.Path.Combine(Application.StartupPath, "roster_updater.log")
         Using writer As New System.IO.StreamWriter(logFilePath, True)
-            Dim logEntry As String = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss,fff} - {action} Student with ID {student.ID} and full name {student.FName.ToUpper()} {student.LName.ToUpper()}"
+            Dim logEntry As String = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss,fff} - {action} Student {student.FName.ToUpper()} {student.LName.ToUpper()} with ID {student.ID}"
             writer.WriteLine(logEntry)
         End Using
     End Sub
 
-
+    Private Sub btnSettings_Click(sender As Object, e As EventArgs)
+        Settings.Show()
+    End Sub
 End Class
