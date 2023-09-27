@@ -214,4 +214,57 @@ Module DBFunctions
         End Select
     End Function
 
+    Public Sub PopulateContactInfoByCenter(centerName As String, lblCenter As Label, txtSHRO As Guna.UI2.WinForms.Guna2TextBox, txtSHROeMail As Guna.UI2.WinForms.Guna2TextBox, txtC2C As Guna.UI2.WinForms.Guna2TextBox, txtSHROphone As Guna.UI2.WinForms.Guna2TextBox)
+        Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
+        Using connection As New MySqlConnection(connectionString)
+            Try
+                connection.Open()
+                Dim query As String = "SELECT * FROM contacts WHERE Center = @centerName"
+                Using cmd As New MySqlCommand(query, connection)
+                    cmd.Parameters.AddWithValue("@centerName", centerName)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            lblCenter.Text = reader("Center").ToString()
+                            txtSHRO.Text = reader("Name").ToString()
+                            txtSHROeMail.Text = reader("Email").ToString()
+                            txtC2C.Text = reader("C2C").ToString()
+                            txtSHROphone.Text = reader("Phone").ToString()
+                        Else
+
+                        End If
+                    End Using
+                End Using
+            Catch ex As Exception
+                ' Handle exceptions
+            Finally
+                connection.Close()
+            End Try
+        End Using
+    End Sub
+
+    Public Sub UpdateContactInfo(centerName As String, txtSHRO As Guna.UI2.WinForms.Guna2TextBox, txtSHROeMail As Guna.UI2.WinForms.Guna2TextBox, txtC2C As Guna.UI2.WinForms.Guna2TextBox, txtSHROphone As Guna.UI2.WinForms.Guna2TextBox)
+        Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
+        Using connection As New MySqlConnection(connectionString)
+            connection.Open()
+            Dim query As String = "UPDATE contacts SET Name = @Name, Email = @Email, C2C = @C2C, Phone = @Phone WHERE Center = @Center"
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@Name", txtSHRO.Text)
+                command.Parameters.AddWithValue("@Email", txtSHROeMail.Text)
+                command.Parameters.AddWithValue("@C2C", txtC2C.Text)
+                command.Parameters.AddWithValue("@Phone", txtSHROphone.Text)
+                command.Parameters.AddWithValue("@Center", centerName)
+                Dim rowsAffected = command.ExecuteNonQuery()
+                If rowsAffected > 0 Then
+
+                    MessageBox.Show("Record Updated Successfully!")
+
+                Else
+                    MessageBox.Show("Update failed.")
+
+                End If
+            End Using
+        End Using
+    End Sub
+
+
 End Module

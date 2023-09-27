@@ -454,4 +454,8 @@ Public Class Form1
         Dim contactForm As New Contacts()
         contactForm.ShowDialog()
     End Sub
+
+    Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
