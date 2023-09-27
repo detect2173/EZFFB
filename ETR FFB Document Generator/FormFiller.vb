@@ -279,6 +279,7 @@ Module FormFiller
 
     Public Sub runSettings()
         If checkSettings() Then
+            MsgBox("You must enter your Center Name and Phone# to continue")
             Dim settingsForm As New Settings()
             settingsForm.ShowDialog()
         Else

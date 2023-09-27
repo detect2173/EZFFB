@@ -50,7 +50,7 @@ Partial Class Settings
         txtCenter.Location = New Point(107, 44)
         txtCenter.Name = "txtCenter"
         txtCenter.PasswordChar = ChrW(0)
-        txtCenter.PlaceholderText = ""
+        txtCenter.PlaceholderText = "i.e. Northlands Job Corps Center"
         txtCenter.SelectedText = ""
         txtCenter.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtCenter.Size = New Size(366, 36)
@@ -70,7 +70,7 @@ Partial Class Settings
         txtPhone.Location = New Point(107, 121)
         txtPhone.Name = "txtPhone"
         txtPhone.PasswordChar = ChrW(0)
-        txtPhone.PlaceholderText = ""
+        txtPhone.PlaceholderText = "Enter a 10 Digit Phone Number"
         txtPhone.SelectedText = ""
         txtPhone.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtPhone.Size = New Size(366, 36)
@@ -84,8 +84,7 @@ Partial Class Settings
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(76, 17)
         Guna2HtmlLabel1.TabIndex = 2
-        Guna2HtmlLabel1.Text = "Center Name:"
-        ' 
+        Guna2HtmlLabel1.Text = "Center Name:"' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
@@ -94,8 +93,7 @@ Partial Class Settings
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(81, 17)
         Guna2HtmlLabel2.TabIndex = 3
-        Guna2HtmlLabel2.Text = "SHRO Phone#:"
-        ' 
+        Guna2HtmlLabel2.Text = "SHRO Phone#:"' 
         ' btnSaveSettings
         ' 
         btnSaveSettings.AutoRoundedCorners = True
@@ -113,8 +111,7 @@ Partial Class Settings
         btnSaveSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnSaveSettings.Size = New Size(121, 36)
         btnSaveSettings.TabIndex = 4
-        btnSaveSettings.Text = "Save Settings"
-        ' 
+        btnSaveSettings.Text = "Save Settings"' 
         ' Label1
         ' 
         Label1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
