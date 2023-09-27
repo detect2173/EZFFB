@@ -45,15 +45,17 @@ Partial Class Settings
         txtCenter.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCenter.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCenter.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCenter.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCenter.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCenter.ForeColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtCenter.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCenter.Location = New Point(107, 44)
+        txtCenter.Location = New Point(92, 42)
+        txtCenter.Margin = New Padding(4, 4, 4, 4)
         txtCenter.Name = "txtCenter"
         txtCenter.PasswordChar = ChrW(0)
         txtCenter.PlaceholderText = "i.e. Northlands Job Corps Center"
         txtCenter.SelectedText = ""
         txtCenter.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        txtCenter.Size = New Size(366, 36)
+        txtCenter.Size = New Size(375, 36)
         txtCenter.TabIndex = 0
         ' 
         ' txtPhone
@@ -65,15 +67,17 @@ Partial Class Settings
         txtPhone.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPhone.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPhone.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPhone.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPhone.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtPhone.ForeColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtPhone.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPhone.Location = New Point(107, 121)
+        txtPhone.Location = New Point(92, 121)
+        txtPhone.Margin = New Padding(4, 4, 4, 4)
         txtPhone.Name = "txtPhone"
         txtPhone.PasswordChar = ChrW(0)
         txtPhone.PlaceholderText = "Enter a 10 Digit Phone Number"
         txtPhone.SelectedText = ""
         txtPhone.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        txtPhone.Size = New Size(366, 36)
+        txtPhone.Size = New Size(375, 36)
         txtPhone.TabIndex = 1
         ' 
         ' Guna2HtmlLabel1

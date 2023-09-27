@@ -1,17 +1,17 @@
 ﻿Public Class Settings
-    Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Settings_Load(sender As Object, e As EventArgs)
         txtCenter.Text = My.Settings.CenterName
         txtPhone.Text = My.Settings.PhoneNumber
     End Sub
 
-    Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
+    Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs)
         My.Settings.CenterName = txtCenter.Text
         My.Settings.PhoneNumber = txtPhone.Text
         My.Settings.Save()
         Me.Close()
     End Sub
 
-    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs)
         Dim text As String = txtPhone.Text
         text = text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "")
 
