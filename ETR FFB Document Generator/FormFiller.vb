@@ -269,4 +269,20 @@ Module FormFiller
         FillBallot()
         FillTermLetter1()
     End Sub
+
+    Public Function checkSettings() As Boolean
+        If String.IsNullOrEmpty(My.Settings.CenterName) OrElse String.IsNullOrEmpty(My.Settings.PhoneNumber) Then
+            Return True
+        Else Return False
+        End If
+    End Function
+
+    Public Sub runSettings()
+        If checkSettings() Then
+            Dim settingsForm As New Settings()
+            settingsForm.ShowDialog()
+        Else
+            Exit Sub
+        End If
+    End Sub
 End Module

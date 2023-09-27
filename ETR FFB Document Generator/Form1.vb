@@ -46,10 +46,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs)
-        If String.IsNullOrEmpty(My.Settings.CenterName) OrElse String.IsNullOrEmpty(My.Settings.PhoneNumber) Then
-            Dim settingsForm As New Settings()
-            settingsForm.ShowDialog()
-        End If
+        runSettings()
         toolTip1.SetToolTip(cbLevel, "Check the Box to Populate Level 2 infractions, and uncheck the box to populate Level 1 infractions.")
         CopyLogToDocuments()
         SetupLogic.SetupUI()
