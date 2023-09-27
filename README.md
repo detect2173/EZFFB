@@ -2,7 +2,7 @@
 ## Enhancing Data Integrity through Automation
 ---
 ## Introduction
-
+Welcome to the ETR EZ Fact Finding Board Document Generator & Student Roster Management System.  This project is written in VB.NET almost exclusively with a few modules written in Python.  The software keeps a database of active students and allows for adding, deleting and updating student records as well as generating accurate Fact Finding Board Documents in just seconds by automatically populating documents necessary for the FFB through a local datasource as well as minimal user input in the application UI.
 ### Brief Overview
 Your software helps manage student rosters efficiently and provides features such as adding, updating, and deleting student records. 
 
