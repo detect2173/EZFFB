@@ -511,13 +511,13 @@ Partial Class Contacts
         Guna2Button12.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button12.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button12.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button12.FillColor = Color.Silver
+        Guna2Button12.FillColor = Color.DimGray
         Guna2Button12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2Button12.ForeColor = Color.Black
-        Guna2Button12.Location = New Point(697, 401)
+        Guna2Button12.ForeColor = Color.Silver
+        Guna2Button12.Location = New Point(731, 400)
         Guna2Button12.Name = "Guna2Button12"
         Guna2Button12.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button12.Size = New Size(91, 28)
+        Guna2Button12.Size = New Size(57, 28)
         Guna2Button12.TabIndex = 23
         Guna2Button12.Text = "Clear"' 
         ' Contacts
