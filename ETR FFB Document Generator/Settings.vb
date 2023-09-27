@@ -1,4 +1,13 @@
 ﻿Public Class Settings
+
+    Public Sub New()
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        AddHandler MyBase.Load, AddressOf Settings_Load
+        AddHandler btnSaveSettings.Click, AddressOf btnSaveSettings_Click
+    End Sub
     Private Sub Settings_Load(sender As Object, e As EventArgs)
         txtCenter.Text = My.Settings.CenterName
         txtPhone.Text = My.Settings.PhoneNumber
@@ -21,4 +30,6 @@
             txtPhone.SelectionStart = txtPhone.Text.Length
         End If
     End Sub
+
+
 End Class

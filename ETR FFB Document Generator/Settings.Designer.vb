@@ -22,6 +22,7 @@ Partial Class Settings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -34,6 +35,7 @@ Partial Class Settings
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnSaveSettings = New Guna.UI2.WinForms.Guna2Button()
         Label1 = New Label()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         SuspendLayout()
         ' 
         ' txtCenter
@@ -110,6 +112,8 @@ Partial Class Settings
         btnSaveSettings.FillColor = Color.White
         btnSaveSettings.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         btnSaveSettings.ForeColor = Color.Black
+        btnSaveSettings.HoverState.FillColor = Color.Gray
+        btnSaveSettings.HoverState.ForeColor = Color.White
         btnSaveSettings.Location = New Point(219, 172)
         btnSaveSettings.Name = "btnSaveSettings"
         btnSaveSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges6
@@ -118,14 +122,23 @@ Partial Class Settings
         btnSaveSettings.Text = "Save Settings"' 
         ' Label1
         ' 
+        Label1.BackColor = Color.Black
         Label1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(33, 26)
+        Label1.ForeColor = Color.Snow
+        Label1.Location = New Point(29, 26)
         Label1.Name = "Label1"
         Label1.Size = New Size(18, 174)
         Label1.TabIndex = 5
         Label1.Text = "SETTINGS"
         Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.AnimateWindow = True
+        Guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
         ' Settings
         ' 
@@ -140,7 +153,7 @@ Partial Class Settings
         Controls.Add(txtPhone)
         Controls.Add(txtCenter)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4)
         MaximizeBox = False
         MinimizeBox = False
@@ -160,4 +173,5 @@ Partial Class Settings
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnSaveSettings As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
 End Class
