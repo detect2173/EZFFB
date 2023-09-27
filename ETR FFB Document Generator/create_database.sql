@@ -23,6 +23,15 @@ CREATE TABLE Level2 (
     Infraction VARCHAR(255),
     Code VARCHAR(50)
 );
+
+CREATE TABLE contacts (
+  Name VARCHAR(100),
+  Center VARCHAR(100),
+  Email VARCHAR(100),
+  Phone VARCHAR(20),
+  C2C VARCHAR(50) PRIMARY KEY
+);
+
 INSERT INTO Level1 (infraction, code) VALUES
 ('Possession of a weapon on center or under center supervision', '5.1a'),
 ('Assault', '5.1a'),
@@ -58,4 +67,16 @@ INSERT INTO Level2 (infraction, code) VALUES
 ('Bringing disrepute to the program', '5.1b'),
 ('Pattern of minor infractions', '5.3a'),
 ('Unauthorized exit', '5.3d');
+
+INSERT INTO contacts (Name, Center, Email, C2C, Phone) VALUES
+('Pierre Stinson', 'Benjamin L. Hooks', 'Stinson.pierre@jobcorps.org', '254.5832', '901.344.5832'),
+('Roosevelt Wilensky', 'Hubert H. Humphrey', 'Wilensky.roosevelt@jobcorps.org', '152.1823', '651.444.1823'),
+('Robert Eaton', 'Iroquois', 'Eaton.robert@jobcorps.org', '157.6716', '585.344.6716'),
+('Angela Taylor', 'Montgomery', 'Taylor.angela@jobcorps.org', '258.2423', '334.420.2423'),
+('John Berry', 'Northlands', 'Berry.john@jobcorps.org', '174.0189', '802.877.0189'),
+('Christina Eastwood', 'Oneonta', 'Eastwood.christina@jobcorps.org', '177.1469', '607.431.1469'),
+('James Ross', 'Wilmington', 'Ross.james@jobcorps.org', '235.2525', '302.230.2525'),
+('Steven Ochieng', 'Excelsior Springs', 'Ochieng.steven@jobcorps.org', '135.3117', '816.629.3117'),
+('Adrese Davis', 'Westover', 'Davis.adrese@jobcorps.org', '208.4049', '413.593.4049'),
+('Keith White', 'ETR Rochester', 'Keith.white@etrky.com', 'N/A', '585.202.5018');
 

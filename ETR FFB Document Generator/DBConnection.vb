@@ -50,4 +50,34 @@ Public Class DBConnection
         Form1.lblOBS.Text = CStr(Form1.dgvRoster.Rows.Count)
         Form1.txtCount.Text = CStr(Form1.dgvRoster.Rows.Count)
     End Sub
+
+
+    'Public Shared Sub PopulateDgvContacts(ByRef dgvContacts As DataGridView)
+    '    Dim connString As String = "Server=localhost;Database=roster;User ID=root;Password=;"
+    '    Dim query As String = "SELECT * FROM contacts"
+    '    Dim conn As New MySqlConnection(connString)
+    '    Dim cmd As New MySqlCommand(query, conn)
+    '    Dim adapter As New MySqlDataAdapter(cmd)
+    '    Dim dt As New DataTable()
+
+    '    Try
+    '        conn.Open()
+    '        Console.WriteLine("Connected to database.")
+    '        adapter.Fill(dt)
+
+    '        If dt.Rows.Count > 0 Then
+    '            Console.WriteLine("Data found. Populating DataGridView.")
+    '            dgvContacts.DataSource = dt
+    '        Else
+    '            Console.WriteLine("No data found.")
+    '        End If
+
+    '    Catch ex As Exception
+    '        MessageBox.Show("An error occurred: " + ex.Message)
+    '    Finally
+    '        conn.Close()
+    '    End Try
+    'End Sub
+
+
 End Class

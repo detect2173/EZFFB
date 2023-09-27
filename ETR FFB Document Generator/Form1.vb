@@ -449,4 +449,9 @@ Public Class Form1
         Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\" & "Statement.pdf")
         Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
     End Sub
+
+    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
+        Dim contactForm As New Contacts()
+        contactForm.ShowDialog()
+    End Sub
 End Class
