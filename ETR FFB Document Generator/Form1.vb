@@ -458,7 +458,7 @@ Public Class Form1
 
     Private Sub Guna2HtmlLabel11_Click(sender As Object, e As EventArgs)
         'System.Diagnostics.Process.Start(New ProcessStartInfo("https://github.com/detect2173/EZFFB/blob/mysql-FINAL/README.md") With {.UseShellExecute = True})
-        Dim readmePath As String = System.IO.Path.Combine(Application.StartupPath, "README.md")
+        Dim readmePath As String = System.IO.Path.Combine(Application.StartupPath, "\README.md")
         System.Diagnostics.Process.Start("cmd.exe", $"/c start chrome {readmePath}")
 
 

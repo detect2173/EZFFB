@@ -255,12 +255,88 @@ Module FormFiller
 
     End Sub
 
+    Public Sub FillNotPresent1()
+        Dim presence As String = ""
+        Dim pdfTemplate As String = Application.StartupPath & "\PDF\NotPresent.pdf"
+        Dim newFile As String = Application.StartupPath & "\PDF\Saved\" & Form1.cmbStudentName.Text & "_NotPresent_L1.pdf"
 
+        Dim pdfReader As New PdfReader(pdfTemplate)
+        Dim pdfStamper As New PdfStamper(pdfReader, New FileStream(
+            newFile, FileMode.Create))
+
+        Dim pdfFormFields As AcroFields = pdfStamper.AcroFields
+        If Form1.tglPresent.Checked = False Then
+            presence = "STUDENT NOT PRESENT"
+        Else
+            presence = "STUDENT PRESENT"
+        End If
+
+        ' Set form fields
+        ' Level 1 Notification Form
+        pdfFormFields.SetField("PRESENT", presence)
+        pdfFormFields.SetField("STUDENT_NAME", Form1.cmbStudentName.Text)
+        pdfFormFields.SetField("INFRACTION_2", Form1.cmbInfraction.SelectedItem.ToString.ToUpper)
+
+
+
+        ' report by reading values from completed PDF
+        Dim sTmp3 As String = "Student Not Present " +
+        pdfFormFields.GetField("STUDENT_NAME") + " " +
+        pdfFormFields.GetField("STUDENT_ID")
+        'MessageBox.Show(sTmp, "Finished")
+
+        ' flatten the form to remove editting options, set it to false
+        ' to leave the form open to subsequent manual edits
+        pdfStamper.FormFlattening = True
+
+        ' close the pdf
+        pdfStamper.Close()
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\" & Form1.cmbStudentName.Text & "_NotPresent_L1.pdf")
+        Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
+    End Sub
+
+    Public Sub FillRightToAppeal()
+
+        Dim pdfTemplate As String = Application.StartupPath & "\PDF\RightToAppeal_New.pdf"
+        Dim newFile As String = Application.StartupPath & "\PDF\Saved\" & Form1.cmbStudentName.Text & "_RightToAppeal.pdf"
+
+        Dim pdfReader As New PdfReader(pdfTemplate)
+        Dim pdfStamper As New PdfStamper(pdfReader, New FileStream(
+            newFile, FileMode.Create))
+
+        Dim pdfFormFields As AcroFields = pdfStamper.AcroFields
+
+
+        ' Set form fields
+        ' Level 1 Notification Form
+        pdfFormFields.SetField("STUDENT_NAME", Form1.cmbStudentName.Text)
+        pdfFormFields.SetField("STUDENT_ID", Form1.txtStudentID.Text)
+        pdfFormFields.SetField("BDATE", Form1.dtpFFBDate.Text)
+
+
+
+        ' report by reading values from completed PDF
+        Dim sTmp3 As String = "Student Not Present " +
+        pdfFormFields.GetField("STUDENT_NAME") + " " +
+        pdfFormFields.GetField("STUDENT_ID")
+        'MessageBox.Show(sTmp, "Finished")
+
+        ' flatten the form to remove editting options, set it to false
+        ' to leave the form open to subsequent manual edits
+        pdfStamper.FormFlattening = True
+
+        ' close the pdf
+        pdfStamper.Close()
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\" & Form1.cmbStudentName.Text & "_RightToAppeal.pdf")
+        Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
+    End Sub
     Public Sub RunLevel1()
         FillSummary1()
         FillNoticeLevel1()
         FillBallot()
         FillTermLetter1()
+        FillNotPresent1()
+        FillRightToAppeal()
     End Sub
 
     Public Sub RunLevel2()
@@ -268,6 +344,8 @@ Module FormFiller
         FillNoticeLevel2()
         FillBallot()
         FillTermLetter1()
+        FillNotPresent1()
+        FillRightToAppeal()
     End Sub
 
     Public Function checkSettings() As Boolean
