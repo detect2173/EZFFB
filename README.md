@@ -2,7 +2,7 @@
 ## Enhancing Data Integrity through Automation
 ![static badge](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 ![static badge](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![static badge](https://img.shields.io/github/license/detect2173/ETR-FFB-Document-Generator.svg)
+![static badge](https://img.shields.io/github/license/detect2173/EZFFB.svg)
 ![Static Badge](https://img.shields.io/badge/made%20with-hard%20work%20and%20dedication-orange?link=https%3A%2F%2Fgithub.com%2Fdetect2173%2FETR-FFB-Document-Generator)
 
 ---
