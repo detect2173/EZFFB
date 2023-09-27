@@ -36,6 +36,7 @@ Public Class Form1
         AddHandler btnSettings.Click, AddressOf btnSettings_Click
         AddHandler btnStatement.Click, AddressOf btnStatement_Click
         AddHandler btnPrint.Click, AddressOf btnPrint_Click
+        AddHandler Guna2HtmlLabel11.Click, AddressOf Guna2HtmlLabel11_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
@@ -455,7 +456,12 @@ Public Class Form1
         contactForm.ShowDialog()
     End Sub
 
-    Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Guna2HtmlLabel11_Click(sender As Object, e As EventArgs)
+        'System.Diagnostics.Process.Start(New ProcessStartInfo("https://github.com/detect2173/EZFFB/blob/mysql-FINAL/README.md") With {.UseShellExecute = True})
+        Dim readmePath As String = System.IO.Path.Combine(Application.StartupPath, "README.md")
+        System.Diagnostics.Process.Start("cmd.exe", $"/c start chrome {readmePath}")
+
 
     End Sub
+
 End Class

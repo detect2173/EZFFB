@@ -102,6 +102,7 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
+        Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
         btnSettings = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -230,6 +231,7 @@ Partial Class Form1
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.Black
+        TabPage1.Controls.Add(Guna2HtmlLabel11)
         TabPage1.Controls.Add(Guna2CircleButton1)
         TabPage1.Controls.Add(btnSettings)
         TabPage1.Controls.Add(Guna2PictureBox2)
@@ -249,7 +251,18 @@ Partial Class Form1
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(1092, 745)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Home"' 
+        TabPage1.Text = "Home"
+        ' 
+        ' Guna2HtmlLabel11
+        ' 
+        Guna2HtmlLabel11.BackColor = Color.Transparent
+        Guna2HtmlLabel11.ForeColor = SystemColors.ControlLightLight
+        Guna2HtmlLabel11.Location = New Point(1045, 714)
+        Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
+        Guna2HtmlLabel11.Size = New Size(28, 17)
+        Guna2HtmlLabel11.TabIndex = 14
+        Guna2HtmlLabel11.Text = "Help"
+        ' 
         ' Guna2CircleButton1
         ' 
         Guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray
@@ -309,7 +322,8 @@ Partial Class Form1
         lblOBS.Name = "lblOBS"
         lblOBS.Size = New Size(54, 32)
         lblOBS.TabIndex = 10
-        lblOBS.Text = "128"' 
+        lblOBS.Text = "128"
+        ' 
         ' Label10
         ' 
         Label10.AutoSize = True
@@ -319,7 +333,8 @@ Partial Class Form1
         Label10.Name = "Label10"
         Label10.Size = New Size(166, 32)
         Label10.TabIndex = 9
-        Label10.Text = "Current OBS:"' 
+        Label10.Text = "Current OBS:"
+        ' 
         ' btnUpdateDB
         ' 
         btnUpdateDB.AutoRoundedCorners = True
@@ -339,7 +354,8 @@ Partial Class Form1
         btnUpdateDB.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnUpdateDB.Size = New Size(140, 45)
         btnUpdateDB.TabIndex = 8
-        btnUpdateDB.Text = "UPDATE ROSTER"' 
+        btnUpdateDB.Text = "UPDATE ROSTER"
+        ' 
         ' Guna2Button8
         ' 
         Guna2Button8.AutoRoundedCorners = True
@@ -359,7 +375,8 @@ Partial Class Form1
         Guna2Button8.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2Button8.Size = New Size(140, 45)
         Guna2Button8.TabIndex = 7
-        Guna2Button8.Text = "LOGS"' 
+        Guna2Button8.Text = "LOGS"
+        ' 
         ' Guna2Separator4
         ' 
         Guna2Separator4.FillThickness = 4
@@ -430,7 +447,8 @@ Partial Class Form1
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(1092, 745)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "FFB DOCS"' 
+        TabPage2.Text = "FFB DOCS"
+        ' 
         ' Guna2GroupBox2
         ' 
         Guna2GroupBox2.BackColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
@@ -487,7 +505,8 @@ Partial Class Form1
         btnStatement.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnStatement.Size = New Size(142, 45)
         btnStatement.TabIndex = 23
-        btnStatement.Text = "Statement"' 
+        btnStatement.Text = "Statement"
+        ' 
         ' btnOpenDirectory
         ' 
         btnOpenDirectory.CustomizableEdges = CustomizableEdges13
@@ -503,7 +522,8 @@ Partial Class Form1
         btnOpenDirectory.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnOpenDirectory.Size = New Size(143, 45)
         btnOpenDirectory.TabIndex = 22
-        btnOpenDirectory.Text = "File Directory"' 
+        btnOpenDirectory.Text = "File Directory"
+        ' 
         ' Guna2HtmlLabel10
         ' 
         Guna2HtmlLabel10.BackColor = Color.Transparent
@@ -513,7 +533,8 @@ Partial Class Form1
         Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
         Guna2HtmlLabel10.Size = New Size(118, 23)
         Guna2HtmlLabel10.TabIndex = 21
-        Guna2HtmlLabel10.Text = "Board Location:"' 
+        Guna2HtmlLabel10.Text = "Board Location:"
+        ' 
         ' txtLocation
         ' 
         txtLocation.CustomizableEdges = CustomizableEdges15
@@ -546,7 +567,8 @@ Partial Class Form1
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Guna2HtmlLabel6.Size = New Size(120, 23)
         Guna2HtmlLabel6.TabIndex = 19
-        Guna2HtmlLabel6.Text = "Incident Details:"' 
+        Guna2HtmlLabel6.Text = "Incident Details:"
+        ' 
         ' btnCreateDocs
         ' 
         btnCreateDocs.BorderThickness = 2
@@ -563,7 +585,8 @@ Partial Class Form1
         btnCreateDocs.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         btnCreateDocs.Size = New Size(143, 109)
         btnCreateDocs.TabIndex = 18
-        btnCreateDocs.Text = "Generate Documents"' 
+        btnCreateDocs.Text = "Generate Documents"
+        ' 
         ' btnResetForm
         ' 
         btnResetForm.CustomizableEdges = CustomizableEdges19
@@ -579,7 +602,8 @@ Partial Class Form1
         btnResetForm.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnResetForm.Size = New Size(143, 45)
         btnResetForm.TabIndex = 17
-        btnResetForm.Text = "Reset Form"' 
+        btnResetForm.Text = "Reset Form"
+        ' 
         ' txtDetails
         ' 
         txtDetails.CustomizableEdges = CustomizableEdges21
@@ -612,7 +636,8 @@ Partial Class Form1
         Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
         Guna2HtmlLabel9.Size = New Size(125, 23)
         Guna2HtmlLabel9.TabIndex = 15
-        Guna2HtmlLabel9.Text = "Date of Incident:"' 
+        Guna2HtmlLabel9.Text = "Date of Incident:"
+        ' 
         ' dtpDOI
         ' 
         dtpDOI.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -631,7 +656,8 @@ Partial Class Form1
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(102, 23)
         Guna2HtmlLabel7.TabIndex = 13
-        Guna2HtmlLabel7.Text = "Date of Entry:"' 
+        Guna2HtmlLabel7.Text = "Date of Entry:"
+        ' 
         ' dtpDOE2
         ' 
         dtpDOE2.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -651,7 +677,8 @@ Partial Class Form1
         Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
         Guna2HtmlLabel8.Size = New Size(100, 23)
         Guna2HtmlLabel8.TabIndex = 11
-        Guna2HtmlLabel8.Text = "Date of Birth:"' 
+        Guna2HtmlLabel8.Text = "Date of Birth:"
+        ' 
         ' dtpDOB2
         ' 
         dtpDOB2.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -671,7 +698,8 @@ Partial Class Form1
         lblAppealDate.Name = "lblAppealDate"
         lblAppealDate.Size = New Size(127, 34)
         lblAppealDate.TabIndex = 9
-        lblAppealDate.Text = "00/00/0000"' 
+        lblAppealDate.Text = "00/00/0000"
+        ' 
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
@@ -681,7 +709,8 @@ Partial Class Form1
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(143, 34)
         Guna2HtmlLabel5.TabIndex = 8
-        Guna2HtmlLabel5.Text = "Appeal Date"' 
+        Guna2HtmlLabel5.Text = "Appeal Date"
+        ' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
@@ -691,7 +720,8 @@ Partial Class Form1
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(71, 23)
         Guna2HtmlLabel4.TabIndex = 7
-        Guna2HtmlLabel4.Text = "FFB Date:"' 
+        Guna2HtmlLabel4.Text = "FFB Date:"
+        ' 
         ' dtpFFBDate
         ' 
         dtpFFBDate.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -710,7 +740,8 @@ Partial Class Form1
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(132, 23)
         Guna2HtmlLabel3.TabIndex = 5
-        Guna2HtmlLabel3.Text = "Notification Date:"' 
+        Guna2HtmlLabel3.Text = "Notification Date:"
+        ' 
         ' dtpNotification
         ' 
         dtpNotification.CalendarFont = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -729,7 +760,8 @@ Partial Class Form1
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(85, 23)
         Guna2HtmlLabel2.TabIndex = 3
-        Guna2HtmlLabel2.Text = "Student ID:"' 
+        Guna2HtmlLabel2.Text = "Student ID:"
+        ' 
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
@@ -739,7 +771,8 @@ Partial Class Form1
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(65, 23)
         Guna2HtmlLabel1.TabIndex = 2
-        Guna2HtmlLabel1.Text = "Student:"' 
+        Guna2HtmlLabel1.Text = "Student:"
+        ' 
         ' txtStudentID
         ' 
         txtStudentID.CustomizableEdges = CustomizableEdges23
@@ -883,7 +916,8 @@ Partial Class Form1
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(1092, 745)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Student Roster"' 
+        TabPage3.Text = "Student Roster"
+        ' 
         ' GroupBox2
         ' 
         GroupBox2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -900,7 +934,8 @@ Partial Class Form1
         GroupBox2.Size = New Size(538, 324)
         GroupBox2.TabIndex = 21
         GroupBox2.TabStop = False
-        GroupBox2.Text = "ROSTER ACTIONS"' 
+        GroupBox2.Text = "ROSTER ACTIONS"
+        ' 
         ' btnReload
         ' 
         btnReload.AutoRoundedCorners = True
@@ -918,7 +953,8 @@ Partial Class Form1
         btnReload.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         btnReload.Size = New Size(395, 45)
         btnReload.TabIndex = 25
-        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇"' 
+        btnReload.Text = "🡇  RELOAD ROSTER DATA  🡇"
+        ' 
         ' Guna2Button6
         ' 
         Guna2Button6.AutoRoundedCorners = True
@@ -937,7 +973,8 @@ Partial Class Form1
         Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         Guna2Button6.Size = New Size(180, 45)
         Guna2Button6.TabIndex = 24
-        Guna2Button6.Text = "(Not In Use)"' 
+        Guna2Button6.Text = "(Not In Use)"
+        ' 
         ' btnPrint
         ' 
         btnPrint.AutoRoundedCorners = True
@@ -955,7 +992,8 @@ Partial Class Form1
         btnPrint.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         btnPrint.Size = New Size(180, 45)
         btnPrint.TabIndex = 23
-        btnPrint.Text = "PRINT"' 
+        btnPrint.Text = "PRINT"
+        ' 
         ' btnReset
         ' 
         btnReset.AutoRoundedCorners = True
@@ -973,7 +1011,8 @@ Partial Class Form1
         btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges42
         btnReset.Size = New Size(180, 45)
         btnReset.TabIndex = 22
-        btnReset.Text = "RESET"' 
+        btnReset.Text = "RESET"
+        ' 
         ' btnDelete
         ' 
         btnDelete.AutoRoundedCorners = True
@@ -991,7 +1030,8 @@ Partial Class Form1
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges44
         btnDelete.Size = New Size(180, 45)
         btnDelete.TabIndex = 21
-        btnDelete.Text = "DELETE"' 
+        btnDelete.Text = "DELETE"
+        ' 
         ' btnUpdate
         ' 
         btnUpdate.AutoRoundedCorners = True
@@ -1009,7 +1049,8 @@ Partial Class Form1
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges46
         btnUpdate.Size = New Size(180, 45)
         btnUpdate.TabIndex = 20
-        btnUpdate.Text = "UPDATE"' 
+        btnUpdate.Text = "UPDATE"
+        ' 
         ' btnAdd
         ' 
         btnAdd.AutoRoundedCorners = True
@@ -1027,7 +1068,8 @@ Partial Class Form1
         btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges48
         btnAdd.Size = New Size(180, 45)
         btnAdd.TabIndex = 19
-        btnAdd.Text = "ADD"' 
+        btnAdd.Text = "ADD"
+        ' 
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -1040,7 +1082,8 @@ Partial Class Form1
         GroupBox1.Size = New Size(538, 125)
         GroupBox1.TabIndex = 20
         GroupBox1.TabStop = False
-        GroupBox1.Text = "SEARCH"' 
+        GroupBox1.Text = "SEARCH"
+        ' 
         ' txtCount
         ' 
         txtCount.BackColor = Color.Transparent
@@ -1076,7 +1119,8 @@ Partial Class Form1
         Label11.Name = "Label11"
         Label11.Size = New Size(39, 13)
         Label11.TabIndex = 24
-        Label11.Text = "Count"' 
+        Label11.Text = "Count"
+        ' 
         ' txtSearch
         ' 
         txtSearch.AutoRoundedCorners = True
@@ -1132,7 +1176,8 @@ Partial Class Form1
         Label4.Name = "Label4"
         Label4.Size = New Size(53, 21)
         Label4.TabIndex = 15
-        Label4.Text = "EMail"' 
+        Label4.Text = "EMail"
+        ' 
         ' dtpDOE
         ' 
         dtpDOE.AutoRoundedCorners = True
@@ -1144,13 +1189,13 @@ Partial Class Form1
         dtpDOE.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOE.Format = DateTimePickerFormat.Short
         dtpDOE.Location = New Point(110, 216)
-        dtpDOE.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
-        dtpDOE.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
+        dtpDOE.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        dtpDOE.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpDOE.Name = "dtpDOE"
         dtpDOE.ShadowDecoration.CustomizableEdges = CustomizableEdges56
         dtpDOE.Size = New Size(239, 28)
         dtpDOE.TabIndex = 6
-        dtpDOE.Value = New DateTime(2023, 9, 16, 18, 5, 55, 566)
+        dtpDOE.Value = New Date(2023, 9, 16, 18, 5, 55, 566)
         ' 
         ' dtpDOB
         ' 
@@ -1163,13 +1208,13 @@ Partial Class Form1
         dtpDOB.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         dtpDOB.Format = DateTimePickerFormat.Short
         dtpDOB.Location = New Point(110, 180)
-        dtpDOB.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
-        dtpDOB.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
+        dtpDOB.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        dtpDOB.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpDOB.Name = "dtpDOB"
         dtpDOB.ShadowDecoration.CustomizableEdges = CustomizableEdges58
         dtpDOB.Size = New Size(239, 28)
         dtpDOB.TabIndex = 5
-        dtpDOB.Value = New DateTime(2023, 9, 16, 18, 7, 40, 435)
+        dtpDOB.Value = New Date(2023, 9, 16, 18, 7, 40, 435)
         ' 
         ' txtEMail
         ' 
@@ -1304,7 +1349,8 @@ Partial Class Form1
         GroupBox3.Size = New Size(539, 455)
         GroupBox3.TabIndex = 26
         GroupBox3.TabStop = False
-        GroupBox3.Text = "Student Information"' 
+        GroupBox3.Text = "Student Information"
+        ' 
         ' btnFill
         ' 
         btnFill.AutoRoundedCorners = True
@@ -1322,7 +1368,8 @@ Partial Class Form1
         btnFill.ShadowDecoration.CustomizableEdges = CustomizableEdges64
         btnFill.Size = New Size(116, 45)
         btnFill.TabIndex = 26
-        btnFill.Text = "🡇 FILL"' 
+        btnFill.Text = "🡇 FILL"
+        ' 
         ' cmbTrade
         ' 
         cmbTrade.AutoRoundedCorners = True
@@ -1392,7 +1439,8 @@ Partial Class Form1
         Label9.Name = "Label9"
         Label9.Size = New Size(81, 21)
         Label9.TabIndex = 18
-        Label9.Text = "Incentive"' 
+        Label9.Text = "Incentive"
+        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -1402,7 +1450,8 @@ Partial Class Form1
         Label6.Name = "Label6"
         Label6.Size = New Size(44, 21)
         Label6.TabIndex = 13
-        Label6.Text = "DOB"' 
+        Label6.Text = "DOB"
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -1412,7 +1461,8 @@ Partial Class Form1
         Label5.Name = "Label5"
         Label5.Size = New Size(43, 21)
         Label5.TabIndex = 14
-        Label5.Text = "DOE"' 
+        Label5.Text = "DOE"
+        ' 
         ' txtLName
         ' 
         txtLName.AutoRoundedCorners = True
@@ -1474,7 +1524,8 @@ Partial Class Form1
         Label7.Name = "Label7"
         Label7.Size = New Size(52, 21)
         Label7.TabIndex = 16
-        Label7.Text = "Trade"' 
+        Label7.Text = "Trade"
+        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -1484,7 +1535,8 @@ Partial Class Form1
         Label8.Name = "Label8"
         Label8.Size = New Size(41, 21)
         Label8.TabIndex = 17
-        Label8.Text = "Size"' 
+        Label8.Text = "Size"
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -1494,7 +1546,8 @@ Partial Class Form1
         Label3.Name = "Label3"
         Label3.Size = New Size(90, 21)
         Label3.TabIndex = 12
-        Label3.Text = "Last Name"' 
+        Label3.Text = "Last Name"
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -1504,7 +1557,8 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(91, 21)
         Label1.TabIndex = 10
-        Label1.Text = "Student ID"' 
+        Label1.Text = "Student ID"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -1514,7 +1568,8 @@ Partial Class Form1
         Label2.Name = "Label2"
         Label2.Size = New Size(92, 21)
         Label2.TabIndex = 11
-        Label2.Text = "First Name"' 
+        Label2.Text = "First Name"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
@@ -1631,4 +1686,5 @@ Partial Class Form1
     Friend WithEvents btnStatement As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSettings As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

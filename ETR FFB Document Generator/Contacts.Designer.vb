@@ -117,7 +117,8 @@ Partial Class Contacts
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2Button1.Size = New Size(151, 32)
         Guna2Button1.TabIndex = 0
-        Guna2Button1.Text = "Northlands"' 
+        Guna2Button1.Text = "Northlands"
+        ' 
         ' Guna2Button2
         ' 
         Guna2Button2.BackColor = SystemColors.ControlLight
@@ -129,7 +130,7 @@ Partial Class Contacts
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.FillColor = Color.Black
-        Guna2Button2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button2.ForeColor = Color.White
         Guna2Button2.HoverState.FillColor = Color.Gray
         Guna2Button2.Location = New Point(26, 68)
@@ -137,7 +138,8 @@ Partial Class Contacts
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2Button2.Size = New Size(151, 32)
         Guna2Button2.TabIndex = 1
-        Guna2Button2.Text = "Excelsior Springs"' 
+        Guna2Button2.Text = "Excelsior Springs"
+        ' 
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = SystemColors.ControlLight
@@ -149,7 +151,7 @@ Partial Class Contacts
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button3.FillColor = Color.Black
-        Guna2Button3.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button3.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button3.ForeColor = Color.White
         Guna2Button3.HoverState.FillColor = Color.Gray
         Guna2Button3.Location = New Point(26, 106)
@@ -157,7 +159,8 @@ Partial Class Contacts
         Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Button3.Size = New Size(151, 32)
         Guna2Button3.TabIndex = 2
-        Guna2Button3.Text = "Hubert H. Humphrey"' 
+        Guna2Button3.Text = "Hubert H. Humphrey"
+        ' 
         ' Guna2Button4
         ' 
         Guna2Button4.BackColor = SystemColors.ControlLight
@@ -169,7 +172,7 @@ Partial Class Contacts
         Guna2Button4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button4.FillColor = Color.Black
-        Guna2Button4.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button4.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button4.ForeColor = Color.White
         Guna2Button4.HoverState.FillColor = Color.Gray
         Guna2Button4.Location = New Point(26, 144)
@@ -177,7 +180,8 @@ Partial Class Contacts
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2Button4.Size = New Size(151, 32)
         Guna2Button4.TabIndex = 3
-        Guna2Button4.Text = "Iroquois"' 
+        Guna2Button4.Text = "Iroquois"
+        ' 
         ' Guna2Button5
         ' 
         Guna2Button5.BackColor = SystemColors.ControlLight
@@ -189,7 +193,7 @@ Partial Class Contacts
         Guna2Button5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button5.FillColor = Color.Black
-        Guna2Button5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button5.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button5.ForeColor = Color.White
         Guna2Button5.HoverState.FillColor = Color.Gray
         Guna2Button5.Location = New Point(26, 182)
@@ -197,7 +201,8 @@ Partial Class Contacts
         Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2Button5.Size = New Size(151, 32)
         Guna2Button5.TabIndex = 4
-        Guna2Button5.Text = "Oneonta"' 
+        Guna2Button5.Text = "Oneonta"
+        ' 
         ' Guna2Button6
         ' 
         Guna2Button6.BackColor = SystemColors.ControlLight
@@ -209,7 +214,7 @@ Partial Class Contacts
         Guna2Button6.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button6.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button6.FillColor = Color.Black
-        Guna2Button6.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button6.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button6.ForeColor = Color.White
         Guna2Button6.HoverState.FillColor = Color.Gray
         Guna2Button6.Location = New Point(26, 220)
@@ -217,7 +222,8 @@ Partial Class Contacts
         Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button6.Size = New Size(151, 32)
         Guna2Button6.TabIndex = 5
-        Guna2Button6.Text = "Westover"' 
+        Guna2Button6.Text = "Westover"
+        ' 
         ' Guna2Button7
         ' 
         Guna2Button7.BackColor = SystemColors.ControlLight
@@ -229,7 +235,7 @@ Partial Class Contacts
         Guna2Button7.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button7.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button7.FillColor = Color.Black
-        Guna2Button7.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button7.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button7.ForeColor = Color.White
         Guna2Button7.HoverState.FillColor = Color.Gray
         Guna2Button7.Location = New Point(26, 258)
@@ -237,7 +243,8 @@ Partial Class Contacts
         Guna2Button7.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2Button7.Size = New Size(151, 32)
         Guna2Button7.TabIndex = 6
-        Guna2Button7.Text = "Wilmington"' 
+        Guna2Button7.Text = "Wilmington"
+        ' 
         ' Guna2Button8
         ' 
         Guna2Button8.BackColor = SystemColors.ControlLight
@@ -249,7 +256,7 @@ Partial Class Contacts
         Guna2Button8.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button8.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button8.FillColor = Color.Black
-        Guna2Button8.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button8.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button8.ForeColor = Color.White
         Guna2Button8.HoverState.FillColor = Color.Gray
         Guna2Button8.Location = New Point(26, 296)
@@ -257,7 +264,8 @@ Partial Class Contacts
         Guna2Button8.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2Button8.Size = New Size(151, 32)
         Guna2Button8.TabIndex = 7
-        Guna2Button8.Text = "Benjamin L. Hooks"' 
+        Guna2Button8.Text = "Benjamin L. Hooks"
+        ' 
         ' Guna2Button9
         ' 
         Guna2Button9.BackColor = SystemColors.ControlLight
@@ -269,7 +277,7 @@ Partial Class Contacts
         Guna2Button9.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button9.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button9.FillColor = Color.Black
-        Guna2Button9.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button9.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button9.ForeColor = Color.White
         Guna2Button9.HoverState.FillColor = Color.Gray
         Guna2Button9.Location = New Point(26, 334)
@@ -277,7 +285,8 @@ Partial Class Contacts
         Guna2Button9.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Button9.Size = New Size(151, 32)
         Guna2Button9.TabIndex = 8
-        Guna2Button9.Text = "Montgomery"' 
+        Guna2Button9.Text = "Montgomery"
+        ' 
         ' Guna2Button10
         ' 
         Guna2Button10.BackColor = SystemColors.ControlLight
@@ -289,7 +298,7 @@ Partial Class Contacts
         Guna2Button10.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button10.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button10.FillColor = Color.Black
-        Guna2Button10.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Guna2Button10.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Guna2Button10.ForeColor = Color.White
         Guna2Button10.HoverState.FillColor = Color.Gray
         Guna2Button10.Location = New Point(26, 372)
@@ -297,7 +306,8 @@ Partial Class Contacts
         Guna2Button10.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button10.Size = New Size(151, 32)
         Guna2Button10.TabIndex = 9
-        Guna2Button10.Text = "ETR Rochester"' 
+        Guna2Button10.Text = "ETR Rochester"
+        ' 
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = SystemColors.AppWorkspace
@@ -347,7 +357,7 @@ Partial Class Contacts
         txtSHRO.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtSHRO.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtSHRO.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSHRO.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtSHRO.Font = New Font("Segoe UI Black", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtSHRO.ForeColor = Color.White
         txtSHRO.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSHRO.Location = New Point(324, 87)
@@ -364,33 +374,36 @@ Partial Class Contacts
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.ControlLightLight
         Label1.Location = New Point(247, 93)
         Label1.Name = "Label1"
         Label1.Size = New Size(57, 21)
         Label1.TabIndex = 15
-        Label1.Text = "SHRO:"' 
+        Label1.Text = "SHRO:"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = SystemColors.ControlLightLight
         Label2.Location = New Point(252, 150)
         Label2.Name = "Label2"
         Label2.Size = New Size(52, 21)
         Label2.TabIndex = 16
-        Label2.Text = "Email:"' 
+        Label2.Text = "Email:"
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label3.ForeColor = SystemColors.ControlLightLight
         Label3.Location = New Point(248, 207)
         Label3.Name = "Label3"
         Label3.Size = New Size(56, 21)
         Label3.TabIndex = 17
-        Label3.Text = "C2C #:"' 
+        Label3.Text = "C2C #:"
+        ' 
         ' txtSHROeMail
         ' 
         txtSHROeMail.Animated = True
@@ -404,7 +417,7 @@ Partial Class Contacts
         txtSHROeMail.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtSHROeMail.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtSHROeMail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSHROeMail.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtSHROeMail.Font = New Font("Segoe UI Black", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtSHROeMail.ForeColor = Color.White
         txtSHROeMail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSHROeMail.Location = New Point(324, 144)
@@ -431,7 +444,7 @@ Partial Class Contacts
         txtC2C.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtC2C.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtC2C.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtC2C.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtC2C.Font = New Font("Segoe UI Black", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtC2C.ForeColor = Color.White
         txtC2C.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtC2C.Location = New Point(324, 201)
@@ -458,7 +471,7 @@ Partial Class Contacts
         txtSHROphone.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtSHROphone.FillColor = Color.FromArgb(CByte(88), CByte(0), CByte(5))
         txtSHROphone.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSHROphone.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtSHROphone.Font = New Font("Segoe UI Black", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtSHROphone.ForeColor = Color.White
         txtSHROphone.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSHROphone.Location = New Point(324, 258)
@@ -475,13 +488,14 @@ Partial Class Contacts
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.ForeColor = SystemColors.ControlLightLight
         Label4.Location = New Point(244, 264)
         Label4.Name = "Label4"
         Label4.Size = New Size(60, 21)
         Label4.TabIndex = 21
-        Label4.Text = "Phone:"' 
+        Label4.Text = "Phone:"
+        ' 
         ' Guna2Button11
         ' 
         Guna2Button11.AutoRoundedCorners = True
@@ -501,7 +515,8 @@ Partial Class Contacts
         Guna2Button11.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2Button11.Size = New Size(173, 37)
         Guna2Button11.TabIndex = 22
-        Guna2Button11.Text = "Update Record"' 
+        Guna2Button11.Text = "Update Record"
+        ' 
         ' Guna2Button12
         ' 
         Guna2Button12.AutoRoundedCorners = True
@@ -512,14 +527,15 @@ Partial Class Contacts
         Guna2Button12.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button12.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button12.FillColor = Color.DimGray
-        Guna2Button12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2Button12.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2Button12.ForeColor = Color.Silver
         Guna2Button12.Location = New Point(731, 400)
         Guna2Button12.Name = "Guna2Button12"
         Guna2Button12.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button12.Size = New Size(57, 28)
         Guna2Button12.TabIndex = 23
-        Guna2Button12.Text = "Clear"' 
+        Guna2Button12.Text = "Clear"
+        ' 
         ' Contacts
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
