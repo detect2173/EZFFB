@@ -256,7 +256,10 @@ Module FormFiller
     End Sub
 
     Public Sub FillNotPresent1()
-        Dim presence As String = ""
+        Dim presence As String = "STUDENT NOT PRESENT"
+        If Form1.tglPresent.Checked = True Then
+            presence = "STUDENT PRESENT"
+        End If
         Dim pdfTemplate As String = Application.StartupPath & "\PDF\NotPresent.pdf"
         Dim newFile As String = Application.StartupPath & "\PDF\Saved\" & Form1.cmbStudentName.Text & "_NotPresent_L1.pdf"
 
@@ -265,11 +268,7 @@ Module FormFiller
             newFile, FileMode.Create))
 
         Dim pdfFormFields As AcroFields = pdfStamper.AcroFields
-        If Form1.tglPresent.Checked = False Then
-            presence = "STUDENT NOT PRESENT"
-        Else
-            presence = "STUDENT PRESENT"
-        End If
+
 
         ' Set form fields
         ' Level 1 Notification Form

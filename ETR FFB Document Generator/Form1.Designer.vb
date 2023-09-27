@@ -52,6 +52,8 @@ Partial Class Form1
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -99,8 +101,6 @@ Partial Class Form1
         Dim CustomizableEdges74 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges75 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges76 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
@@ -146,6 +146,9 @@ Partial Class Form1
         txtStudentID = New Guna.UI2.WinForms.Guna2TextBox()
         cmbStudentName = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        tglPresent = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         txtPRHCode = New Guna.UI2.WinForms.Guna2TextBox()
         cmbInfraction = New Guna.UI2.WinForms.Guna2ComboBox()
         cbLevel = New Guna.UI2.WinForms.Guna2CheckBox()
@@ -184,9 +187,6 @@ Partial Class Form1
         Label3 = New Label()
         Label1 = New Label()
         Label2 = New Label()
-        tglPresent = New Guna.UI2.WinForms.Guna2ToggleSwitch()
-        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         tc1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -840,6 +840,47 @@ Partial Class Form1
         Guna2GroupBox1.TabIndex = 0
         Guna2GroupBox1.Text = "Infraction"
         Guna2GroupBox1.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Guna2HtmlLabel13
+        ' 
+        Guna2HtmlLabel13.BackColor = Color.Transparent
+        Guna2HtmlLabel13.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel13.ForeColor = Color.White
+        Guna2HtmlLabel13.Location = New Point(395, 99)
+        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
+        Guna2HtmlLabel13.Size = New Size(90, 23)
+        Guna2HtmlLabel13.TabIndex = 25
+        Guna2HtmlLabel13.Text = "Not Present"
+        ' 
+        ' Guna2HtmlLabel12
+        ' 
+        Guna2HtmlLabel12.BackColor = Color.Transparent
+        Guna2HtmlLabel12.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel12.ForeColor = Color.White
+        Guna2HtmlLabel12.Location = New Point(547, 99)
+        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
+        Guna2HtmlLabel12.Size = New Size(58, 23)
+        Guna2HtmlLabel12.TabIndex = 24
+        Guna2HtmlLabel12.Text = "Present"
+        ' 
+        ' tglPresent
+        ' 
+        tglPresent.CheckedState.BorderColor = Color.AliceBlue
+        tglPresent.CheckedState.BorderThickness = 1
+        tglPresent.CheckedState.FillColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        tglPresent.CheckedState.InnerBorderColor = Color.White
+        tglPresent.CheckedState.InnerColor = Color.White
+        tglPresent.CustomizableEdges = CustomizableEdges29
+        tglPresent.Location = New Point(491, 102)
+        tglPresent.Name = "tglPresent"
+        tglPresent.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        tglPresent.Size = New Size(50, 20)
+        tglPresent.TabIndex = 3
+        tglPresent.UncheckedState.BorderColor = Color.AliceBlue
+        tglPresent.UncheckedState.BorderThickness = 1
+        tglPresent.UncheckedState.FillColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        tglPresent.UncheckedState.InnerBorderColor = Color.White
+        tglPresent.UncheckedState.InnerColor = Color.White
         ' 
         ' txtPRHCode
         ' 
@@ -1578,45 +1619,6 @@ Partial Class Form1
         Label2.Size = New Size(92, 21)
         Label2.TabIndex = 11
         Label2.Text = "First Name"
-        ' 
-        ' tglPresent
-        ' 
-        tglPresent.CheckedState.BorderColor = Color.Yellow
-        tglPresent.CheckedState.FillColor = Color.Yellow
-        tglPresent.CheckedState.InnerBorderColor = Color.White
-        tglPresent.CheckedState.InnerColor = Color.White
-        tglPresent.CustomizableEdges = CustomizableEdges29
-        tglPresent.Location = New Point(491, 102)
-        tglPresent.Name = "tglPresent"
-        tglPresent.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        tglPresent.Size = New Size(50, 20)
-        tglPresent.TabIndex = 3
-        tglPresent.UncheckedState.BorderColor = Color.Red
-        tglPresent.UncheckedState.FillColor = Color.Red
-        tglPresent.UncheckedState.InnerBorderColor = Color.White
-        tglPresent.UncheckedState.InnerColor = Color.White
-        ' 
-        ' Guna2HtmlLabel12
-        ' 
-        Guna2HtmlLabel12.BackColor = Color.Transparent
-        Guna2HtmlLabel12.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel12.ForeColor = Color.White
-        Guna2HtmlLabel12.Location = New Point(547, 99)
-        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-        Guna2HtmlLabel12.Size = New Size(58, 23)
-        Guna2HtmlLabel12.TabIndex = 24
-        Guna2HtmlLabel12.Text = "Present"
-        ' 
-        ' Guna2HtmlLabel13
-        ' 
-        Guna2HtmlLabel13.BackColor = Color.Transparent
-        Guna2HtmlLabel13.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel13.ForeColor = Color.White
-        Guna2HtmlLabel13.Location = New Point(395, 99)
-        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-        Guna2HtmlLabel13.Size = New Size(90, 23)
-        Guna2HtmlLabel13.TabIndex = 25
-        Guna2HtmlLabel13.Text = "Not Present"
         ' 
         ' Form1
         ' 

@@ -30,3 +30,8 @@ Imports System.Diagnostics.CodeAnalysis
 <Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Form1.cmbStudentName_SelectedIndexChanged(System.Object,System.EventArgs)")>
 <Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Form1.dtpFFBDate_ValueChanged(System.Object,System.EventArgs)")>
 <Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Settings.btnSaveSettings_Click(System.Object,System.EventArgs)")>
+<Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Contacts.resetControls")>
+<Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Form1.btnStatement_Click(System.Object,System.EventArgs)")>
+<Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.FormFiller.checkSettings~System.Boolean")>
+<Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.FormFiller.runSettings")>
+<Assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification:="<Pending>", Scope:="member", Target:="~M:ETR_FFB_Document_Generator.Settings.txtPhone_TextChanged(System.Object,System.EventArgs)")>
