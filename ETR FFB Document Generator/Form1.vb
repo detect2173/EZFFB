@@ -34,6 +34,8 @@ Public Class Form1
         AddHandler btnCreateDocs.Click, AddressOf btnCreateDocs_Click
         AddHandler btnOpenDirectory.Click, AddressOf btnOpenDirectory_Click
         AddHandler btnSettings.Click, AddressOf btnSettings_Click
+        AddHandler btnStatement.Click, AddressOf btnStatement_Click
+        AddHandler btnPrint.Click, AddressOf btnPrint_Click
     End Sub
 
     Private level1Infractions As Dictionary(Of String, String)
@@ -444,5 +446,10 @@ Public Class Form1
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs)
         Settings.Show()
+    End Sub
+
+    Private Sub btnStatement_Click(sender As Object, e As EventArgs)
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\" & "Statement.pdf")
+        Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
     End Sub
 End Class

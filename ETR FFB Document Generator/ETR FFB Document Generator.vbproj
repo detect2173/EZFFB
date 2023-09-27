@@ -144,6 +144,9 @@
     <None Update="PDF\ATTACHMENT F - RIGHT TO APPEAL FORM.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="PDF\Statement.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="PythonRunTime\libcrypto-3.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
