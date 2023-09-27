@@ -32,6 +32,8 @@ CREATE TABLE contacts (
   C2C VARCHAR(50) PRIMARY KEY
 );
 
+DELETE FROM Level1;
+
 INSERT INTO Level1 (infraction, code) VALUES
 ('Possession of a weapon on center or under center supervision', '5.1a'),
 ('Assault', '5.1a'),
@@ -48,6 +50,8 @@ INSERT INTO Level1 (infraction, code) VALUES
 ('Arson', '5.1a'),
 ('Cruelty to animals', '5.1a'),
 ('Inciting a disturbance or creating disorder', '5.1a');
+
+DELETE FROM Level2;
 
 INSERT INTO Level2 (infraction, code) VALUES
 ('Possession of a potentially dangerous item', '5.1b'),
@@ -67,6 +71,8 @@ INSERT INTO Level2 (infraction, code) VALUES
 ('Bringing disrepute to the program', '5.1b'),
 ('Pattern of minor infractions', '5.3a'),
 ('Unauthorized exit', '5.3d');
+
+DELETE FROM contacts;
 
 INSERT INTO contacts (Name, Center, Email, C2C, Phone) VALUES
 ('Pierre Stinson', 'Benjamin L. Hooks', 'Stinson.pierre@jobcorps.org', '254.5832', '901.344.5832'),
