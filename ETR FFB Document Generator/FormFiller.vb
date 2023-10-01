@@ -7,6 +7,8 @@ Imports iTextSharp.text.pdf
 Imports System.IO
 
 Module FormFiller
+    Dim labelValues As List(Of String) = Pattern.GetLabelValues()
+    Dim dateValues As List(Of DateTime) = Pattern.GetDateValues()
 
     Public Sub FillNoticeLevel1()
         Dim pdfTemplate As String = Application.StartupPath & "\PDF\Notice_L1.pdf"

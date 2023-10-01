@@ -208,6 +208,7 @@ Module DBFunctions
             Case 6
                 Return "Student tested positive on their second drug test for the presence of drugs. "
             Case 15
+                Pattern.Show()
                 Return "Student received more than 4 minor infractions within a 60 day period elevating the infraction to a Level II infraction with a Fact Finding Board for: Pattern of minor infractons."
             Case Else
                 Return "" ' Clear the textbox or set to a default value
