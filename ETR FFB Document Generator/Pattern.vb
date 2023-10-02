@@ -68,6 +68,7 @@ Public Class Pattern
             dateValues.Add(datePickers(i).Value)
         Next
         pattern = True
+        Me.Close()
         ' Now labelValues and dateValues contain the information for later use
     End Sub
     Public Shared Function GetLabelValues() As List(Of String)
