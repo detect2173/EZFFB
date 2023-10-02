@@ -1,11 +1,10 @@
 ﻿Imports Guna.UI2.WinForms
 
 Public Class Pattern
-
-    Private labelValues As New List(Of String)
-    Private dateValues As New List(Of DateTime) ' Clear existing values
+    Public Shared pattern As Boolean = False
+    Public Shared labelValues As New List(Of String)
+    Public Shared dateValues As New List(Of DateTime) ' Clear existing values
     Public Sub New()
-
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -68,14 +67,14 @@ Public Class Pattern
             labelValues.Add(labels(i).Text)
             dateValues.Add(datePickers(i).Value)
         Next
-
+        pattern = True
         ' Now labelValues and dateValues contain the information for later use
     End Sub
-    Public Function GetLabelValues() As List(Of String)
+    Public Shared Function GetLabelValues() As List(Of String)
         Return labelValues
     End Function
 
-    Public Function GetDateValues() As List(Of DateTime)
+    Public Shared Function GetDateValues() As List(Of DateTime)
         Return dateValues
     End Function
 

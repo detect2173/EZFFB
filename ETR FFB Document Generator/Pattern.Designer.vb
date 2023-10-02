@@ -84,8 +84,7 @@ Partial Class Pattern
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(431, 32)
         lblTitle.TabIndex = 0
-        lblTitle.Text = "Level II: Pattern of Minor Infractions"
-        ' 
+        lblTitle.Text = "Level II: Pattern of Minor Infractions"' 
         ' tglNIR1
         ' 
         tglNIR1.CheckedState.BorderColor = Color.FromArgb(CByte(142), CByte(199), CByte(210))
@@ -179,8 +178,7 @@ Partial Class Pattern
         lblNIR1.Name = "lblNIR1"
         lblNIR1.Size = New Size(475, 40)
         lblNIR1.TabIndex = 6
-        lblNIR1.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."
-        ' 
+        lblNIR1.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."' 
         ' lblNIR2
         ' 
         lblNIR2.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -189,8 +187,7 @@ Partial Class Pattern
         lblNIR2.Name = "lblNIR2"
         lblNIR2.Size = New Size(475, 40)
         lblNIR2.TabIndex = 7
-        lblNIR2.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."
-        ' 
+        lblNIR2.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."' 
         ' lblNIR3
         ' 
         lblNIR3.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -199,8 +196,7 @@ Partial Class Pattern
         lblNIR3.Name = "lblNIR3"
         lblNIR3.Size = New Size(475, 40)
         lblNIR3.TabIndex = 8
-        lblNIR3.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."
-        ' 
+        lblNIR3.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."' 
         ' lblNIR4
         ' 
         lblNIR4.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -209,8 +205,7 @@ Partial Class Pattern
         lblNIR4.Name = "lblNIR4"
         lblNIR4.Size = New Size(475, 40)
         lblNIR4.TabIndex = 9
-        lblNIR4.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."
-        ' 
+        lblNIR4.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."' 
         ' lblNIR5
         ' 
         lblNIR5.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
@@ -219,8 +214,7 @@ Partial Class Pattern
         lblNIR5.Name = "lblNIR5"
         lblNIR5.Size = New Size(475, 40)
         lblNIR5.TabIndex = 10
-        lblNIR5.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."
-        ' 
+        lblNIR5.Text = "Failure to follow center rules impacting the individual’s participation or progress in the program."' 
         ' dtpNIR1
         ' 
         dtpNIR1.Checked = True
@@ -229,13 +223,13 @@ Partial Class Pattern
         dtpNIR1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         dtpNIR1.Format = DateTimePickerFormat.Short
         dtpNIR1.Location = New Point(614, 103)
-        dtpNIR1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpNIR1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpNIR1.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpNIR1.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpNIR1.Name = "dtpNIR1"
         dtpNIR1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         dtpNIR1.Size = New Size(139, 36)
         dtpNIR1.TabIndex = 11
-        dtpNIR1.Value = New Date(2023, 9, 29, 18, 27, 31, 144)
+        dtpNIR1.Value = New DateTime(2023, 9, 29, 18, 27, 31, 144)
         ' 
         ' dtpNIR2
         ' 
@@ -245,13 +239,13 @@ Partial Class Pattern
         dtpNIR2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         dtpNIR2.Format = DateTimePickerFormat.Short
         dtpNIR2.Location = New Point(614, 155)
-        dtpNIR2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpNIR2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpNIR2.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpNIR2.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpNIR2.Name = "dtpNIR2"
         dtpNIR2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         dtpNIR2.Size = New Size(139, 36)
         dtpNIR2.TabIndex = 12
-        dtpNIR2.Value = New Date(2023, 9, 29, 18, 27, 31, 144)
+        dtpNIR2.Value = New DateTime(2023, 9, 29, 18, 27, 31, 144)
         ' 
         ' dtpNIR3
         ' 
@@ -261,13 +255,13 @@ Partial Class Pattern
         dtpNIR3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         dtpNIR3.Format = DateTimePickerFormat.Short
         dtpNIR3.Location = New Point(614, 207)
-        dtpNIR3.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpNIR3.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpNIR3.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpNIR3.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpNIR3.Name = "dtpNIR3"
         dtpNIR3.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         dtpNIR3.Size = New Size(139, 36)
         dtpNIR3.TabIndex = 13
-        dtpNIR3.Value = New Date(2023, 9, 29, 18, 27, 31, 144)
+        dtpNIR3.Value = New DateTime(2023, 9, 29, 18, 27, 31, 144)
         ' 
         ' dtpNIR4
         ' 
@@ -277,13 +271,13 @@ Partial Class Pattern
         dtpNIR4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         dtpNIR4.Format = DateTimePickerFormat.Short
         dtpNIR4.Location = New Point(614, 259)
-        dtpNIR4.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpNIR4.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpNIR4.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpNIR4.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpNIR4.Name = "dtpNIR4"
         dtpNIR4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         dtpNIR4.Size = New Size(139, 36)
         dtpNIR4.TabIndex = 14
-        dtpNIR4.Value = New Date(2023, 9, 29, 18, 27, 31, 144)
+        dtpNIR4.Value = New DateTime(2023, 9, 29, 18, 27, 31, 144)
         ' 
         ' dtpNIR5
         ' 
@@ -293,13 +287,13 @@ Partial Class Pattern
         dtpNIR5.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         dtpNIR5.Format = DateTimePickerFormat.Short
         dtpNIR5.Location = New Point(614, 311)
-        dtpNIR5.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpNIR5.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpNIR5.MaxDate = New DateTime(9998, 12, 31, 0, 0, 0, 0)
+        dtpNIR5.MinDate = New DateTime(1753, 1, 1, 0, 0, 0, 0)
         dtpNIR5.Name = "dtpNIR5"
         dtpNIR5.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         dtpNIR5.Size = New Size(139, 36)
         dtpNIR5.TabIndex = 15
-        dtpNIR5.Value = New Date(2023, 9, 29, 18, 27, 31, 144)
+        dtpNIR5.Value = New DateTime(2023, 9, 29, 18, 27, 31, 144)
         ' 
         ' pbExit
         ' 
@@ -331,8 +325,7 @@ Partial Class Pattern
         btnStoreValues.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnStoreValues.Size = New Size(180, 45)
         btnStoreValues.TabIndex = 17
-        btnStoreValues.Text = "Set NIR's"
-        ' 
+        btnStoreValues.Text = "Set NIR's"' 
         ' Pattern
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
