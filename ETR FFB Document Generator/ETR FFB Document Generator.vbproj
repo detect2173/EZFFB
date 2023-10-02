@@ -32,6 +32,11 @@
     <None Remove="create_database.sql" />
     <None Remove="csv_sync.py" />
     <None Remove="db_sync.py" />
+    <None Remove="EZFFB_Documentation\Contributing.md" />
+    <None Remove="EZFFB_Documentation\Features.md" />
+    <None Remove="EZFFB_Documentation\Installation.md" />
+    <None Remove="EZFFB_Documentation\README.md" />
+    <None Remove="EZFFB_Documentation\Usage.md" />
     <None Remove="PDF\FFB_Ballot_New.pdf" />
     <None Remove="PDF\FFB_Summary1.pdf" />
     <None Remove="PDF\FFB_Summary2.pdf" />
@@ -48,6 +53,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ETR_Logo_2023 (2).ico" />
+    <Content Include="EZFFB_Documentation\Contributing.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EZFFB_Documentation\Features.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EZFFB_Documentation\Installation.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EZFFB_Documentation\README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EZFFB_Documentation\Usage.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="PDF\FFB_Ballot_New.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

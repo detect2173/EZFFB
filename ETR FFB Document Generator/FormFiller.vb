@@ -416,7 +416,7 @@ Module FormFiller
         End If
 
         If String.IsNullOrEmpty(Form1.txtLocation.Text) Then
-            errorMessage.AppendLine("Location is required.")
+            errorMessage.AppendLine(" Board Location is required.")
         End If
 
         If String.IsNullOrEmpty(Form1.cmbStudentName.Text) Then
