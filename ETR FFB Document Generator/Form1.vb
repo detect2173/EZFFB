@@ -424,8 +424,15 @@ Public Class Form1
 
 
     Private Sub btnCreateDocs_Click(sender As Object, e As EventArgs)
-        RunLevel1()
-        ResetFormFFB()
+        If ValidateFFB() Then
+            If cbLevel.Checked = False Then
+                RunLevel1()
+            Else
+                RunLevel2()
+            End If
+        Else
+            MsgBox("Please Correct Errors and Try Again")
+        End If
     End Sub
 
     Private Sub btnOpenDirectory_Click(sender As Object, e As EventArgs)

@@ -5,6 +5,7 @@
 
 Imports iTextSharp.text.pdf
 Imports System.IO
+Imports System.Text
 
 Module FormFiller
     Dim labelValues As List(Of String) = Pattern.GetLabelValues()
@@ -331,6 +332,36 @@ Module FormFiller
         Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\" & Form1.cmbStudentName.Text & "_RightToAppeal.pdf")
         Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
     End Sub
+
+    Public Sub FillNIRSummary()
+
+        Dim pdfTemplate As String = Application.StartupPath & "\PDF\NIR_Summary.pdf"
+        Dim newFile As String = Application.StartupPath & "\PDF\Saved\" & Form1.cmbStudentName.Text & "_NIR_Summary.pdf"
+
+        Dim pdfReader As New PdfReader(pdfTemplate)
+        Dim pdfStamper As New PdfStamper(pdfReader, New FileStream(
+            newFile, FileMode.Create))
+
+        Dim pdfFormFields As AcroFields = pdfStamper.AcroFields
+
+        Dim retrievedLabelValues As List(Of String) = Pattern.GetLabelValues()
+        Dim retrievedDateValues As List(Of DateTime) = Pattern.GetDateValues()
+
+        ' Set NIR fields
+        For i As Integer = 1 To 5
+            pdfFormFields.SetField($"NIR{i}", retrievedLabelValues(i - 1))
+            pdfFormFields.SetField($"DATE{i}", retrievedDateValues(i - 1).ToString("MM/dd/yyyy"))
+        Next
+
+        ' flatten the form to remove editting options, set it to false
+        ' to leave the form open to subsequent manual edits
+        pdfStamper.FormFlattening = True
+
+        ' close the pdf
+        pdfStamper.Close()
+        Dim pdfDest As String = Path.Combine(Application.StartupPath, $"PDF\Saved\" & Form1.cmbStudentName.Text & "_NIR_Summary.pdf")
+        Process.Start(New ProcessStartInfo(pdfDest) With {.UseShellExecute = True})
+    End Sub
     Public Sub RunLevel1()
         FillSummary1()
         FillNoticeLevel1()
@@ -341,12 +372,23 @@ Module FormFiller
     End Sub
 
     Public Sub RunLevel2()
-        FillSummary2()
-        FillNoticeLevel2()
-        FillBallot()
-        FillTermLetter1()
-        FillNotPresent1()
-        FillRightToAppeal()
+        If Pattern.pattern = True Then
+            FillNIRSummary()
+            FillSummary2()
+            FillNoticeLevel2()
+            FillBallot()
+            FillTermLetter1()
+            FillNotPresent1()
+            FillRightToAppeal()
+        Else
+            FillSummary2()
+            FillNoticeLevel2()
+            FillBallot()
+            FillTermLetter1()
+            FillNotPresent1()
+            FillRightToAppeal()
+        End If
+
     End Sub
 
     Public Function checkSettings() As Boolean
@@ -365,4 +407,36 @@ Module FormFiller
             Exit Sub
         End If
     End Sub
+
+    Public Function ValidateFFB() As Boolean
+        Dim errorMessage As New StringBuilder()
+
+        If String.IsNullOrEmpty(Form1.cmbInfraction.Text) Then
+            errorMessage.AppendLine("Infraction is required.")
+        End If
+
+        If String.IsNullOrEmpty(Form1.txtLocation.Text) Then
+            errorMessage.AppendLine("Location is required.")
+        End If
+
+        If String.IsNullOrEmpty(Form1.cmbStudentName.Text) Then
+            errorMessage.AppendLine("Student Name is required.")
+        End If
+
+        If String.IsNullOrEmpty(Form1.txtStudentID.Text) Then
+            errorMessage.AppendLine("Student ID is required.")
+        End If
+
+        If String.IsNullOrEmpty(Form1.txtDetails.Text) OrElse Form1.txtDetails.Text.Length < 10 Then
+            errorMessage.AppendLine("Details must be at least 10 characters long.")
+        End If
+
+        If errorMessage.Length > 0 Then
+            MessageBox.Show(errorMessage.ToString())
+            Return False
+        End If
+
+        Return True
+    End Function
+
 End Module
