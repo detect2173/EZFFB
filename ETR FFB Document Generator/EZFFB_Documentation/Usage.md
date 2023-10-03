@@ -1,4 +1,4 @@
-    ## Creating New FFB Documents
+## Creating New FFB Documents
 
 Once you've launched the software, you'll find yourself on the Main Dashboard. Here’s how to create a new FFB Document:
 
