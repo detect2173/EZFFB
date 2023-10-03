@@ -429,10 +429,13 @@ Public Class Form1
                 RunLevel1()
             Else
                 RunLevel2()
+
             End If
         Else
             MsgBox("Please Correct Errors and Try Again")
+            Exit Sub
         End If
+        Pattern.pattern = False
     End Sub
 
     Private Sub btnOpenDirectory_Click(sender As Object, e As EventArgs)
