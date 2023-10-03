@@ -2,7 +2,7 @@
 
 ---
 
-## Main Features of the FFB Software
+## Main Features of the EZ FFB Software
 
 ### Form Generation
 

@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to EZFFB, your go-to solution for maintaining data integrity, and saving time during the creation of Fact Finding Board Documents. It also serves as a SHRO directory and student record management system.
+Welcome to EZ FFB, your go-to solution for maintaining data integrity, and saving time during the creation of Fact Finding Board Documents. It also serves as a SHRO directory and student record management system.
 
 ## Purpose
 
