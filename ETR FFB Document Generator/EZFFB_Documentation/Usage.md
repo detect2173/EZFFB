@@ -36,3 +36,75 @@ A: You can always Generate new forms as needed. If you made a mistake that rende
 
 **Q: Where are the generated FFB documents saved?**  
 A: Documents are saved in a folder named 'Saved' within the application directory.
+
+## Managing the Student Roster
+
+The Student Roster feature allows you to manage and view student records in a simplified manner.
+
+### Step 1: Navigate to the 'Student Roster' tab
+
+- On the left-hand sidebar, click on the "Student Roster" tab.
+
+### Step 2: View and Sort Student Records
+
+- Here, you'll see a table that displays the existing student records.
+- You can sort the table by each column: Student ID, Name, DOB, etc.
+- You can also click on a student record and populate the controls on the left side for editing.
+
+![Student Roster View](images/Student_Roster_View.png)
+
+### Step 3: Add a New Student Record
+
+- To add a new student, fill out the Student ID, First and Last name, Date of Birth and date of Entry fields on the left side and click the "Fill" button. This will autofill the rest of the fields at which time you can click the "Add" button to add the student record to the database.
+
+### Step 4: Edit or Delete a Student Record
+
+- To edit an existing record, Click on the student's record in the table to populate the fields for editing.
+- Make the changes in the form fields and click "Update."
+- To delete a student, select the student record from the table and click the "Delete" button.
+
+### FAQ
+
+**Q: Can I import student records from an external source?**  
+A: Yes, you can import records from an Active Student Roster downloaded from CIS. Make sure you use the "Run excel data Report" Option and save the file to a location on your local desktop (Not the Citrix Desktop). You will then go to the Home tab of the software and click on "Update Roster". Select the Roster you downloaded and it will automatically update the entire database by removing records no longer needed, and adding records that are not yet added.
+
+**Q: How do I search for a specific student?**  
+A: Use the search bar at the top of the Student Roster table and enter the name or ID of the student.
+
+**Q: What do I do if I've made an error while adding or editing a student?**  
+A: No worries! You can always go back and edit the record by clicking the student's record in the table to populate the fields. Make the necessary changes and click "Update."
+
+## SHRO Directory Contact Feature
+
+This feature allows you to manage and access SHRO (Student Human Resource Officer) contact information efficiently under ETR employment.
+
+### Step 1: Click the Contacts icon on the Home Tab
+
+- On the botoom of the UI, click on the "Contacts" icon.
+
+### Step 2: View SHRO Contacts by Center
+
+- Each Center has its own button. Click each button to see the SHRO contact information for that center
+
+![SHRO Directory View](images/SHRO_Directory_View.png)
+
+### Step 3: Add a New SHRO Contact
+
+- To add a new contact, click the "Add Contact" button usually located at the top or bottom of the table.
+- Complete the fields in the pop-up form and click "Save."
+
+### Step 4: Edit or Delete a SHRO Contact
+
+- To edit an existing contact, locate the contact and click the "Edit" button, usually represented by a pencil icon.
+- Update the necessary information in the pop-up form and click "Update."
+- To delete a contact, locate the record and click the "Delete" button, often represented by a trash can icon.
+
+### FAQ
+
+**Q: Can I import SHRO contacts from an external source?**  
+A: No, that feature is not available at this time
+
+**Q: How do I search for a specific contact?**  
+A: Simply click on the button with the Center's name on it
+**Q: What if I made an error while editing a contact?**  
+A: Don't sweat it! You can always make changes in the form fields and click on "Update Record".
