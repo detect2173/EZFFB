@@ -108,3 +108,63 @@ A: No, that feature is not available at this time
 A: Simply click on the button with the Center's name on it
 **Q: What if I made an error while editing a contact?**  
 A: Don't sweat it! You can always make changes in the form fields and click on "Update Record".
+
+## Logging Feature
+
+The Logging Feature ensures that all transactions within the Student Roster UI are recorded for auditing and tracking purposes.
+
+### Accessing the Logs
+
+- To view the logs, navigate to the "Home" tab.
+- Click the "Logs" button, usually located at the top-right corner of the UI.
+
+### Features
+
+- **View Logs**: Upon clicking the "Logs" button, a separate window appears displaying the log entries in chronological order.
+
+  ![Log View](images/Log_View.png)
+
+- **Search Logs**: A search bar is available for filtering the log entries by keyword, date, or other criteria.
+- **Export Logs**: An "Export" button allows you to save the log file externally, typically in CSV or TXT format.
+
+### FAQ
+
+**Q: How long are logs stored?**  
+A: Logs are stored indefinitely within the application directory but can be manually deleted if needed.
+
+**Q: Can I search logs by a specific date range?**  
+A: Yes, the search bar allows for advanced filtering options, including date range selection.
+
+**Q: Who has access to the logs?**  
+A: Access to the logs is restricted to authorized personnel. Please consult your system administrator for permissions.
+
+## Settings Feature
+
+The Settings feature ensures that essential user-specific information like Center Name and Phone Number are stored for document generation.
+
+### Initial Setup
+
+- Upon first use, the software will prompt you with a popup asking for your Center Name and Phone Number. These fields are mandatory.
+
+  ![Initial Setup Popup](images/Initial_Setup.png)
+
+### Accessing and Editing Settings
+
+- To access or edit these settings later, navigate to the "Home" tab.
+- Click on the gear icon, usually located at the lower left corner of the UI.
+
+### Features
+
+- **View Settings**: Clicking the gear icon opens the Settings window, where you can view or edit the Center Name and Phone Number.
+
+  ![Settings View](images/Settings_View.png)
+
+- **Save Changes**: After editing, click the "Save" button to store the new settings.
+
+### FAQ
+
+**Q: What happens if I don't enter my Center Name or Phone Number?**  
+A: The software will not allow you to proceed without entering these details. A popup will appear until the fields are filled in. You will not be able to generate FFB documents without that information.
+
+**Q: Can I change the Center Name and Phone Number later?**  
+A: Yes, simply go to the Settings by clicking the gear icon and make the necessary changes.
