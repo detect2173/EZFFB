@@ -1,4 +1,4 @@
-## Contributing to FFB Software
+## Contributing to EZ FFB Software
 
 1. **Fork the repository**: Start by forking the official repository to your own GitHub account.
 2. **Clone your fork locally**: Use `git clone` to get a copy of the project.
