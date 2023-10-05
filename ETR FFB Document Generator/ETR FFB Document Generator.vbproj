@@ -9,13 +9,15 @@
     <MyType>WindowsForms</MyType>
     <ApplicationIcon>ETR_Logo_2023 (2).ico</ApplicationIcon>
     <PackageIcon>ETR_Logo_2023.png</PackageIcon>
-    <RepositoryUrl>https://github.com/detect2173/ETR-FFB-Document-Generator</RepositoryUrl>
+    <RepositoryUrl>https://github.com/detect2173/EZFFB</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 	<NoWarn>BC40008</NoWarn>
 	<NoWarn>NU1701</NoWarn>
 	<NoWarn>BC42016</NoWarn>
 	<NoWarn>BC42016</NoWarn>
-	<NoWarn>NU1701</NoWarn>	  
+	<NoWarn>NU1701</NoWarn>
+	<Title>EZ FFB Document Generator</Title>
+	<Copyright>John F Berry 2023</Copyright>	  
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
