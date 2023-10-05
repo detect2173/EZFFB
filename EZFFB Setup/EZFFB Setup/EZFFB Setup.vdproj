@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1B673AAD18644B03A52CFDF33701EEE1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6BAF91F674834FA0AB63382A06B05784"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -59,17 +65,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_E14B938B25474B5AAC799D1616E6322D"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_AE77A5C2EB014AC28B4DEC6C93695F3B"
             {
             "Name" = "8:EZFFB_db_setup.exe"
             "Condition" = "8:"
-            "Object" = "8:_6BAF91F674834FA0AB63382A06B05784"
+            "Object" = "8:_1B673AAD18644B03A52CFDF33701EEE1"
             "FileType" = "3:2"
             "InstallAction" = "3:1"
             "Arguments" = "8:/Install"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_12644626_5AD2_4C86_BEC0_DDBE1F876F70"
+            "Identifier" = "8:_C9FDD5FA_42E2_452C_B5C9_30C6AFBC6E57"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -88,6 +94,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B673AAD18644B03A52CFDF33701EEE1"
+            {
+            "SourcePath" = "8:C:\\Users\\jfber\\PycharmProjects\\xamppInstallation\\dist\\EZFFB_db_setup.exe"
+            "TargetName" = "8:EZFFB_db_setup.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_E04D2622D787499FB70D100E38310DA4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6BAF91F674834FA0AB63382A06B05784"
             {
             "SourcePath" = "8:C:\\Users\\jfber\\PycharmProjects\\xamppInstallation\\dist\\EZFFB_db_setup.exe"
