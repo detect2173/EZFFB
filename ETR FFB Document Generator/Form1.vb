@@ -385,9 +385,10 @@ Public Class Form1
             selectedInfractions = level1Infractions
         End If
 
-        Dim selectedInfractionIndex As Integer = cmbInfraction.SelectedIndex()
         Dim selectedInfractionText As String = cmbInfraction.SelectedItem.ToString().Trim()
-        txtDetails.Text = GetInfractionDetails(selectedInfractionIndex)
+
+        ' Update details using infraction name instead of index
+        txtDetails.Text = GetInfractionDetails(selectedInfractionText)
 
         ' Populate txtPRHCode
         If selectedInfractions.ContainsKey(selectedInfractionText) Then
@@ -397,6 +398,7 @@ Public Class Form1
         End If
 
     End Sub
+
 
 
 

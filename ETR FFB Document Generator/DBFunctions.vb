@@ -203,17 +203,31 @@ Module DBFunctions
     End Sub
 
 
-    Public Function GetInfractionDetails(selectedInfraction As Integer) As String
-        Select Case selectedInfraction
-            Case 6
-                Return "Student tested positive on their second drug test for the presence of drugs. "
-            Case 15
+    'Public Function GetInfractionDetails(selectedInfraction As Integer) As String
+
+    '    Select Case selectedInfraction
+    '        Case 6
+    '            Return "Student tested positive on their second drug test for the presence of drugs. "
+    '        Case 15
+    '            Pattern.Show()
+    '            Return "Student received more than 4 minor infractions within a 60 day period elevating the infraction to a Level II infraction with a Fact Finding Board for: Pattern of minor infractons."
+    '        Case Else
+    '            Return "" ' Clear the textbox or set to a default value
+    '    End Select
+    'End Function
+
+    Public Function GetInfractionDetails(infractionName As String) As String
+        Select Case infractionName
+            Case "Drugs: Use of drugs as evidenced by a positive drug test"
+                Return "Student tested positive on their second drug test for the presence of drugs."
+            Case "Pattern of minor infractions"
                 Pattern.Show()
-                Return "Student received more than 4 minor infractions within a 60 day period elevating the infraction to a Level II infraction with a Fact Finding Board for: Pattern of minor infractons."
+                Return "Student received more than 4 minor infractions within a 60 day period elevating the infraction to a Level II infraction with a Fact Finding Board for: Pattern of minor infractions."
             Case Else
                 Return "" ' Clear the textbox or set to a default value
         End Select
     End Function
+
 
     Public Sub PopulateContactInfoByCenter(centerName As String, lblCenter As Label, txtSHRO As Guna.UI2.WinForms.Guna2TextBox, txtSHROeMail As Guna.UI2.WinForms.Guna2TextBox, txtC2C As Guna.UI2.WinForms.Guna2TextBox, txtSHROphone As Guna.UI2.WinForms.Guna2TextBox)
         Dim connectionString As String = $"Server=localhost;Database=roster;User ID=root;Password=;"
