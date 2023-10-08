@@ -81,7 +81,7 @@ INSERT INTO contacts (Name, Center, Email, C2C, Phone) VALUES
 ('Angela Taylor', 'Montgomery', 'Taylor.angela@jobcorps.org', '258.2423', '334.420.2423'),
 ('John Berry', 'Northlands', 'Berry.john@jobcorps.org', '174.0189', '802.877.0189'),
 ('Christina Eastwood', 'Oneonta', 'Eastwood.christina@jobcorps.org', '177.1469', '607.431.1469'),
-('James Ross', 'Wilmington', 'Ross.james@jobcorps.org', '235.2525', '302.230.2525'),
+('Rasheed Carter', 'Wilmington', 'Carter.Rasheed@jobcorps.org', '235.2525', '302.230.2525'),
 ('Steven Ochieng', 'Excelsior Springs', 'Ochieng.steven@jobcorps.org', '135.3117', '816.629.3117'),
 ('Adrese Davis', 'Westover', 'Davis.adrese@jobcorps.org', '208.4049', '413.593.4049'),
 ('Keith White', 'ETR Rochester', 'Keith.white@etrky.com', 'N/A', '585.202.5018');
