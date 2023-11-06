@@ -4,6 +4,8 @@ Imports System.Configuration
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.IO
 Imports Guna.UI2.WinForms
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Data.SqlClient
 
 Public Class Form1
     Public Sub New()
@@ -41,14 +43,14 @@ Public Class Form1
 
     Private level1Infractions As Dictionary(Of String, String)
     Private level2Infractions As Dictionary(Of String, String)
-    Private ReadOnly toolTip1 As New ToolTip()
+    'Private ReadOnly TooltipNew As New ToolTip()
     Private studentInfo As Dictionary(Of String, (Integer, DateTime, DateTime)) = GetStudentInfo()
 
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs)
         runSettings()
-        toolTip1.SetToolTip(cbLevel, "Check the Box to Populate Level 2 infractions, and uncheck the box to populate Level 1 infractions.")
+        infractionToolTip.SetToolTip(cbLevel, "Check the Box to Populate Level 2 infractions, and uncheck the box to populate Level 1 infractions.")
         CopyLogToDocuments()
         SetupLogic.SetupUI()
         ' Populate and set up DataGrid
@@ -476,4 +478,52 @@ Public Class Form1
 
     End Sub
 
+    Private Sub cmbInfraction_MouseHover(sender As Object, e As EventArgs) Handles cmbInfraction.MouseHover
+        If cmbInfraction.SelectedItem IsNot Nothing Then
+            ' Your existing code here
+
+
+            Dim selectedItem As String = cmbInfraction.SelectedItem.ToString()
+
+            ' Query the database for the definition
+            Dim definition As String = GetInfractionDefinition(selectedItem)
+
+            ' Show the tooltip
+            infractionToolTip.SetToolTip(cmbInfraction, definition)
+        End If
+    End Sub
+
+    Private Function GetInfractionDefinition(infraction As String) As String
+        Dim tableName As String
+        Dim connectionString As String = "Server=localhost;Database=roster;User ID=root;Password=;"
+        ' Check which table to query based on cbLevel's checked status
+        If cbLevel.Checked Then
+            tableName = "level2"
+        Else
+            tableName = "level1"
+        End If
+        If cmbInfraction.SelectedItem IsNot Nothing Then
+
+
+            Using connection As New SqlConnection(connectionString)
+                connection.Open()
+
+                ' Set up your query
+                Dim query As String = $"SELECT Definition FROM " & tableName & " WHERE Infraction = @InfractionName"
+
+                Using command As New SqlCommand(query, connection)
+                    ' Prevent SQL injection by using parameters
+                    command.Parameters.AddWithValue("@InfractionName", infraction)
+
+                    Dim result As Object = command.ExecuteScalar()
+
+                    If result IsNot Nothing AndAlso TypeOf result Is String Then
+                        Return result.ToString()
+                    Else
+                        Return "Definition not found."
+                    End If
+                End Using
+            End Using
+        End If
+    End Function
 End Class

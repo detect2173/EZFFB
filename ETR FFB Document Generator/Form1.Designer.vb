@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -101,6 +102,12 @@ Partial Class Form1
         Dim CustomizableEdges74 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges75 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges76 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges81 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges82 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges77 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges78 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges79 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges80 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tc1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
@@ -187,6 +194,12 @@ Partial Class Form1
         Label3 = New Label()
         Label1 = New Label()
         Label2 = New Label()
+        tp4 = New TabPage()
+        grp60Window = New Guna.UI2.WinForms.Guna2GroupBox()
+        btnCalc60Window = New Guna.UI2.WinForms.Guna2Button()
+        txt60Window = New Guna.UI2.WinForms.Guna2TextBox()
+        Label12 = New Label()
+        infractionToolTip = New ToolTip(components)
         tc1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -199,6 +212,8 @@ Partial Class Form1
         GroupBox1.SuspendLayout()
         CType(dgvRoster, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox3.SuspendLayout()
+        tp4.SuspendLayout()
+        grp60Window.SuspendLayout()
         SuspendLayout()
         ' 
         ' tc1
@@ -207,6 +222,7 @@ Partial Class Form1
         tc1.Controls.Add(TabPage1)
         tc1.Controls.Add(TabPage2)
         tc1.Controls.Add(TabPage3)
+        tc1.Controls.Add(tp4)
         tc1.Dock = DockStyle.Fill
         tc1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         tc1.ItemSize = New Size(180, 40)
@@ -1574,6 +1590,78 @@ Partial Class Form1
         Label2.Size = New Size(92, 21)
         Label2.TabIndex = 11
         Label2.Text = "First Name"' 
+        ' tp4
+        ' 
+        tp4.BackColor = Color.Black
+        tp4.Controls.Add(grp60Window)
+        tp4.Location = New Point(184, 4)
+        tp4.Name = "tp4"
+        tp4.Padding = New Padding(3)
+        tp4.Size = New Size(1092, 745)
+        tp4.TabIndex = 3
+        tp4.Text = "60 Day"' 
+        ' grp60Window
+        ' 
+        grp60Window.Controls.Add(btnCalc60Window)
+        grp60Window.Controls.Add(txt60Window)
+        grp60Window.Controls.Add(Label12)
+        grp60Window.CustomizableEdges = CustomizableEdges81
+        grp60Window.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        grp60Window.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        grp60Window.Location = New Point(91, 83)
+        grp60Window.Name = "grp60Window"
+        grp60Window.ShadowDecoration.CustomizableEdges = CustomizableEdges82
+        grp60Window.Size = New Size(380, 175)
+        grp60Window.TabIndex = 0
+        grp60Window.Text = "60 Day Window"' 
+        ' btnCalc60Window
+        ' 
+        btnCalc60Window.CustomizableEdges = CustomizableEdges77
+        btnCalc60Window.DisabledState.BorderColor = Color.DarkGray
+        btnCalc60Window.DisabledState.CustomBorderColor = Color.DarkGray
+        btnCalc60Window.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnCalc60Window.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnCalc60Window.FillColor = Color.Silver
+        btnCalc60Window.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCalc60Window.ForeColor = Color.Black
+        btnCalc60Window.Location = New Point(109, 120)
+        btnCalc60Window.Name = "btnCalc60Window"
+        btnCalc60Window.ShadowDecoration.CustomizableEdges = CustomizableEdges78
+        btnCalc60Window.Size = New Size(154, 40)
+        btnCalc60Window.TabIndex = 2
+        btnCalc60Window.Text = "Calculate"' 
+        ' txt60Window
+        ' 
+        txt60Window.CustomizableEdges = CustomizableEdges79
+        txt60Window.DefaultText = ""
+        txt60Window.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txt60Window.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txt60Window.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txt60Window.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txt60Window.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txt60Window.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txt60Window.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txt60Window.Location = New Point(32, 67)
+        txt60Window.Margin = New Padding(4, 4, 4, 4)
+        txt60Window.Name = "txt60Window"
+        txt60Window.PasswordChar = ChrW(0)
+        txt60Window.PlaceholderText = ""
+        txt60Window.SelectedText = ""
+        txt60Window.ShadowDecoration.CustomizableEdges = CustomizableEdges80
+        txt60Window.Size = New Size(317, 46)
+        txt60Window.TabIndex = 1
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.BackColor = Color.Transparent
+        Label12.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.ForeColor = Color.Black
+        Label12.Location = New Point(59, 45)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(262, 21)
+        Label12.TabIndex = 0
+        Label12.Text = "Current 60 Day Window Begins on:"' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
@@ -1606,6 +1694,9 @@ Partial Class Form1
         CType(dgvRoster, ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
+        tp4.ResumeLayout(False)
+        grp60Window.ResumeLayout(False)
+        grp60Window.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -1696,4 +1787,10 @@ Partial Class Form1
     Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents tglPresent As Guna.UI2.WinForms.Guna2ToggleSwitch
+    Friend WithEvents tp4 As TabPage
+    Friend WithEvents grp60Window As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents btnCalc60Window As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txt60Window As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents infractionToolTip As ToolTip
 End Class
